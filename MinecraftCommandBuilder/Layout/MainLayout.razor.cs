@@ -2,6 +2,8 @@ namespace MinecraftCommandBuilder.Layout;
 
 public partial class MainLayout
 {
+    private const string AppTitle = "Minecraft Command Builder";
+
     private bool isDarkMode;
     private MudThemeProvider? mudThemeProvider;
 
