@@ -1,5 +1,7 @@
 ﻿@page "/"
 
+@inject ICommandService CommandService
+
 <PageTitle>
     Minecraft Command Builder
 </PageTitle>
@@ -18,7 +20,7 @@
 </MudButton>
 
 @code {
-    private string CommandText { get; set; } = "Hello, world!";
+    private string CommandText { get; set; } = string.Empty;
 
-    private void ChangeCommandText() => CommandText = "Goodbye, world!";
+    private void ChangeCommandText() => CommandText = CommandService.GiveCommand("@s", "apple", 1);
 }

@@ -9,6 +9,7 @@
                 ButtonType="@ButtonType.Button"
                 Variant="@Variant.Filled"
                 OnClick="@CopyCommandText"
+                Disabled="@string.IsNullOrWhiteSpace(CommandText)"
                 title="Copy command text">
          Copy command text
      </MudButton>
