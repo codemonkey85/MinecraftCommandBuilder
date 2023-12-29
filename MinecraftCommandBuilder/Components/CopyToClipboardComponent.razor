@@ -1,0 +1,15 @@
+﻿@inject IJSRuntime JSRuntime
+
+<MudStack>
+    <MudInput T="string"
+              @bind-Value="@CommandText"
+              Variant="@Variant.Outlined"
+              ReadOnly />
+     <MudButton StartIcon="@Icons.Material.Filled.CopyAll"
+                ButtonType="@ButtonType.Button"
+                Variant="@Variant.Filled"
+                OnClick="@CopyCommandText"
+                title="Copy command text">
+         Copy command text
+     </MudButton>
+ </MudStack>
