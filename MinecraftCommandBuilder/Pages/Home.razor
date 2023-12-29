@@ -6,14 +6,15 @@
     Minecraft Command Builder
 </PageTitle>
 
-<CopyToClipboardComponent CommandText="@CommandText" />
-
-<MudButton OnClick="@ChangeCommandText"
-           ButtonType="@ButtonType.Button"
-           Variant="@Variant.Filled"
-           title="Change command text">
-    Change command text
-</MudButton>
+<MudStack Class="mt-3">
+    <CopyToClipboardComponent CommandText="@CommandText" />
+    <MudButton OnClick="@ChangeCommandText"
+               ButtonType="@ButtonType.Button"
+               Variant="@Variant.Filled"
+               title="Change command text">
+        Change command text
+    </MudButton>
+</MudStack>
 
 @code {
     private string CommandText { get; set; } = string.Empty;
