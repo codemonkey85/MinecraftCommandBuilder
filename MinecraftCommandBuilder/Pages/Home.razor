@@ -14,10 +14,28 @@
                title="Change command text">
         Change command text
     </MudButton>
+    <MudSelect T="MinecraftDataCSharp.Block">
+        @foreach (var block in Blocks.Take(10))
+        {
+            <MudSelectItem T="MinecraftDataCSharp.Block" Value="@block">
+                @block.displayName
+            </MudSelectItem>
+        })
+    </MudSelect>
 </MudStack>
 
 @code {
     private string CommandText { get; set; } = string.Empty;
+
+    private List<MinecraftDataCSharp.Block> Blocks { get; set; } = [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Blocks is [])
+        {
+            Blocks = await BlockRepository.GetAllBlocks() ?? [];
+        }
+    }
 
     private void ChangeCommandText() => CommandText = CommandService.GiveCommand("@s", "apple", 1);
 }
