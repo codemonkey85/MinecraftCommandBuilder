@@ -8,6 +8,12 @@
                      ToStringFunc="@ToString"
                      Clearable />
 
+     <MudNumericField T="int"
+                      Label="Count"
+                      Min="1"
+                      Max="int.MaxValue"
+                      @bind-Value="@Count" />
+
      <MudButton ButtonType="@ButtonType.Submit"
                 Variant="@Variant.Filled"
                 Color="@Color.Primary"

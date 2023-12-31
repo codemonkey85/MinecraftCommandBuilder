@@ -8,7 +8,7 @@ public partial class EffectsTab
 
     private Effect? SelectedEffect { get; set; }
 
-    private int Duration { get; set; } = 100;
+    private int Duration { get; set; } = 60;
 
     private int Amplifier { get; set; } = 1;
 

@@ -15,6 +15,13 @@
             </MudSelectItem>
         }
     </MudSelect>
+
+    <MudNumericField T="int"
+                     Label="Level"
+                     Min="1"
+                     Max="@(SelectedEnchantment?.maxLevel ?? 1)"
+                     @bind-Value="@Level" />
+
     <MudButton ButtonType="@ButtonType.Submit"
                Variant="@Variant.Filled"
                Color="@Color.Primary"
