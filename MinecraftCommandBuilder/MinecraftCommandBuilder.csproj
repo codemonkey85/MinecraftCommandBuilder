@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
@@ -19,7 +19,10 @@
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
 	</ItemGroup>
 
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' != 'Windows_NT'">
+		<Exec Command="cp -r &quot;$(NuGetPackageRoot)MinecraftDataCSharp/1.0.0.8/content/data/data&quot; &quot;$(ProjectDir)wwwroot/data/data&quot;" />
+	</Target>
+	<Target Name="PostBuildWindows" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
 		<Exec Command="xcopy /Y /I /E &quot;$(NuGetPackageRoot)MinecraftDataCSharp\1.0.0.8\content\data\data\*.*&quot; &quot;$(ProjectDir)wwwroot\data\data\&quot;" />
 	</Target>
 
