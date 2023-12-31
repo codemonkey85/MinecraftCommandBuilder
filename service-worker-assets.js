@@ -49,7 +49,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-WohypjZoT5QE5SxaGubVazae\/GHp2QJIPrySwyPtuk0=",
+      "hash": "sha256-j8G0zENi+p0rC7vlBSDmJH4AmSNKyxe\/Vg1Xpa+9n\/k=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -129,11 +129,11 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-xfGEGzRKcGGS0+nC+ICPOpQb+7WGUqiLZgpkUFTfdAw=",
+      "hash": "sha256-61fQ\/u3CDTgKe6Gh0fNdRXwxERMSRlKPXpXNCGn6gyo=",
       "url": "_framework\/MinecraftCommandBuilder.wasm"
     },
     {
-      "hash": "sha256-yeTL\/z0Wj+TsLNI7uQWpUfHW+cwsmD68wLsvj2Jg4Xo=",
+      "hash": "sha256-NrPrZT0JQWRUCDT3Y9\/BPW1ZP+HEuPap9NGIsIeRTWY=",
       "url": "_framework\/MinecraftDataCSharp.wasm"
     },
     {
@@ -229,5 +229,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "aHLXOKEZ"
+  "version": "rWYXNy8H"
 };
