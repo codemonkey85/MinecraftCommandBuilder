@@ -30,7 +30,7 @@ public partial class GiveItemsTab
 
             : (IEnumerable<Item>)Items
                 .Where(item => item.displayName
-                    .Contains(value, StringComparison.InvariantCultureIgnoreCase))
+                    .StartsWith(value, StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(i => i.displayName);
     }
 
