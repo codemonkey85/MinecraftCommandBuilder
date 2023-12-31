@@ -6,14 +6,15 @@
                      Label="Select an item"
                      @bind-Value="SelectedItem"
                      SearchFunc="@Search"
-                     ToStringFunc="@ToString" />
+                     ToStringFunc="@ToString"
+                     Clearable />
 
-    <MudButton ButtonType="@ButtonType.Submit"
-               Variant="@Variant.Filled"
-               Color="@Color.Primary"
-               OnClick="@GenerateCommand"
-               Disabled="@GenerateCommandDisabled"
-               title="Generate command">
-        Generate command
-    </MudButton>
-</MudStack>
+     <MudButton ButtonType="@ButtonType.Submit"
+                Variant="@Variant.Filled"
+                Color="@Color.Primary"
+                OnClick="@GenerateCommand"
+                Disabled="@GenerateCommandDisabled"
+                title="Generate command">
+         Generate command
+     </MudButton>
+ </MudStack>
