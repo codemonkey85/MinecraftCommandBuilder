@@ -10,6 +10,10 @@ public partial class Home
 
     private List<Item> Items { get; set; } = [];
 
+    private List<Biome> BiomesList { get; set; } = [];
+
+    private List<Entity> EntitiesList { get; set; } = [];
+
     protected override async Task OnInitializedAsync()
     {
         if (Blocks is [])
@@ -23,6 +27,14 @@ public partial class Home
         if (Items is [])
         {
             Items = await ItemRepository.GetAllItems() ?? [];
+        }
+        if (BiomesList is [])
+        {
+            BiomesList = await BiomeRepository.GetAllBiomes() ?? [];
+        }
+        if (EntitiesList is [])
+        {
+            EntitiesList = await EntityRepository.GetAllEntities() ?? [];
         }
     }
 

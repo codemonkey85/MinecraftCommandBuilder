@@ -50,4 +50,28 @@
         }
     </MudSelect>
 
+    <MudSelect T="Biome"
+               Placeholder="Select a biome"
+               Clearable>
+        @foreach (var biome in BiomesList.OrderBy(i => i.displayName).Take(10))
+        {
+            <MudSelectItem T="Biome"
+                           Value="@biome">
+                @biome.displayName
+            </MudSelectItem>
+        }
+    </MudSelect>
+
+    <MudSelect T="Entity"
+               Placeholder="Select an entity"
+               Clearable>
+        @foreach (var entity in EntitiesList.OrderBy(i => i.displayName).Take(10))
+        {
+            <MudSelectItem T="Entity"
+                           Value="@entity">
+                @entity.displayName
+            </MudSelectItem>
+        }
+    </MudSelect>
+
 </MudStack>
