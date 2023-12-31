@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MinecraftCommandBuilder",
   "resources": {
-    "hash": "sha256-9GScXCNxdsSKASgav7ma/LADMqCgqeEvQ5uh/6yYbpY=",
+    "hash": "sha256-m12Dz6DzjNEIVDxtJEHvU0CaxPmwPWfLxU9nyJKVrbs=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.fnc3ed5sjr.js": "sha256-8su0dfqXmrR6nSS80nF/thphOx+y1Myj7Zbp7+5wV3Y="
     },
@@ -34,8 +34,8 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-Ms2HR5Gpug/0uRAzdk4SUNT76Ml3CjFv9Jo+dUIMGac=",
       "Microsoft.JSInterop.wasm": "sha256-EtJO0POenyod5M2fB0fS97fOwqWAHYxciSYpGqqItvE=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-CQVLCKiSxLN5ghyJZG3mhnMGRROdqrbNUjtAXB0nWb8=",
-      "MinecraftCommandBuilder.wasm": "sha256-61fQ/u3CDTgKe6Gh0fNdRXwxERMSRlKPXpXNCGn6gyo=",
-      "MinecraftDataCSharp.wasm": "sha256-NrPrZT0JQWRUCDT3Y9/BPW1ZP+HEuPap9NGIsIeRTWY=",
+      "MinecraftCommandBuilder.wasm": "sha256-bcGUdJ+GURPIf6v0dz3BhhJzZ297b+mZaqUWQdss2Jk=",
+      "MinecraftDataCSharp.wasm": "sha256-sMJsMJkT8QlugbY2OHoJupFJVtazW+xx0l3RGaGdvD0=",
       "MudBlazor.wasm": "sha256-3gHTX6WvOK4nckH0QbqcHuwnSV+1zPy34oeGywBkowA=",
       "System.Collections.Concurrent.wasm": "sha256-VGbE/XhZmviXBkOuOQbUr9eM6f2+0X/JWSS7jYDdheU=",
       "System.Collections.wasm": "sha256-mMbKVYmSqFvFCWNsGP6HXRPPAYn/TF4sxRB0+kdfOdg=",
