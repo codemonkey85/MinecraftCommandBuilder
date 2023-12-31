@@ -2,17 +2,19 @@
 
 public class CommandService : ICommandService
 {
+    public string PlayerName { get; set; } = "@s";
+
     public event Action? OnAppStateChanged;
 
     public void Refresh() => OnAppStateChanged?.Invoke();
 
     public string CommandText { get; private set; } = string.Empty;
 
-    public void SetGiveItemCommand(string playerName, string itemName, int count)
+    public void SetGiveItemCommand(string itemName, int count)
     {
-        if (string.IsNullOrWhiteSpace(playerName))
+        if (string.IsNullOrWhiteSpace(PlayerName))
         {
-            throw new ArgumentException("Player name cannot be empty.", nameof(playerName));
+            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
         }
 
         if (string.IsNullOrWhiteSpace(itemName))
@@ -25,15 +27,15 @@ public class CommandService : ICommandService
             throw new ArgumentOutOfRangeException(nameof(count), "Count must be greater than 0.");
         }
 
-        CommandText = $"/give {playerName} {itemName} {count}";
+        CommandText = $"/give {PlayerName} {itemName} {count}";
         Refresh();
     }
 
-    public void SetEnchantCommand(string playerName, string enchantmentName, int level)
+    public void SetEnchantCommand(string enchantmentName, int level)
     {
-        if (string.IsNullOrWhiteSpace(playerName))
+        if (string.IsNullOrWhiteSpace(PlayerName))
         {
-            throw new ArgumentException("Player name cannot be empty.", nameof(playerName));
+            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
         }
 
         if (string.IsNullOrWhiteSpace(enchantmentName))
@@ -46,15 +48,15 @@ public class CommandService : ICommandService
             throw new ArgumentOutOfRangeException(nameof(level), "Level must be greater than 0.");
         }
 
-        CommandText = $"/enchant {playerName} {enchantmentName} {level}";
+        CommandText = $"/enchant {PlayerName} {enchantmentName} {level}";
         Refresh();
     }
 
-    public void SetEffectCommand(string playerName, string effectName, int duration, int amplifier)
+    public void SetEffectCommand(string effectName, int duration, int amplifier)
     {
-        if (string.IsNullOrWhiteSpace(playerName))
+        if (string.IsNullOrWhiteSpace(PlayerName))
         {
-            throw new ArgumentException("Player name cannot be empty.", nameof(playerName));
+            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
         }
 
         if (string.IsNullOrWhiteSpace(effectName))
@@ -72,7 +74,7 @@ public class CommandService : ICommandService
             throw new ArgumentOutOfRangeException(nameof(amplifier), "Amplifier must be greater than 0.");
         }
 
-        CommandText = $"/effect {playerName} {effectName} {duration} {amplifier}";
+        CommandText = $"/effect {PlayerName} {effectName} {duration} {amplifier}";
         Refresh();
     }
 }

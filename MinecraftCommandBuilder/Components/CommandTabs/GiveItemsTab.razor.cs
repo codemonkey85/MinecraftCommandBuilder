@@ -4,8 +4,6 @@ public partial class GiveItemsTab
 {
     private List<Item> Items { get; set; } = [];
 
-    private string PlayerName { get; set; } = "@s";
-
     private Item? SelectedItem { get; set; }
 
     private int Count { get; set; } = 1;
@@ -46,6 +44,8 @@ public partial class GiveItemsTab
             return;
         }
 
-        CommandService.SetGiveItemCommand(PlayerName, SelectedItem.name, Count);
+        CommandService.SetGiveItemCommand(
+            SelectedItem.name,
+            Count);
     }
 }

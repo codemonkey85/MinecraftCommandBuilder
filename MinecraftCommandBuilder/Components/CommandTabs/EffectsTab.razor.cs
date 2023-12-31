@@ -4,8 +4,6 @@ public partial class EffectsTab
 {
     private List<Effect> Effects { get; set; } = [];
 
-    private string PlayerName { get; set; } = "@s";
-
     private Effect? SelectedEffect { get; set; }
 
     private int Duration { get; set; } = 60;
@@ -33,6 +31,9 @@ public partial class EffectsTab
             return;
         }
 
-        CommandService.SetEffectCommand(PlayerName, SelectedEffect.bedrock_name, Duration, Amplifier);
+        CommandService.SetEffectCommand(
+            SelectedEffect.bedrock_name,
+            Duration,
+            Amplifier);
     }
 }

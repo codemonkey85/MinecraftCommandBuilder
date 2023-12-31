@@ -4,8 +4,6 @@ public partial class EnchantsTab
 {
     private List<Enchantment> Enchantments { get; set; } = [];
 
-    private string PlayerName { get; set; } = "@s";
-
     private Enchantment? SelectedEnchantment { get; set; }
 
     private int Level { get; set; } = 1;
@@ -31,6 +29,8 @@ public partial class EnchantsTab
             return;
         }
 
-        CommandService.SetEnchantCommand(PlayerName, SelectedEnchantment.name, Level);
+        CommandService.SetEnchantCommand(
+            SelectedEnchantment.name,
+            Level);
     }
 }
