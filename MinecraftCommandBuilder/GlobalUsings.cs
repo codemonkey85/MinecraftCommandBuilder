@@ -9,3 +9,4 @@ global using MinecraftCommandBuilder.Services;
 global using MinecraftDataCSharp;
 global using MudBlazor;
 global using MudBlazor.Services;
+global using Block = MinecraftDataCSharp.Block;

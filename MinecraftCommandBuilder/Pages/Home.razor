@@ -6,18 +6,48 @@
 
 <MudStack Class="mt-3">
     <CopyToClipboardComponent CommandText="@CommandText" />
+
     <MudButton OnClick="@ChangeCommandText"
                ButtonType="@ButtonType.Button"
                Variant="@Variant.Filled"
                title="Change command text">
         Change command text
     </MudButton>
-    <MudSelect T="MinecraftDataCSharp.Block">
-        @foreach (var block in Blocks.Take(10))
+
+    <MudSelect T="Block"
+               Placeholder="Select a block"
+               Clearable>
+        @foreach (var block in Blocks.OrderBy(b => b.displayName).Take(10))
         {
-            <MudSelectItem T="MinecraftDataCSharp.Block" Value="@block">
+            <MudSelectItem T="Block"
+                           Value="@block">
                 @block.displayName
             </MudSelectItem>
         }
     </MudSelect>
+
+    <MudSelect T="Effect"
+               Placeholder="Select an effect"
+               Clearable>
+        @foreach (var effect in Effects.OrderBy(e => e.displayName).Take(10))
+        {
+            <MudSelectItem T="Effect"
+                           Value="@effect">
+                @effect.displayName
+            </MudSelectItem>
+        }
+    </MudSelect>
+
+    <MudSelect T="Item"
+               Placeholder="Select an item"
+               Clearable>
+        @foreach (var item in Items.OrderBy(i => i.displayName).Take(10))
+        {
+            <MudSelectItem T="Item"
+                           Value="@item">
+                @item.displayName
+            </MudSelectItem>
+        }
+    </MudSelect>
+
 </MudStack>
