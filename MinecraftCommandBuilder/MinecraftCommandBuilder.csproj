@@ -22,7 +22,7 @@
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' != 'Windows_NT'">
 		<!-- Unix-based systems (Linux and macOS) -->
 		<Exec Command="mkdir -p &quot;$(ProjectDir)wwwroot/data/data&quot;" />
-		<Exec Command="cp -r &quot;$(NuGetPackageRoot)MinecraftDataCSharp/1.0.0.8/content/data/data&quot; &quot;$(ProjectDir)wwwroot/data/data&quot;" />
+		<Exec Command="cp -r &quot;$(NuGetPackageRoot)minecraftdatacsharp/1.0.0.8/content/data/data&quot; &quot;$(ProjectDir)wwwroot/data/data&quot;" />
 	</Target>
 	<Target Name="PostBuildWindows" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
 		<!-- Windows systems -->
