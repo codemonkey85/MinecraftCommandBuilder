@@ -49,7 +49,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-hptcW0os2uOFV8JWsKDk+o5UR0Y5z1RD4\/5Pm0qC1uc=",
+      "hash": "sha256-\/8Rn+X2vhHcesno08tccQHh4Rqj26wxe0usJm7UrU\/o=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -57,7 +57,7 @@
       "url": "_framework\/dotnet.native.8.0.0.fnc3ed5sjr.js"
     },
     {
-      "hash": "sha256-bO\/j+sVu9O+0z\/dDUOy0JLAhSSyMftoS4Hx0ca16ojM=",
+      "hash": "sha256-23v0FXJHgtEkqwzleQQvge\/8Q0ctESJ5sAQeoZmnIk4=",
       "url": "_framework\/dotnet.native.wasm"
     },
     {
@@ -105,7 +105,7 @@
       "url": "_framework\/Microsoft.Extensions.Localization.wasm"
     },
     {
-      "hash": "sha256-t8bvo7bfFo868ziwYLfmSUQdYJw1rGz8j50AV36yLcc=",
+      "hash": "sha256-N87BWj3+Vi2Oy1KCBKbrB2Xrtd9mF31GDIbLIlUzErA=",
       "url": "_framework\/Microsoft.Extensions.Logging.Abstractions.wasm"
     },
     {
@@ -129,15 +129,15 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-ngcojOBWRLTra4JSWypCMlSogIZO8V4hHcXbQxvLUJc=",
+      "hash": "sha256-GW1EKSSgqaFUz1ezsReOFx+1r7IlvgwvTH7dA\/6Luws=",
       "url": "_framework\/MinecraftCommandBuilder.wasm"
     },
     {
-      "hash": "sha256-sMJsMJkT8QlugbY2OHoJupFJVtazW+xx0l3RGaGdvD0=",
+      "hash": "sha256-JlmucqfpcyOoQ0S7twWB4ylTgPdTMhOFJ9\/pX02t0L0=",
       "url": "_framework\/MinecraftDataCSharp.wasm"
     },
     {
-      "hash": "sha256-aA4A04breckGFAdU1CzHwU9BpOCFmYVKBm0tJ0VthwA=",
+      "hash": "sha256-6t2VYjMcuNfg+TfpD2km0VwCNpciIm2kRrGCrPdvOiY=",
       "url": "_framework\/MudBlazor.wasm"
     },
     {
@@ -173,11 +173,11 @@
       "url": "_framework\/System.Linq.Expressions.wasm"
     },
     {
-      "hash": "sha256-kEmWmXAfgaBYl7AlMDf6uBDzYZgmHiN9YuNfFCrUoS0=",
+      "hash": "sha256-bdqxcArNj9utypy2so+EWJ\/GGNVytwW1KWvaud44OLM=",
       "url": "_framework\/System.Linq.wasm"
     },
     {
-      "hash": "sha256-hkth6YS6UnK33Aewp8zIVYMCzEDYAnu0rL6ER05D+qw=",
+      "hash": "sha256-AR6eNiiIVHpEyNQeXfi0D1jmiLzKKs8XmuVKw5fI0os=",
       "url": "_framework\/System.Memory.wasm"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_framework\/System.ObjectModel.wasm"
     },
     {
-      "hash": "sha256-DAX8uFQIOEdgF7pVSwdx2tSNnK+mlFuCcCVIYuatxtU=",
+      "hash": "sha256-PCbLSZxtlo3vnGMqrdDC\/9eqYHFT6IwU4XIbncJ5U3M=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -205,7 +205,7 @@
       "url": "_framework\/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-0kY00+xVA5BylUuJAy\/X4BcI64gDEgKIbCCeymyOOd8=",
+      "hash": "sha256-me1YxzP2LwoUME5Q3mARi6NvwlULLFHFyauxZtl3X88=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -217,7 +217,7 @@
       "url": "_framework\/System.Text.Json.wasm"
     },
     {
-      "hash": "sha256-xJSBjH0aVS7pwrglxW2XoDw4hkF+OB3AX\/XxRSA7+x8=",
+      "hash": "sha256-2OWN8cTlh10TWBmBwutTBkKGHRPpy\/c\/Z6wfKOYROD0=",
       "url": "_framework\/System.Text.RegularExpressions.wasm"
     },
     {
@@ -233,5 +233,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "S124mP4v"
+  "version": "kDRVO5wz"
 };
