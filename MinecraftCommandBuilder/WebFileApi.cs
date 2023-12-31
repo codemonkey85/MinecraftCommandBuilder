@@ -1,6 +1,4 @@
-﻿using MinecraftDataCSharp;
-
-namespace MinecraftCommandBuilder;
+﻿namespace MinecraftCommandBuilder;
 
 public class WebFileApi(HttpClient httpClient) : IFileApi
 {

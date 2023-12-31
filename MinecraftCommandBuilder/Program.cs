@@ -1,5 +1,3 @@
-using MinecraftDataCSharp;
-
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 var services = builder.Services;
 

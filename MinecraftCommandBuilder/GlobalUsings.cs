@@ -6,5 +6,6 @@ global using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 global using Microsoft.JSInterop;
 global using MinecraftCommandBuilder;
 global using MinecraftCommandBuilder.Services;
+global using MinecraftDataCSharp;
 global using MudBlazor;
 global using MudBlazor.Services;
