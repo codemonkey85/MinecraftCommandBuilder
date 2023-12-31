@@ -1,0 +1,27 @@
+﻿<h3>Effects</h3>
+
+<MudSelect T="Effect"
+           Placeholder="Select an effect"
+           Clearable>
+    @foreach (var effect in Effects.OrderBy(e => e.displayName).Take(10))
+    {
+        <MudSelectItem T="Effect"
+                       Value="@effect">
+            @effect.displayName
+        </MudSelectItem>
+    }
+</MudSelect>
+
+
+@code {
+    private List<Effect> Effects { get; set; } = [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        if (Effects is [])
+        {
+            Effects = await EffectRepository.GetAllEffects() ?? [];
+        }
+    }
+}

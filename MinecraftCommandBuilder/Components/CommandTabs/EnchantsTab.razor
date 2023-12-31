@@ -1,0 +1,26 @@
+﻿<h3>Enchantments</h3>
+
+<MudSelect T="Enchantment"
+           Placeholder="Select an enchantment"
+           Clearable>
+    @foreach (var enchantment in EnchantmentsList.OrderBy(i => i.displayName).Take(10))
+    {
+        <MudSelectItem T="Enchantment"
+                       Value="@enchantment">
+            @enchantment.displayName
+        </MudSelectItem>
+    }
+</MudSelect>
+
+@code {
+    private List<Enchantment> EnchantmentsList { get; set; } = [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        if (EnchantmentsList is [])
+        {
+            EnchantmentsList = await EnchantmentRepository.GetAllEnchantments() ?? [];
+        }
+    }
+}
