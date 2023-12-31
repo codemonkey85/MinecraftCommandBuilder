@@ -2,6 +2,10 @@
 
 public class CommandService : ICommandService
 {
+    public event Action? OnAppStateChanged;
+
+    public void Refresh() => OnAppStateChanged?.Invoke();
+
     public string CommandText { get; private set; } = string.Empty;
 
     public void SetGiveItemCommand(string playerName, string itemName, int count)
@@ -22,6 +26,7 @@ public class CommandService : ICommandService
         }
 
         CommandText = $"/give {playerName} {itemName} {count}";
+        Refresh();
     }
 
     public void SetEnchantCommand(string playerName, string enchantmentName, int level)
@@ -42,6 +47,7 @@ public class CommandService : ICommandService
         }
 
         CommandText = $"/enchant {playerName} {enchantmentName} {level}";
+        Refresh();
     }
 
     public void SetEffectCommand(string playerName, string effectName, int duration, int amplifier)
@@ -67,5 +73,6 @@ public class CommandService : ICommandService
         }
 
         CommandText = $"/effect {playerName} {effectName} {duration} {amplifier}";
+        Refresh();
     }
 }

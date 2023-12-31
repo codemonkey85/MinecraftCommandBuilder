@@ -1,26 +1,26 @@
 ﻿<h3>Give Items</h3>
 
-<MudSelect T="Item"
-           Placeholder="Select an item"
-           Clearable>
-    @foreach (var item in Items.OrderBy(i => i.displayName).Take(10))
-    {
-        <MudSelectItem T="Item"
-                       Value="@item">
-            @item.displayName
-        </MudSelectItem>
-    }
-</MudSelect>
-
-@code {
-    private List<Item> Items { get; set; } = [];
-
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-        if (Items is [])
+<MudStack>
+    <MudSelect T="Item"
+               Placeholder="Select an item"
+               Class="mt-3"
+               MultiSelection="@false"
+               SelectedValuesChanged="@OnSelectedValuesChanged"
+               Clearable>
+        @foreach (var item in Items.OrderBy(i => i.displayName).Take(10))
         {
-            Items = await ItemRepository.GetAllItems() ?? [];
+            <MudSelectItem T="Item"
+                           Value="@item">
+                @item.displayName
+            </MudSelectItem>
         }
-    }
-}
+    </MudSelect>
+    <MudButton ButtonType="@ButtonType.Submit"
+               Variant="@Variant.Filled"
+               Color="@Color.Primary"
+               OnClick="@GenerateCommand"
+               Disabled="@GenerateCommandDisabled"
+               title="Generate command">
+        Generate command
+    </MudButton>
+</MudStack>

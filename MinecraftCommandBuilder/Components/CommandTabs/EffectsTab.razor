@@ -1,27 +1,26 @@
 ﻿<h3>Effects</h3>
 
-<MudSelect T="Effect"
-           Placeholder="Select an effect"
-           Clearable>
-    @foreach (var effect in Effects.OrderBy(e => e.displayName).Take(10))
-    {
-        <MudSelectItem T="Effect"
-                       Value="@effect">
-            @effect.displayName
-        </MudSelectItem>
-    }
-</MudSelect>
-
-
-@code {
-    private List<Effect> Effects { get; set; } = [];
-
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-        if (Effects is [])
+<MudStack>
+    <MudSelect T="Effect"
+               Placeholder="Select an effect"
+               Class="mt-3"
+               MultiSelection="@false"
+               SelectedValuesChanged="@OnSelectedValuesChanged"
+               Clearable>
+        @foreach (var effect in Effects.OrderBy(e => e.displayName).Take(10))
         {
-            Effects = await EffectRepository.GetAllEffects() ?? [];
+            <MudSelectItem T="Effect"
+                           Value="@effect">
+                @effect.displayName
+            </MudSelectItem>
         }
-    }
-}
+    </MudSelect>
+    <MudButton ButtonType="@ButtonType.Submit"
+               Variant="@Variant.Filled"
+               Color="@Color.Primary"
+               OnClick="@GenerateCommand"
+               Disabled="@GenerateCommandDisabled"
+               title="Generate command">
+        Generate command
+    </MudButton>
+</MudStack>
