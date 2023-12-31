@@ -7,7 +7,7 @@
                MultiSelection="@false"
                SelectedValuesChanged="@OnSelectedValuesChanged"
                Clearable>
-        @foreach (var enchantment in Enchantments.OrderBy(i => i.displayName).Take(10))
+        @foreach (var enchantment in Enchantments.OrderBy(i => i.displayName))
         {
             <MudSelectItem T="Enchantment"
                            Value="@enchantment">

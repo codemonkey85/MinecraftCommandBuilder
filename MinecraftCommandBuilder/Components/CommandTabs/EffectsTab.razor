@@ -7,7 +7,7 @@
                MultiSelection="@false"
                SelectedValuesChanged="@OnSelectedValuesChanged"
                Clearable>
-        @foreach (var effect in Effects.OrderBy(e => e.displayName).Take(10))
+        @foreach (var effect in Effects.OrderBy(e => e.displayName))
         {
             <MudSelectItem T="Effect"
                            Value="@effect">

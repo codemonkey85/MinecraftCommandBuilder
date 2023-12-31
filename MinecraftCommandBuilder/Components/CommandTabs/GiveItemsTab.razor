@@ -1,20 +1,13 @@
 ﻿<h3>Give Items</h3>
 
 <MudStack>
-    <MudSelect T="Item"
-               Placeholder="Select an item"
-               Class="mt-3"
-               MultiSelection="@false"
-               SelectedValuesChanged="@OnSelectedValuesChanged"
-               Clearable>
-        @foreach (var item in Items.OrderBy(i => i.displayName).Take(10))
-        {
-            <MudSelectItem T="Item"
-                           Value="@item">
-                @item.displayName
-            </MudSelectItem>
-        }
-    </MudSelect>
+
+    <MudAutocomplete T="Item"
+                     Label="Select an item"
+                     @bind-Value="SelectedItem"
+                     SearchFunc="@Search"
+                     ToStringFunc="@ToString" />
+
     <MudButton ButtonType="@ButtonType.Submit"
                Variant="@Variant.Filled"
                Color="@Color.Primary"

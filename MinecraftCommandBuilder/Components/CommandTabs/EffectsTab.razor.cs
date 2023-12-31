@@ -33,6 +33,6 @@ public partial class EffectsTab
             return;
         }
 
-        CommandService.SetEffectCommand(PlayerName, SelectedEffect.name, Duration, Amplifier);
+        CommandService.SetEffectCommand(PlayerName, SelectedEffect.bedrock_name, Duration, Amplifier);
     }
 }
