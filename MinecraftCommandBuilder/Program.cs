@@ -12,6 +12,7 @@ services
     .AddScoped<ItemRepository>()
     .AddScoped<BiomeRepository>()
     .AddScoped<EntityRepository>()
+    .AddScoped<EnchantmentRepository>()
     .AddScoped<ICommandService, CommandService>()
     .AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 

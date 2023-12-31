@@ -74,4 +74,16 @@
         }
     </MudSelect>
 
+    <MudSelect T="Enchantment"
+               Placeholder="Select an enchantment"
+               Clearable>
+        @foreach (var enchantment in EnchantmentsList.OrderBy(i => i.displayName).Take(10))
+        {
+            <MudSelectItem T="Enchantment"
+                           Value="@enchantment">
+                @enchantment.displayName
+            </MudSelectItem>
+        }
+    </MudSelect>
+
 </MudStack>

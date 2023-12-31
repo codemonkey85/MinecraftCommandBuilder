@@ -14,6 +14,8 @@ public partial class Home
 
     private List<Entity> EntitiesList { get; set; } = [];
 
+    private List<Enchantment> EnchantmentsList { get; set; } = [];
+
     protected override async Task OnInitializedAsync()
     {
         if (Blocks is [])
@@ -35,6 +37,10 @@ public partial class Home
         if (EntitiesList is [])
         {
             EntitiesList = await EntityRepository.GetAllEntities() ?? [];
+        }
+        if (EnchantmentsList is [])
+        {
+            EnchantmentsList = await EnchantmentRepository.GetAllEnchantments() ?? [];
         }
     }
 
