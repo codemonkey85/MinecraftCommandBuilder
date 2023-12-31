@@ -49,7 +49,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-Pzthu0Iw5N1DRsF8gsU9HC4fubMSjzB3JldbBFBUeMg=",
+      "hash": "sha256-a+A0Me0VkDKX70RGRObbWzJeuyMXaUumBrEktCuyksI=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -57,7 +57,7 @@
       "url": "_framework\/dotnet.native.8.0.0.fnc3ed5sjr.js"
     },
     {
-      "hash": "sha256-kBuypF5rJCX3ZuYxmmiE36zC+phmyR57ZcLhz1z6IPc=",
+      "hash": "sha256-bO\/j+sVu9O+0z\/dDUOy0JLAhSSyMftoS4Hx0ca16ojM=",
       "url": "_framework\/dotnet.native.wasm"
     },
     {
@@ -129,7 +129,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-bcGUdJ+GURPIf6v0dz3BhhJzZ297b+mZaqUWQdss2Jk=",
+      "hash": "sha256-d9WdU3P+4AnuzE1d0Hqaeotw69gBe3By05\/n84Rfkrc=",
       "url": "_framework\/MinecraftCommandBuilder.wasm"
     },
     {
@@ -137,7 +137,7 @@
       "url": "_framework\/MinecraftDataCSharp.wasm"
     },
     {
-      "hash": "sha256-3gHTX6WvOK4nckH0QbqcHuwnSV+1zPy34oeGywBkowA=",
+      "hash": "sha256-aA4A04breckGFAdU1CzHwU9BpOCFmYVKBm0tJ0VthwA=",
       "url": "_framework\/MudBlazor.wasm"
     },
     {
@@ -173,7 +173,7 @@
       "url": "_framework\/System.Linq.Expressions.wasm"
     },
     {
-      "hash": "sha256-EE+sc8YDesoHNK9B1dUG26\/JNwK+HtFgUm4XIwE3GRA=",
+      "hash": "sha256-kEmWmXAfgaBYl7AlMDf6uBDzYZgmHiN9YuNfFCrUoS0=",
       "url": "_framework\/System.Linq.wasm"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_framework\/System.ObjectModel.wasm"
     },
     {
-      "hash": "sha256-VUxG5XEkQnoheG6B5cQ2yDCDJ7oy7rCymykZlOK5iu4=",
+      "hash": "sha256-DAX8uFQIOEdgF7pVSwdx2tSNnK+mlFuCcCVIYuatxtU=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -229,5 +229,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "ASCq4twl"
+  "version": "CvxIto2K"
 };
