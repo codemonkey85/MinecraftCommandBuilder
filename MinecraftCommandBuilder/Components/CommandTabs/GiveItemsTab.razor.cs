@@ -4,7 +4,11 @@ public partial class GiveItemsTab
 {
     private List<Item> Items { get; set; } = [];
 
+    private string PlayerName { get; set; } = "@s";
+
     private Item? SelectedItem { get; set; }
+
+    private int Count { get; set; } = 1;
 
     protected override async Task OnInitializedAsync()
     {
@@ -27,6 +31,6 @@ public partial class GiveItemsTab
             return;
         }
 
-        CommandService.SetGiveItemCommand("@s", SelectedItem.name, 1);
+        CommandService.SetGiveItemCommand(PlayerName, SelectedItem.name, Count);
     }
 }

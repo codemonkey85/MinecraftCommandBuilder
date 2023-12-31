@@ -4,7 +4,13 @@ public partial class EffectsTab
 {
     private List<Effect> Effects { get; set; } = [];
 
+    private string PlayerName { get; set; } = "@s";
+
     private Effect? SelectedEffect { get; set; }
+
+    private int Duration { get; set; } = 100;
+
+    private int Amplifier { get; set; } = 1;
 
     protected override async Task OnInitializedAsync()
     {
@@ -27,6 +33,6 @@ public partial class EffectsTab
             return;
         }
 
-        CommandService.SetEffectCommand("@s", SelectedEffect.name, 100, 1);
+        CommandService.SetEffectCommand(PlayerName, SelectedEffect.name, Duration, Amplifier);
     }
 }

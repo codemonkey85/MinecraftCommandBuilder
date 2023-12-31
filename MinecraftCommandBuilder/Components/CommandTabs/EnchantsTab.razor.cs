@@ -4,7 +4,11 @@ public partial class EnchantsTab
 {
     private List<Enchantment> Enchantments { get; set; } = [];
 
+    private string PlayerName { get; set; } = "@s";
+
     private Enchantment? SelectedEnchantment { get; set; }
+
+    private int Level { get; set; } = 1;
 
     protected override async Task OnInitializedAsync()
     {
@@ -27,6 +31,6 @@ public partial class EnchantsTab
             return;
         }
 
-        CommandService.SetEnchantCommand("@s", SelectedEnchantment.name, 1);
+        CommandService.SetEnchantCommand(PlayerName, SelectedEnchantment.name, Level);
     }
 }
