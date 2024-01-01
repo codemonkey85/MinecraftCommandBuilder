@@ -74,7 +74,7 @@ public class CommandService : ICommandService
             throw new ArgumentOutOfRangeException(nameof(amplifier), "Amplifier must be greater than 0.");
         }
 
-        CommandText = $"/effect{(clear ? " clear" : " give")} {PlayerName} {effectName} {duration} {amplifier}";
+        CommandText = $"/effect{(clear ? " clear" : "")} {PlayerName} {effectName} {duration} {amplifier}";
         Refresh();
     }
 
