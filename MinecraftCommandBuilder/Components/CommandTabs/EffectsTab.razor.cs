@@ -10,6 +10,8 @@ public partial class EffectsTab
 
     private int Amplifier { get; set; } = 1;
 
+    private bool ClearEffect { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
@@ -34,6 +36,10 @@ public partial class EffectsTab
         CommandService.SetEffectCommand(
             SelectedEffect.bedrock_name,
             Duration,
-            Amplifier);
+            Amplifier,
+            ClearEffect);
     }
+
+    private void GenerateClearAllEffectsCommand() =>
+        CommandService.ClearAllEffectsCommand();
 }

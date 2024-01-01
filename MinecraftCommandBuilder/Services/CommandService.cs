@@ -52,7 +52,7 @@ public class CommandService : ICommandService
         Refresh();
     }
 
-    public void SetEffectCommand(string effectName, int duration, int amplifier)
+    public void SetEffectCommand(string effectName, int duration, int amplifier, bool clear = false)
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
@@ -74,7 +74,18 @@ public class CommandService : ICommandService
             throw new ArgumentOutOfRangeException(nameof(amplifier), "Amplifier must be greater than 0.");
         }
 
-        CommandText = $"/effect {PlayerName} {effectName} {duration} {amplifier}";
+        CommandText = $"/effect{(clear ? " clear" : " give")} {PlayerName} {effectName} {duration} {amplifier}";
+        Refresh();
+    }
+
+    public void ClearAllEffectsCommand()
+    {
+        if (string.IsNullOrWhiteSpace(PlayerName))
+        {
+            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
+        }
+
+        CommandText = $"/effect clear {PlayerName}";
         Refresh();
     }
 

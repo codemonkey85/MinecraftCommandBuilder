@@ -29,6 +29,10 @@
                      Max="255"
                      @bind-Value="@Amplifier" />
 
+    <MudSwitch Label="Clear Effect"
+               Color="@Color.Primary"
+               @bind-Value="@ClearEffect" />
+
     <MudButton ButtonType="@ButtonType.Submit"
                Variant="@Variant.Filled"
                Color="@Color.Primary"
@@ -37,4 +41,13 @@
                title="Generate command">
         Generate command
     </MudButton>
+
+    <MudButton ButtonType="@ButtonType.Button"
+               Variant="@Variant.Filled"
+               Color="@Color.Default"
+               OnClick="@GenerateClearAllEffectsCommand"
+               title="Clear all effects">
+        Clear all effects
+    </MudButton>
+
 </MudStack>
