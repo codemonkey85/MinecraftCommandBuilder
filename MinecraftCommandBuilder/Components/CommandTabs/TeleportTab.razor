@@ -1,0 +1,43 @@
+﻿<h3>TeleportTab</h3>
+
+<MudStack>
+    <PlayerNameComponent />
+
+    <MudGrid>
+        <MudItem xs="12"
+                 md="4">
+            <MudNumericField T="double?"
+                             Label="X"
+                             Min="-double.MaxValue"
+                             Max="double.MaxValue"
+                             @bind-Value="@X"
+                             Clearable />
+         </MudItem>
+         <MudItem xs="12"
+                  md="4">
+             <MudNumericField T="double?"
+                              Label="Y"
+                              Min="-double.MaxValue"
+                              Max="double.MaxValue"
+                              @bind-Value="@Y"
+                              Clearable />
+         </MudItem>
+         <MudItem xs="12"
+                  md="4">
+             <MudNumericField T="double?"
+                              Label="Z"
+                              Min="-double.MaxValue"
+                              Max="double.MaxValue"
+                              @bind-Value="@Z"
+                              Clearable />
+         </MudItem>
+     </MudGrid>
+     <MudButton ButtonType="@ButtonType.Submit"
+                Variant="@Variant.Filled"
+                Color="@Color.Primary"
+                OnClick="@GenerateCommand"
+                Disabled="@GenerateCommandDisabled"
+                title="Generate command">
+         Generate command
+     </MudButton>
+ </MudStack>

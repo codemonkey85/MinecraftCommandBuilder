@@ -15,4 +15,6 @@ public interface ICommandService
     void SetEnchantCommand(string enchantmentName, int level);
 
     void SetEffectCommand(string effectName, int duration, int amplifier);
+
+    void SetTeleportCommand(double? x, double? y, double? z);
 }

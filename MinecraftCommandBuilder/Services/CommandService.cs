@@ -77,4 +77,15 @@ public class CommandService : ICommandService
         CommandText = $"/effect {PlayerName} {effectName} {duration} {amplifier}";
         Refresh();
     }
+
+    public void SetTeleportCommand(double? x, double? y, double? z)
+    {
+        if (string.IsNullOrWhiteSpace(PlayerName))
+        {
+            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
+        }
+
+        CommandText = $"/tp {PlayerName} {(x is not null ? x : "~")} {(y is not null ? y : "~")} {(z is not null ? z : "~")}";
+        Refresh();
+    }
 }
