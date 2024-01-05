@@ -1,6 +1,6 @@
 # Minecraft Command Builder
 
-A helper to build Minecraft commands.
+A tool to help build Minecraft commands.
 
 Depends on [minecraft-data-csharp](https://github.com/codemonkey85/minecraft-data-csharp).
 
