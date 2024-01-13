@@ -99,4 +99,40 @@ public class CommandService : ICommandService
         CommandText = $"/tp {PlayerName} {(x is not null ? x : "~")} {(y is not null ? y : "~")} {(z is not null ? z : "~")}";
         Refresh();
     }
+
+    public void SetFillCommand(
+        double x1,
+        double y1,
+        double z1,
+        double x2,
+        double y2,
+        double z2,
+        string blockName)
+    {
+        if (string.IsNullOrWhiteSpace(blockName))
+        {
+            throw new ArgumentException("Block name cannot be empty.", nameof(blockName));
+        }
+
+        CommandText = $"/fill {x1} {y1} {z1} {x2} {y2} {z2} {blockName}";
+        Refresh();
+    }
+
+    public void SetFillCommand(
+        string x1,
+        string y1,
+        string z1,
+        string x2,
+        string y2,
+        string z2,
+        string blockName)
+    {
+        if (string.IsNullOrWhiteSpace(blockName))
+        {
+            throw new ArgumentException("Block name cannot be empty.", nameof(blockName));
+        }
+
+        CommandText = $"/fill {x1} {y1} {z1} {x2} {y2} {z2} {blockName}";
+        Refresh();
+    }
 }

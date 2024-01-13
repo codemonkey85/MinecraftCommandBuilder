@@ -1,0 +1,39 @@
+﻿<h3>FillTab</h3>
+
+<MudStack>
+    <PlayerNameComponent />
+
+    <MudAutocomplete T="Block"
+                     Label="Select a block"
+                     @bind-Value="SelectedBlock"
+                     SearchFunc="@Search"
+                     ToStringFunc="@ToString"
+                     Clearable />
+
+     <MudNumericField T="int"
+                      Label="Width"
+                      Min="-int.MaxValue"
+                      Max="int.MaxValue"
+                      @bind-Value="@Width" />
+
+     <MudNumericField T="int"
+                      Label="Height"
+                      Min="-int.MaxValue"
+                      Max="int.MaxValue"
+                      @bind-Value="@Height" />
+
+     <MudNumericField T="int"
+                      Label="Depth"
+                      Min="-int.MaxValue"
+                      Max="int.MaxValue"
+                      @bind-Value="@Depth" />
+
+     <MudButton ButtonType="@ButtonType.Submit"
+                Variant="@Variant.Filled"
+                Color="@Color.Primary"
+                OnClick="@GenerateCommand"
+                Disabled="@GenerateCommandDisabled"
+                title="Generate command">
+         Generate command
+     </MudButton>
+ </MudStack>
