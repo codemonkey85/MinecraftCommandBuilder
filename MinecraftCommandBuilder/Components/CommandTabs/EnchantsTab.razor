@@ -3,20 +3,12 @@
 <MudStack>
     <PlayerNameComponent />
 
-    <MudSelect T="Enchantment"
-               Placeholder="Select an enchantment"
-               Class="mt-3"
-               MultiSelection="@false"
-               SelectedValuesChanged="@OnSelectedValuesChanged"
-               Clearable>
-        @foreach (var enchantment in Enchantments.OrderBy(i => i.displayName))
-        {
-            <MudSelectItem T="Enchantment"
-                           Value="@enchantment">
-                @enchantment.displayName
-            </MudSelectItem>
-        }
-    </MudSelect>
+    <MudAutocomplete T="Enchantment"
+                     Label="Select an enchantment"
+                     @bind-Value="SelectedEnchantment"
+                     SearchFunc="@Search"
+                     ToStringFunc="@ToString"
+                     Clearable />
 
     <MudNumericField T="int"
                      Label="Level"

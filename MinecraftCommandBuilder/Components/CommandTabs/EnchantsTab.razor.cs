@@ -17,8 +17,23 @@ public partial class EnchantsTab
         }
     }
 
-    private void OnSelectedValuesChanged(IEnumerable<Enchantment> values) =>
-        SelectedEnchantment = values?.FirstOrDefault();
+    private async Task<IEnumerable<Enchantment>> Search(string value)
+    {
+        await Task.Yield();
+
+        return string.IsNullOrEmpty(value)
+            ? Enchantments
+            .OrderBy(i => i.displayName)
+            .Take(10)
+
+            : (IEnumerable<Enchantment>)Enchantments
+                .Where(enchantment => enchantment.displayName
+                    .StartsWith(value, StringComparison.InvariantCultureIgnoreCase))
+                .OrderBy(i => i.displayName);
+    }
+
+    private static string ToString(Enchantment? enchantment) =>
+        enchantment?.displayName ?? string.Empty;
 
     private bool GenerateCommandDisabled => SelectedEnchantment is null;
 
