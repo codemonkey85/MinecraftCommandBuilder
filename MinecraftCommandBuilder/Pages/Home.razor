@@ -5,6 +5,10 @@
 </PageTitle>
 
 <MudStack Class="mt-3">
-    <CopyToClipboardComponent CommandText="@CommandService.CommandText" />
+    <MudInput T="string"
+              Label="Command Text"
+              @bind-Value="@CommandService.CommandText"
+              Variant="@Variant.Outlined"
+              ReadOnly />
     <CommandsTabStrip />
 </MudStack>

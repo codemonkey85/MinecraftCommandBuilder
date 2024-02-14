@@ -37,14 +37,14 @@ public partial class GiveItemsTab
 
     private bool GenerateCommandDisabled => SelectedItem is null;
 
-    private void GenerateCommand()
+    private async Task GenerateCommand()
     {
         if (SelectedItem is null)
         {
             return;
         }
 
-        CommandService.SetGiveItemCommand(
+        await CommandService.SetGiveItemCommand(
             SelectedItem.name,
             Count);
     }

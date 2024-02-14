@@ -37,14 +37,14 @@ public partial class EnchantsTab
 
     private bool GenerateCommandDisabled => SelectedEnchantment is null;
 
-    private void GenerateCommand()
+    private async Task GenerateCommand()
     {
         if (SelectedEnchantment is null)
         {
             return;
         }
 
-        CommandService.SetEnchantCommand(
+        await CommandService.SetEnchantCommand(
             SelectedEnchantment.name,
             Level);
     }

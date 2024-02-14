@@ -41,7 +41,7 @@ public partial class FillTab
     private static string ToString(Block? block) =>
         block?.displayName ?? string.Empty;
 
-    private void GenerateCommand()
+    private async Task GenerateCommand()
     {
         if (SelectedBlock is null)
         {
@@ -88,6 +88,6 @@ public partial class FillTab
             z2 = "~";
         }
 
-        CommandService.SetFillCommand(x1, y1, z1, x2, y2, z2, SelectedBlock.name);
+        await CommandService.SetFillCommand(x1, y1, z1, x2, y2, z2, SelectedBlock.name);
     }
 }

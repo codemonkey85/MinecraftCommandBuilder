@@ -26,14 +26,14 @@ public partial class EffectsTab
 
     private bool GenerateCommandDisabled => SelectedEffect is null;
 
-    private void GenerateCommand()
+    private async Task GenerateCommand()
     {
         if (SelectedEffect is null)
         {
             return;
         }
 
-        CommandService.SetEffectCommand(
+        await CommandService.SetEffectCommand(
             SelectedEffect.bedrock_name,
             Duration,
             Amplifier,
@@ -41,5 +41,5 @@ public partial class EffectsTab
     }
 
     private void GenerateClearAllEffectsCommand() =>
-        CommandService.ClearAllEffectsCommand();
+        CommandService.SetClearAllEffectsCommand();
 }
