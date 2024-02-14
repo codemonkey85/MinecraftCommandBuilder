@@ -1,10 +1,6 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-yw2HfxMnlCcF\/WarlmcFES5PN5F+mlGF0cbEuckjcyw=",
-      "url": "Components\/CopyToClipboardComponent.razor.js"
-    },
-    {
       "hash": "sha256-qSa9utJYGKjRCFUXFYv+stCTWCuE7uOD1+NynJ42V9I=",
       "url": "css\/app.css"
     },
@@ -19,6 +15,10 @@
     {
       "hash": "sha256-UIpRbshADXlVpB+ciG5e0vCsb7PaM2bJH1PB2pFVAcQ=",
       "url": "index.html"
+    },
+    {
+      "hash": "sha256-yw2HfxMnlCcF\/WarlmcFES5PN5F+mlGF0cbEuckjcyw=",
+      "url": "js\/app.js"
     },
     {
       "hash": "sha256-2ke5ROyt+T+HcxjVLyEEP3NhYJwkGdBaTyra3WzQ6ls=",
@@ -49,7 +49,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-834Na9y8UeUE84dP5utnQ9B9cHv72FTdRsoNZiy4TkY=",
+      "hash": "sha256-8oBThpfij8V2mffaSzSeQ+fE7U4zGGEC7TTZX3AU35k=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -57,7 +57,7 @@
       "url": "_framework\/dotnet.native.8.0.2.fnc3ed5sjr.js"
     },
     {
-      "hash": "sha256-s0ixLzwkYfLPQMMCYw4V6dIlanxphKLGiVohyky6hUc=",
+      "hash": "sha256-Knyo\/x0948PkP5a4guvZaDVUAPKcWv5O8uQZ1CCKBqs=",
       "url": "_framework\/dotnet.native.wasm"
     },
     {
@@ -129,7 +129,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-yAl+EIGyJejZKXjP5ytsZsdylJhO+mTwDKYSAmjnhSw=",
+      "hash": "sha256-OVmQ5oeEgLBbTgzB6AEwOGblj\/sNRz6kyq9QQ7gsypw=",
       "url": "_framework\/MinecraftCommandBuilder.wasm"
     },
     {
@@ -197,7 +197,7 @@
       "url": "_framework\/System.ObjectModel.wasm"
     },
     {
-      "hash": "sha256-YdQKVWlGUZRLQi4X5xjS58e2VoGPa\/Ok\/vcFCyCeK9k=",
+      "hash": "sha256-iin1nMMeJ4Uzc0DX4LLNsoadodKCTkTK2Ks7\/HMBFaI=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -205,11 +205,11 @@
       "url": "_framework\/System.Private.Uri.wasm"
     },
     {
-      "hash": "sha256-63DOXyW8PnbyF4OWDJ\/NzBtnKgBk8OPxjbcANdnKLGM=",
+      "hash": "sha256-2fNHxcvnXYStlUf+e1IokgsFZFUyJVv1w3Tf2NEhDBQ=",
       "url": "_framework\/System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "hash": "sha256-aSEhIL4MFh+ASsJ1HJ\/WLVYGK\/eddz50YYYvF2TP8oI=",
+      "hash": "sha256-\/gVmT419vc8vt80bPjWEq8L\/SysUakByBJGm6ypwyIo=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -241,5 +241,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "WijgcyZO"
+  "version": "HF8gDDdu"
 };
