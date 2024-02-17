@@ -10,19 +10,21 @@ public interface ICommandService
 
     string CommandText { get; set; }
 
-    Task SetGiveItemCommand(string itemName, int count);
+    Task CopyTextToClipboard(string text);
 
-    Task SetEnchantCommand(string enchantmentName, int level);
+    void SetGiveItemCommand(string itemName, int count);
 
-    Task SetEffectCommand(string effectName, int duration, int amplifier, bool clear = false);
+    void SetEnchantCommand(string enchantmentName, int level);
 
-    Task SetTeleportCommand(double? x, double? y, double? z);
+    void SetEffectCommand(string effectName, int duration, int amplifier, bool clear = false);
 
-    Task SetClearAllEffectsCommand();
+    void SetTeleportCommand(double? x, double? y, double? z);
 
-    Task SetFillCommand(double x1, double y1, double z1, double x2, double y2, double z2, string blockName);
+    void SetClearAllEffectsCommand();
 
-    Task SetFillCommand(string x1, string y1, string z1, string x2, string y2, string z2, string blockName);
+    void SetFillCommand(double x1, double y1, double z1, double x2, double y2, double z2, string blockName);
 
-    Task SetSummonCommand(string entityName);
+    void SetFillCommand(string x1, string y1, string z1, string x2, string y2, string z2, string blockName);
+
+    void SetSummonCommand(string entityName);
 }

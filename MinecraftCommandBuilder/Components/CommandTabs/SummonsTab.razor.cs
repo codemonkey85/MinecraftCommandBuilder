@@ -45,6 +45,7 @@ public partial class SummonsTab
             return;
         }
 
-        await CommandService.SetSummonCommand(SelectedEntity.name);
+        CommandService.SetSummonCommand(SelectedEntity.name);
+        await CommandService.CopyTextToClipboard(CommandService.CommandText);
     }
 }

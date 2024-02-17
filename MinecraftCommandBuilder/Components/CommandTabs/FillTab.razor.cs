@@ -88,6 +88,7 @@ public partial class FillTab
             z2 = "~";
         }
 
-        await CommandService.SetFillCommand(x1, y1, z1, x2, y2, z2, SelectedBlock.name);
+        CommandService.SetFillCommand(x1, y1, z1, x2, y2, z2, SelectedBlock.name);
+        await CommandService.CopyTextToClipboard(CommandService.CommandText);
     }
 }

@@ -44,8 +44,10 @@ public partial class GiveItemsTab
             return;
         }
 
-        await CommandService.SetGiveItemCommand(
+        CommandService.SetGiveItemCommand(
             SelectedItem.name,
             Count);
+
+        await CommandService.CopyTextToClipboard(CommandService.CommandText);
     }
 }

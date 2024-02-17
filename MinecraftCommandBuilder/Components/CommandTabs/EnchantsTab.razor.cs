@@ -44,8 +44,10 @@ public partial class EnchantsTab
             return;
         }
 
-        await CommandService.SetEnchantCommand(
+        CommandService.SetEnchantCommand(
             SelectedEnchantment.name,
             Level);
+
+        await CommandService.CopyTextToClipboard(CommandService.CommandText);
     }
 }

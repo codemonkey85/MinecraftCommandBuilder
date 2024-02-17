@@ -12,7 +12,7 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
 
     private IJSObjectReference? module;
 
-    private async Task CopyTextToClipboard(string text)
+    public async Task CopyTextToClipboard(string text)
     {
         if (!OperatingSystem.IsBrowser())
         {
@@ -23,7 +23,7 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         await module.InvokeVoidAsync(nameof(CopyTextToClipboard), text);
     }
 
-    public async Task SetGiveItemCommand(string itemName, int count)
+    public void SetGiveItemCommand(string itemName, int count)
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
@@ -41,12 +41,10 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         }
 
         CommandText = $"/give {PlayerName} {itemName} {count}";
-
-        await CopyTextToClipboard(CommandText);
         Refresh();
     }
 
-    public async Task SetEnchantCommand(string enchantmentName, int level)
+    public void SetEnchantCommand(string enchantmentName, int level)
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
@@ -64,11 +62,10 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         }
 
         CommandText = $"/enchant {PlayerName} {enchantmentName} {level}";
-        await CopyTextToClipboard(CommandText);
         Refresh();
     }
 
-    public async Task SetEffectCommand(string effectName, int duration, int amplifier, bool clear = false)
+    public void SetEffectCommand(string effectName, int duration, int amplifier, bool clear = false)
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
@@ -91,11 +88,10 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         }
 
         CommandText = $"/effect{(clear ? " clear" : "")} {PlayerName} {effectName} {duration} {amplifier}";
-        await CopyTextToClipboard(CommandText);
         Refresh();
     }
 
-    public async Task SetClearAllEffectsCommand()
+    public void SetClearAllEffectsCommand()
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
@@ -103,11 +99,10 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         }
 
         CommandText = $"/effect clear {PlayerName}";
-        await CopyTextToClipboard(CommandText);
         Refresh();
     }
 
-    public async Task SetTeleportCommand(double? x, double? y, double? z)
+    public void SetTeleportCommand(double? x, double? y, double? z)
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
@@ -115,11 +110,10 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         }
 
         CommandText = $"/tp {PlayerName} {(x is not null ? x : "~")} {(y is not null ? y : "~")} {(z is not null ? z : "~")}";
-        await CopyTextToClipboard(CommandText);
         Refresh();
     }
 
-    public async Task SetFillCommand(
+    public void SetFillCommand(
         double x1,
         double y1,
         double z1,
@@ -134,11 +128,10 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         }
 
         CommandText = $"/fill {x1} {y1} {z1} {x2} {y2} {z2} {blockName}";
-        await CopyTextToClipboard(CommandText);
         Refresh();
     }
 
-    public async Task SetFillCommand(
+    public void SetFillCommand(
         string x1,
         string y1,
         string z1,
@@ -153,11 +146,10 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         }
 
         CommandText = $"/fill {x1} {y1} {z1} {x2} {y2} {z2} {blockName}";
-        await CopyTextToClipboard(CommandText);
         Refresh();
     }
 
-    public async Task SetSummonCommand(string entityName)
+    public void SetSummonCommand(string entityName)
     {
         if (string.IsNullOrWhiteSpace(entityName))
         {
@@ -165,7 +157,6 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         }
 
         CommandText = $"/summon {entityName}";
-        await CopyTextToClipboard(CommandText);
         Refresh();
     }
 }

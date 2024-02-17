@@ -8,6 +8,10 @@ public partial class TeleportTab
 
     private double? Z { get; set; }
 
-    private async Task GenerateCommand() =>
-        await CommandService.SetTeleportCommand(X, Y, Z);
+    private async Task GenerateCommand()
+    {
+        CommandService.SetTeleportCommand(X, Y, Z);
+        await CommandService.CopyTextToClipboard(CommandService.CommandText);
+    }
+
 }

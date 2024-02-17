@@ -33,11 +33,13 @@ public partial class EffectsTab
             return;
         }
 
-        await CommandService.SetEffectCommand(
+        CommandService.SetEffectCommand(
             SelectedEffect.bedrock_name,
             Duration,
             Amplifier,
             ClearEffect);
+
+        await CommandService.CopyTextToClipboard(CommandService.CommandText);
     }
 
     private void GenerateClearAllEffectsCommand() =>
