@@ -156,4 +156,16 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         await CopyTextToClipboard(CommandText);
         Refresh();
     }
+
+    public async Task SetSummonCommand(string entityName)
+    {
+        if (string.IsNullOrWhiteSpace(entityName))
+        {
+            throw new ArgumentException("Entity name cannot be empty.", nameof(entityName));
+        }
+
+        CommandText = $"/summon {entityName}";
+        await CopyTextToClipboard(CommandText);
+        Refresh();
+    }
 }

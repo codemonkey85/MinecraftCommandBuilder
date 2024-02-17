@@ -1,0 +1,19 @@
+﻿<h3>Summons</h3>
+
+<MudStack>
+    <MudAutocomplete T="Entity"
+                     Label="Select an entity"
+                     @bind-Value="SelectedEntity"
+                     SearchFunc="@Search"
+                     ToStringFunc="@ToString"
+                     Clearable />
+
+    <MudButton ButtonType="@ButtonType.Submit"
+               Variant="@Variant.Filled"
+               Color="@Color.Primary"
+               OnClick="@GenerateCommand"
+               Disabled="@GenerateCommandDisabled"
+               title="Generate command">
+        Generate command
+    </MudButton>
+</MudStack>

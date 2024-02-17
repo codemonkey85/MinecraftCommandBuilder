@@ -23,4 +23,6 @@ public interface ICommandService
     Task SetFillCommand(double x1, double y1, double z1, double x2, double y2, double z2, string blockName);
 
     Task SetFillCommand(string x1, string y1, string z1, string x2, string y2, string z2, string blockName);
+
+    Task SetSummonCommand(string entityName);
 }
