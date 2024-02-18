@@ -77,17 +77,17 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
             throw new ArgumentException("Effect name cannot be empty.", nameof(effectName));
         }
 
-        if (duration < 1)
+        if (!clear && duration < 1)
         {
             throw new ArgumentOutOfRangeException(nameof(duration), "Duration must be greater than 0.");
         }
 
-        if (amplifier < 1)
+        if (!clear && amplifier < 1)
         {
             throw new ArgumentOutOfRangeException(nameof(amplifier), "Amplifier must be greater than 0.");
         }
 
-        CommandText = $"/effect{(clear ? " clear" : "")} {PlayerName} {effectName} {duration} {amplifier}";
+        CommandText = $"/effect {PlayerName} {effectName}{(clear ? "" : $" duration")} {(clear ? "" : $" amplifier")}";
         Refresh();
     }
 
