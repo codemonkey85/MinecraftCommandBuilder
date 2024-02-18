@@ -87,7 +87,7 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
             throw new ArgumentOutOfRangeException(nameof(amplifier), "Amplifier must be greater than 0.");
         }
 
-        CommandText = $"/effect {PlayerName} {effectName}{(clear ? "" : $" duration")} {(clear ? "" : $" amplifier")}";
+        CommandText = $"/effect {PlayerName} {effectName}{(clear ? "" : $" {duration}")} {(clear ? "" : $" {amplifier}")}";
         Refresh();
     }
 
