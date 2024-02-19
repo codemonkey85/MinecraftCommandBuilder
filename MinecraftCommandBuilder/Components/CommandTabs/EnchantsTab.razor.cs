@@ -8,7 +8,7 @@ public partial class EnchantsTab
 
     private int Level { get; set; } = 1;
 
-    private List<string> BestPickaxeEnchantmentNames =
+    private readonly List<string> BestPickaxeEnchantmentNames =
     [
         "unbreaking",
         "mending",
@@ -16,9 +16,9 @@ public partial class EnchantsTab
         "fortune",
     ];
 
-    private List<Enchantment> BestPickaxeEnchantments = [];
+    private readonly List<Enchantment> BestPickaxeEnchantments = [];
 
-    private List<string> BestSwordEnchantmentNames =
+    private readonly List<string> BestSwordEnchantmentNames =
     [
         "unbreaking",
         "mending",
@@ -27,9 +27,9 @@ public partial class EnchantsTab
         "fire_aspect",
     ];
 
-    private List<Enchantment> BestSwordEnchantments = [];
+    private readonly List<Enchantment> BestSwordEnchantments = [];
 
-    private List<string> BestAxeEnchantmentNames =
+    private readonly List<string> BestAxeEnchantmentNames =
     [
         "unbreaking",
         "mending",
@@ -38,9 +38,9 @@ public partial class EnchantsTab
         "silk_touch",
     ];
 
-    private List<Enchantment> BestAxeEnchantments = [];
+    private readonly List<Enchantment> BestAxeEnchantments = [];
 
-    private List<string> BestShovelEnchantmentNames =
+    private readonly List<string> BestShovelEnchantmentNames =
     [
         "unbreaking",
         "mending",
@@ -48,9 +48,9 @@ public partial class EnchantsTab
         "silk_touch",
     ];
 
-    private List<Enchantment> BestShovelEnchantments = [];
+    private readonly List<Enchantment> BestShovelEnchantments = [];
 
-    private List<string> BestHoeEnchantmentNames =
+    private readonly List<string> BestHoeEnchantmentNames =
     [
         "unbreaking",
         "mending",
@@ -58,7 +58,7 @@ public partial class EnchantsTab
         "fortune",
     ];
 
-    private List<Enchantment> BestHoeEnchantments = [];
+    private readonly List<Enchantment> BestHoeEnchantments = [];
 
     protected override async Task OnInitializedAsync()
     {

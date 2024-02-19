@@ -21,19 +21,29 @@
     @RenderBestEnchants("Shovel", BestShovelEnchantments)
     @RenderBestEnchants("Hoe", BestHoeEnchantments)
 
+    @RenderBestEnchants("Helmet", [])
+    @RenderBestEnchants("Body Armor", [])
+    @RenderBestEnchants("Leggings", [])
+    @RenderBestEnchants("Boots", [])
+
+    @RenderBestEnchants("Elytra", [])
+    @RenderBestEnchants("Shield", [])
+    @RenderBestEnchants("Shears", [])
+    @RenderBestEnchants("Flint and Steel", [])
+
+    @RenderBestEnchants("Turtle Shell", [])
+
 </MudStack>
 
 @code {
-    private RenderFragment RenderBestEnchants(string title, List<Enchantment> enchantments)
+    private RenderFragment? RenderBestEnchants(string title, List<Enchantment> enchantments)
     {
-        return
+        return enchantments is not { Count: > 0 } ? null :
     @<MudStack Class="my-3">
         <h5>
             @title
         </h5>
-        @if(enchantments is { Count: > 0 })
-    {
-    foreach(var enchantment in enchantments)
+        @foreach(var enchantment in enchantments)
     {
     var command = GenerateBestEnchantCommand(enchantment);
         <MudStack Row="@true">
@@ -41,7 +51,6 @@
                 Title="Copy" />
             <MudInput T="string" Label="Command Text" Value="@command" Variant="@Variant.Outlined" ReadOnly />
         </MudStack>
-    }
     }
     </MudStack>;
     }
