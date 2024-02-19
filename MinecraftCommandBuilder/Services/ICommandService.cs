@@ -14,6 +14,8 @@ public interface ICommandService
 
     void SetGiveItemCommand(string itemName, int count);
 
+    string GenerateEnchantCommand(string enchantmentName, int level);
+
     void SetEnchantCommand(string enchantmentName, int level);
 
     void SetEffectCommand(string effectName, int duration, int amplifier, bool clear = false);

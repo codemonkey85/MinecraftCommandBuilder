@@ -44,7 +44,7 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         Refresh();
     }
 
-    public void SetEnchantCommand(string enchantmentName, int level)
+    public string GenerateEnchantCommand(string enchantmentName, int level)
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
@@ -61,7 +61,12 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
             throw new ArgumentOutOfRangeException(nameof(level), "Level must be greater than 0.");
         }
 
-        CommandText = $"/enchant {PlayerName} {enchantmentName} {level}";
+        return $"/enchant {PlayerName} {enchantmentName} {level}";
+    }
+
+    public void SetEnchantCommand(string enchantmentName, int level)
+    {
+        CommandText = GenerateEnchantCommand(enchantmentName, level);
         Refresh();
     }
 
