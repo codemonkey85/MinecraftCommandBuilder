@@ -48,13 +48,8 @@ public partial class FillTab
             return;
         }
 
-        var x1 = "";
-        var y1 = "";
-        var z1 = "";
-        var x2 = "";
-        var y2 = "";
-        var z2 = "";
-
+        string? x1;
+        string? x2;
         if (Width > 0)
         {
             x1 = "~";
@@ -66,6 +61,8 @@ public partial class FillTab
             x2 = "~";
         }
 
+        string? y1;
+        string? y2;
         if (Height > 0)
         {
             y1 = "~";
@@ -77,6 +74,8 @@ public partial class FillTab
             y2 = "~";
         }
 
+        string? z1;
+        string? z2;
         if (Depth > 0)
         {
             z1 = "~";

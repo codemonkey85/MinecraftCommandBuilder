@@ -13,5 +13,4 @@ public partial class TeleportTab
         CommandService.SetTeleportCommand(X, Y, Z);
         await CommandService.CopyTextToClipboard(CommandService.CommandText);
     }
-
 }

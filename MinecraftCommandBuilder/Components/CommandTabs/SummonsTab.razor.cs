@@ -15,9 +15,6 @@ public partial class SummonsTab
         }
     }
 
-    private void OnSelectedValuesChanged(IEnumerable<Entity> values) =>
-        SelectedEntity = values?.FirstOrDefault();
-
     private bool GenerateCommandDisabled => SelectedEntity is null;
 
     private async Task<IEnumerable<Entity>> Search(string value)

@@ -6,6 +6,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 services
     .AddMudServices()
+    // Used by MinecraftDataCSharp to read data from the Minecraft data files
     .AddScoped<IFileApi, WebFileApi>()
     .AddScoped<BlockRepository>()
     .AddScoped<EffectRepository>()
