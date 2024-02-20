@@ -15,6 +15,7 @@ services
     .AddScoped<EntityRepository>()
     .AddScoped<EnchantmentRepository>()
     .AddScoped<ICommandService, CommandService>()
+    // Used by WebFileApi
     .AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 await builder.Build().RunAsync();
