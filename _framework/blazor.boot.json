@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MinecraftCommandBuilder",
   "resources": {
-    "hash": "sha256-9zD8+p3pvZPprcqYCc/t130CFRIrWRWpVzpZqlUMmSY=",
+    "hash": "sha256-kgInz43qtl76UScbV8i9KUuelJcRo7VdmPKzCOSEPQQ=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.fnc3ed5sjr.js": "sha256-MS1BleyZ6qEUIQ/AZGuKvvrDlI16truq1Zux4J7In2Y="
     },
@@ -26,17 +26,17 @@
       "Microsoft.Extensions.Configuration.wasm": "sha256-jYqHUZ07UYWc8POk7xhas6xQYH7t1qoTcylqoDqncJk=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.wasm": "sha256-WgJ30FUAYRx98vFvZQAI//lMFilUzRs6+2dyXgr4zaQ=",
       "Microsoft.Extensions.DependencyInjection.wasm": "sha256-gg8xZqJsBBrrNEyUGzYqhL3sqkuZ4AHAvdTdL9nZ0S0=",
-      "Microsoft.Extensions.Localization.Abstractions.wasm": "sha256-6HDTvT7GimjFB26DnLvyokz4CGtYcRUadbpC30nHZvU=",
-      "Microsoft.Extensions.Localization.wasm": "sha256-VgQbNHoexjaWjPIuouCCesdZ20cbuRVYdM1ge/TyGxg=",
+      "Microsoft.Extensions.Localization.Abstractions.wasm": "sha256-ykO99Y3I3rWWxjkFfWf43EUv1GuiYXEqv35skvtK+vE=",
+      "Microsoft.Extensions.Localization.wasm": "sha256-OuYqcSIM9nsF9ryMlsbh/Sq0s8s3QSL/m3oarbQQScw=",
       "Microsoft.Extensions.Logging.Abstractions.wasm": "sha256-N87BWj3+Vi2Oy1KCBKbrB2Xrtd9mF31GDIbLIlUzErA=",
       "Microsoft.Extensions.Logging.wasm": "sha256-8BH+kQfjYuZWxprOICXJ4+tU0OdJOYDKN7G0S3zYYHI=",
       "Microsoft.Extensions.Options.wasm": "sha256-gE1BXyLWVUnQwUrxnkNGo22RSc/PIEaAypz1VWboWP4=",
       "Microsoft.Extensions.Primitives.wasm": "sha256-Ms2HR5Gpug/0uRAzdk4SUNT76Ml3CjFv9Jo+dUIMGac=",
       "Microsoft.JSInterop.wasm": "sha256-5LzWPaF07OS+xrK2mnetBWvna6Yg1QrnaVssBV++Yc0=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-2qBJkLnOCr4py2S0peps0cFo0z3Ew9OVwGYodtvAVkk=",
-      "MinecraftCommandBuilder.wasm": "sha256-OxxKhkAMjXi9aO495No2+imdKYS35LbYiPHjE0t4S4s=",
+      "MinecraftCommandBuilder.wasm": "sha256-4GX+Q8I0KHHL/puF2sSiaL8+hAXUmZylMM54Fjp/M2k=",
       "MinecraftDataCSharp.wasm": "sha256-ogr7zb4TXJ1LFxBvQ1NCiziSdd3H9GAumgpAvtovZOs=",
-      "MudBlazor.wasm": "sha256-SifTmJdDytCpbWCX40B9lNUPaEtW0B6ENUMD+c3j8j4=",
+      "MudBlazor.wasm": "sha256-R5nl8z+plIL9WgTu0LlNL2EFk+Ewn607Z4VDGOA69X0=",
       "System.Collections.Concurrent.wasm": "sha256-YG+4yrtjXDKm0RjFGh30ipg1EfbgH95+d3M/5w5PnO0=",
       "System.Collections.wasm": "sha256-sUQS1EE1M3GGNZ6khxVvOK76vT45nuuwDzcCIwM4xIs=",
       "System.ComponentModel.Annotations.wasm": "sha256-q/rDyE85w2i6MngCY9GSwnVyjMYEe0/ZcnYleWzJEH4=",
