@@ -192,6 +192,11 @@ public partial class EnchantsTab
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
+        await InitializeEnchantments();
+    }
+
+    private async Task InitializeEnchantments()
+    {
         if (Enchantments is [])
         {
             Enchantments = await EnchantmentRepository.GetAllEnchantments() ?? [];
@@ -339,11 +344,6 @@ public partial class EnchantsTab
             {
                 BestTurtleShellEnchantments.Add(Enchantments.First(e => e.name == eName));
             }
-        }
-
-        foreach (var enchantment in BestPickaxeEnchantments.OrderBy(e => e.name))
-        {
-            Console.WriteLine(enchantment.name);
         }
     }
 
