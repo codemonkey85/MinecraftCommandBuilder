@@ -3,13 +3,24 @@
 <MudStack>
     <PlayerNameComponent />
 
-    <MudAutocomplete T="Enchantment" Label="Select an enchantment" @bind-Value="SelectedEnchantment"
-        SearchFunc="@Search" ToStringFunc="@ToString" Clearable />
+    <MudAutocomplete T="Enchantment"
+                     Label="Select an enchantment"
+                     @bind-Value="SelectedEnchantment"
+                     SearchFunc="@Search"
+                     ToStringFunc="@ToString"
+                     Clearable />
 
-    <MudNumericField T="int" Label="Level" Min="1" Max="@(SelectedEnchantment?.maxLevel ?? 1)" @bind-Value="@Level" />
+    <MudNumericField T="int"
+                     Label="Level"
+                     Min="1"
+                     Max="@(SelectedEnchantment?.maxLevel ?? 1)"
+                     @bind-Value="@Level" />
 
-    <MudButton ButtonType="@ButtonType.Submit" Variant="@Variant.Filled" Color="@Color.Primary"
-        OnClick="@GenerateCommand" Disabled="@GenerateCommandDisabled" title="Generate command">
+    <MudButton ButtonType="@ButtonType.Submit"
+               Variant="@Variant.Filled"
+               Color="@Color.Primary"
+               OnClick="@GenerateCommand"
+               Disabled="@GenerateCommandDisabled" title="Generate command">
         Generate command
     </MudButton>
 
@@ -53,9 +64,14 @@
     {
     var command = GenerateBestEnchantCommand(enchantment);
         <MudStack Row="@true">
-            <MudIconButton Icon="@Icons.Material.Filled.ContentCopy" OnClick="@(async _ => await CopyCommand(command))"
-                Title="Copy" />
-            <MudInput T="string" Label="Command Text" Value="@command" Variant="@Variant.Outlined" ReadOnly />
+            <MudIconButton Icon="@Icons.Material.Filled.ContentCopy"
+                           OnClick="@(async _ => await CopyCommand(command))"
+                           Title="Copy" />
+            <MudInput T="string"
+                      Label="Command Text"
+                      Value="@command"
+                      Variant="@Variant.Outlined"
+                      ReadOnly />
         </MudStack>
     }
     </MudStack>;
