@@ -24,32 +24,33 @@
         Generate command
     </MudButton>
 
-    <h4>My Favorite Enchantments</h4>
+    <MudStack>
+        <h4>My Favorite Enchantments</h4>
 
-    @RenderBestEnchants("Pickaxe", BestPickaxeEnchantments)
-    @RenderBestEnchants("Sword", BestSwordEnchantments)
-    @RenderBestEnchants("Axe", BestAxeEnchantments)
-    @RenderBestEnchants("Shovel", BestShovelEnchantments)
-    @RenderBestEnchants("Hoe", BestHoeEnchantments)
+        @RenderBestEnchants("Pickaxe", BestPickaxeEnchantments)
+        @RenderBestEnchants("Sword", BestSwordEnchantments)
+        @RenderBestEnchants("Axe", BestAxeEnchantments)
+        @RenderBestEnchants("Shovel", BestShovelEnchantments)
+        @RenderBestEnchants("Hoe", BestHoeEnchantments)
 
-    @RenderBestEnchants("Bow", [])
-    @RenderBestEnchants("Crossbow", [])
-    @RenderBestEnchants("Trident", [])
+        @RenderBestEnchants("Bow", BestBowEnchantments)
+        @RenderBestEnchants("Crossbow", BestCrossbowEnchantments)
+        @RenderBestEnchants("Trident", BestTridentEnchantments)
 
-    @RenderBestEnchants("Helmet", [])
-    @RenderBestEnchants("Body Armor", [])
-    @RenderBestEnchants("Leggings", [])
-    @RenderBestEnchants("Boots", [])
+        @RenderBestEnchants("Helmet", BestHelmetEnchantments)
+        @RenderBestEnchants("Body Armor", BestBodyArmorEnchantments)
+        @RenderBestEnchants("Leggings", BestLeggingsEnchantments)
+        @RenderBestEnchants("Boots", BestBootsEnchantments)
 
-    @RenderBestEnchants("Elytra", [])
-    @RenderBestEnchants("Shield", [])
+        @RenderBestEnchants("Elytra", BestElytraEnchantments)
+        @RenderBestEnchants("Shield", BestShieldEnchantments)
 
-    @RenderBestEnchants("Shears", [])
-    @RenderBestEnchants("Flint and Steel", [])
-    @RenderBestEnchants("Brush", [])
+        @RenderBestEnchants("Shears", BestShearsEnchantments)
+        @RenderBestEnchants("Flint and Steel", BestFlintAndSteelEnchantments)
+        @RenderBestEnchants("Brush", BestBrushEnchantments)
 
-    @RenderBestEnchants("Turtle Shell", [])
-
+        @RenderBestEnchants("Turtle Shell", BestTurtleShellEnchantments)
+    </MudStack>
 </MudStack>
 
 @code {
