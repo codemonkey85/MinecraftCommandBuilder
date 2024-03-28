@@ -44,6 +44,23 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         Refresh();
     }
 
+    public void SetGiveEnchantedItemCommand(string itemName, List<EnchantmentModel> enchantments)
+    {
+        var enchantmentsString = string.Empty;
+        if (enchantments is { Count: > 0 })
+        {
+            var sbEnchantments = new StringBuilder();
+            foreach (var enchantment in enchantments)
+            {
+                sbEnchantments.Append($"{{id:{enchantment.Name},lvl:{enchantment.Level}}}");
+            }
+            enchantmentsString = $"{{Enchantments:[{sbEnchantments}]}}";
+        }
+
+        CommandText = $"/give {PlayerName} {itemName}{enchantmentsString}";
+        Refresh();
+    }
+
     public string GenerateEnchantCommand(string enchantmentName, int level)
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
