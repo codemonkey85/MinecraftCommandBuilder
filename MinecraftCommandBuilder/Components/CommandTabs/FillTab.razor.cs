@@ -34,7 +34,7 @@ public partial class FillTab
 
             : (IEnumerable<Block>)Blocks
                 .Where(block => block.displayName
-                    .StartsWith(value, StringComparison.InvariantCultureIgnoreCase))
+                    .Contains(value, StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(b => b.displayName);
     }
 
