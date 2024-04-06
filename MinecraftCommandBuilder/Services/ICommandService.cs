@@ -1,4 +1,6 @@
-﻿namespace MinecraftCommandBuilder.Services;
+﻿using static MinecraftCommandBuilder.Components.CommandTabs.GameModeTab;
+
+namespace MinecraftCommandBuilder.Services;
 
 public interface ICommandService
 {
@@ -31,4 +33,6 @@ public interface ICommandService
     void SetFillCommand(string x1, string y1, string z1, string x2, string y2, string z2, string blockName);
 
     void SetSummonCommand(string entityName);
+
+    void SetSetGameModeCommand(GameMode gameMode);
 }

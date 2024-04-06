@@ -1,4 +1,6 @@
-﻿namespace MinecraftCommandBuilder.Services;
+﻿using static MinecraftCommandBuilder.Components.CommandTabs.GameModeTab;
+
+namespace MinecraftCommandBuilder.Services;
 
 public class CommandService(IJSRuntime JSRuntime) : ICommandService
 {
@@ -179,6 +181,17 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         }
 
         CommandText = $"/summon {entityName}";
+        Refresh();
+    }
+
+    public void SetSetGameModeCommand(GameMode gameMode)
+    {
+        if (string.IsNullOrWhiteSpace(PlayerName))
+        {
+            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
+        }
+
+        CommandText = $"/gamemode {gameMode} {PlayerName}";
         Refresh();
     }
 }
