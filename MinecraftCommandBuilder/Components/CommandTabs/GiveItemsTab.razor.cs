@@ -28,7 +28,7 @@ public partial class GiveItemsTab
 
             : (IEnumerable<Item>)Items
                 .Where(item => item.displayName
-                    .StartsWith(value, StringComparison.InvariantCultureIgnoreCase))
+                    .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(i => i.displayName);
     }
 

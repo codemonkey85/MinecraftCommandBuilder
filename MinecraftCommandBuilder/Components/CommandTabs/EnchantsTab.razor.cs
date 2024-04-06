@@ -363,7 +363,7 @@ public partial class EnchantsTab
 
             : (IEnumerable<Enchantment>)Enchantments
                 .Where(enchantment => enchantment.displayName
-                    .StartsWith(value, StringComparison.InvariantCultureIgnoreCase))
+                    .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(i => i.displayName);
     }
 

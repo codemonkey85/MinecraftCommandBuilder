@@ -28,7 +28,7 @@ public partial class SummonsTab
 
             : (IEnumerable<Entity>)Entities
                 .Where(entity => entity.displayName
-                    .StartsWith(value, StringComparison.InvariantCultureIgnoreCase))
+                    .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(i => i.displayName);
     }
 
