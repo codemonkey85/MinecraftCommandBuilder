@@ -55,27 +55,35 @@
 </MudStack>
 
 @code {
-    private RenderFragment? RenderBestEnchants(string title, List<Enchantment> enchantments)
+    private RenderFragment? RenderBestEnchants(string itemName, List<Enchantment> enchantments)
     {
-        return enchantments is not { Count: > 0 } ? null :
+        if (enchantments is not { Count: > 0 })
+        {
+            return null;
+        }
+
+        var item = GetItem(itemName);
+
+        if (item is null)
+        {
+            return null;
+        }
+
+        var command = GenerateGiveEnchantedItemCommand(itemName, enchantments);
+
+        return
     @<MudStack Class="my-3">
         <h5>
-            @title
+            @itemName
         </h5>
-        @foreach(var enchantment in enchantments)
-    {
-    var command = GenerateBestEnchantCommand(enchantment);
-        <MudStack Row="@true">
-            <MudIconButton Icon="@Icons.Material.Filled.ContentCopy"
-                           OnClick="@(async _ => await CopyCommand(command))"
-                           Title="Copy" />
-            <MudInput T="string"
-                      Label="Command Text"
-                      Value="@command"
-                      Variant="@Variant.Outlined"
-                      ReadOnly />
-        </MudStack>
-    }
+        <MudInput T="string"
+                  Label="Command Text"
+                  Value="@command"
+                  Variant="@Variant.Outlined"
+                  ReadOnly
+                  Adornment="Adornment.Start"
+                  AdornmentIcon="@Icons.Material.Filled.ContentCopy"
+                  OnAdornmentClick="@(async _ => await CopyCommand(command))" />
     </MudStack>;
     }
 }

@@ -4,6 +4,8 @@ public partial class EnchantsTab
 {
     private List<Enchantment> Enchantments { get; set; } = [];
 
+    private List<Item> Items { get; set; } = [];
+
     private Enchantment? SelectedEnchantment { get; set; }
 
     private int Level { get; set; } = 1;
@@ -193,6 +195,10 @@ public partial class EnchantsTab
     {
         await base.OnInitializedAsync();
         await InitializeEnchantments();
+        if (Items is [])
+        {
+            Items = await ItemRepository.GetAllItems() ?? [];
+        }
     }
 
     private async Task InitializeEnchantments()
@@ -366,6 +372,27 @@ public partial class EnchantsTab
                     .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(i => i.displayName);
     }
+
+    private async Task<Item?> GetItem(string itemName)
+    {
+        await Task.Yield();
+
+        return string.IsNullOrEmpty(itemName)
+            ? null
+            : Items
+                .FirstOrDefault(item => item.displayName
+                .Equals(itemName.Trim(), StringComparison.InvariantCultureIgnoreCase));
+    }
+
+    private string GenerateGiveEnchantedItemCommand(string itemName, List<Enchantment> enchantments) =>
+        CommandService.GenerateGiveEnchantedItemCommand(
+            itemName,
+            enchantments
+                .Select(e => new EnchantmentModel
+                {
+                    Name = e.name,
+                    Level = e.maxLevel,
+                }).ToList());
 
     private static string ToString(Enchantment? enchantment) =>
         enchantment?.displayName ?? string.Empty;

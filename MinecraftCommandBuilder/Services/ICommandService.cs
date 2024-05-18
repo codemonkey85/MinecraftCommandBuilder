@@ -16,7 +16,7 @@ public interface ICommandService
 
     void SetGiveItemCommand(string itemName, int count);
 
-    void SetGiveEnchantedItemCommand(string itemName, List<EnchantmentModel> enchantments);
+    string GenerateGiveEnchantedItemCommand(string itemName, List<EnchantmentModel> enchantments);
 
     string GenerateEnchantCommand(string enchantmentName, int level);
 

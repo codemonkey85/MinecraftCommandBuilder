@@ -46,7 +46,7 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         Refresh();
     }
 
-    public void SetGiveEnchantedItemCommand(string itemName, List<EnchantmentModel> enchantments)
+    public string GenerateGiveEnchantedItemCommand(string itemName, List<EnchantmentModel> enchantments)
     {
         var enchantmentsString = string.Empty;
         if (enchantments is { Count: > 0 })
@@ -59,8 +59,7 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
             enchantmentsString = $"{{Enchantments:[{sbEnchantments}]}}";
         }
 
-        CommandText = $"/give {PlayerName} {itemName}{enchantmentsString}";
-        Refresh();
+        return $"/give {PlayerName} {itemName}{enchantmentsString}";
     }
 
     public string GenerateEnchantCommand(string enchantmentName, int level)
