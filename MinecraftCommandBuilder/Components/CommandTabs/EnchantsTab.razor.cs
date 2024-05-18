@@ -373,10 +373,8 @@ public partial class EnchantsTab
                 .OrderBy(i => i.displayName);
     }
 
-    private async Task<Item?> GetItem(string itemName)
+    private Item? GetItem(string itemName)
     {
-        await Task.Yield();
-
         return string.IsNullOrEmpty(itemName)
             ? null
             : Items

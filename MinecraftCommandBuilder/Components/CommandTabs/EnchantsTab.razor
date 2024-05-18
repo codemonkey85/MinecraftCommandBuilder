@@ -66,10 +66,16 @@
 
         if (item is null)
         {
-            return null;
+            itemName = $"Netherite {itemName}";
+            item = GetItem(itemName);
+
+            if (item is null)
+            {
+                return null;
+            }
         }
 
-        var command = GenerateGiveEnchantedItemCommand(itemName, enchantments);
+        var command = GenerateGiveEnchantedItemCommand(item.name, enchantments);
 
         return
     @<MudStack Class="my-3">

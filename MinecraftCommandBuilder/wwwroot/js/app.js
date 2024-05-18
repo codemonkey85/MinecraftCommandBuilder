@@ -10,7 +10,6 @@ export function CopyTextToClipboard(textToCopy) {
     });
     navigator.clipboard
       .write([text])
-      .then(alert("Copied to clipboard!"))
       .catch((error) => {
         alert(error);
       });
@@ -21,7 +20,6 @@ export function CopyTextToClipboard(textToCopy) {
     //   Clipboard API being used async in a Promise.
     navigator.clipboard
       .writeText(textToCopy)
-      .then(alert("Copied to clipboard!"))
       .catch((error) => {
         alert(error);
       });

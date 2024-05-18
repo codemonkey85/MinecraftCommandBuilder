@@ -52,11 +52,15 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
         if (enchantments is { Count: > 0 })
         {
             var sbEnchantments = new StringBuilder();
+            sbEnchantments.Append('{');
             foreach (var enchantment in enchantments)
             {
-                sbEnchantments.Append($"{{id:{enchantment.Name},lvl:{enchantment.Level}}}");
+                sbEnchantments.Append($"{enchantment.Name}:{enchantment.Level},");
+
             }
-            enchantmentsString = $"{{Enchantments:[{sbEnchantments}]}}";
+            sbEnchantments.Length--;
+            sbEnchantments.Append('}');
+            enchantmentsString = $"[minecraft:enchantments={sbEnchantments}]";
         }
 
         return $"/give {PlayerName} {itemName}{enchantmentsString}";
