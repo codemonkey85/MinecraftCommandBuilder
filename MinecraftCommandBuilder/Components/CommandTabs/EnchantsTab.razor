@@ -28,6 +28,12 @@
     <MudStack>
         <h4>My Favorite Enchantments</h4>
 
+        <MudNumericField T="int"
+                         Label="Level"
+                         Min="1"
+                         Max="255"
+                         @bind-Value="@BestEnchantsLevel" />
+
         @RenderBestEnchants("Pickaxe", BestPickaxeEnchantments)
         @RenderBestEnchants("Sword", BestSwordEnchantments)
         @RenderBestEnchants("Axe", BestAxeEnchantments)
@@ -39,7 +45,7 @@
         @RenderBestEnchants("Trident", BestTridentEnchantments)
 
         @RenderBestEnchants("Helmet", BestHelmetEnchantments)
-        @RenderBestEnchants("Body Armor", BestBodyArmorEnchantments)
+        @RenderBestEnchants("Chestplate", BestBodyArmorEnchantments)
         @RenderBestEnchants("Leggings", BestLeggingsEnchantments)
         @RenderBestEnchants("Boots", BestBootsEnchantments)
 
@@ -75,7 +81,7 @@
             }
         }
 
-        var command = GenerateGiveEnchantedItemCommand(item.name, enchantments);
+        var command = GenerateGiveEnchantedItemCommand(item.name, enchantments, BestEnchantsLevel);
 
         return
     @<MudStack Class="my-3">

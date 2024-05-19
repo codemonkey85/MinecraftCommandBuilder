@@ -10,6 +10,8 @@ public partial class EnchantsTab
 
     private int Level { get; set; } = 1;
 
+    private int BestEnchantsLevel { get; set; } = 1;
+
     private readonly List<string> BestPickaxeEnchantmentNames =
     [
         "unbreaking",
@@ -382,14 +384,14 @@ public partial class EnchantsTab
                 .Equals(itemName.Trim(), StringComparison.InvariantCultureIgnoreCase));
     }
 
-    private string GenerateGiveEnchantedItemCommand(string itemName, List<Enchantment> enchantments) =>
+    private string GenerateGiveEnchantedItemCommand(string itemName, List<Enchantment> enchantments, int level) =>
         CommandService.GenerateGiveEnchantedItemCommand(
             itemName,
             enchantments
                 .Select(e => new EnchantmentModel
                 {
                     Name = e.name,
-                    Level = e.maxLevel,
+                    Level = level,
                 }).ToList());
 
     private static string ToString(Enchantment? enchantment) =>
