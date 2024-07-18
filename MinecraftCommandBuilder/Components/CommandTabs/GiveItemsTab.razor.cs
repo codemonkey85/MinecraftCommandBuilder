@@ -17,7 +17,7 @@ public partial class GiveItemsTab
         }
     }
 
-    private async Task<IEnumerable<Item>> Search(string value)
+    private async Task<IEnumerable<Item>> Search(string value, CancellationToken cancellationToken)
     {
         await Task.Yield();
 

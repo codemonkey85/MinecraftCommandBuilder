@@ -23,7 +23,7 @@ public partial class FillTab
 
     private bool GenerateCommandDisabled => SelectedBlock is null;
 
-    private async Task<IEnumerable<Block>> Search(string value)
+    private async Task<IEnumerable<Block>> Search(string value, CancellationToken cancellationToken)
     {
         await Task.Yield();
 

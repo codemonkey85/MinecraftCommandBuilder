@@ -17,7 +17,7 @@ public partial class SummonsTab
 
     private bool GenerateCommandDisabled => SelectedEntity is null;
 
-    private async Task<IEnumerable<Entity>> Search(string value)
+    private async Task<IEnumerable<Entity>> Search(string value, CancellationToken cancellationToken)
     {
         await Task.Yield();
 

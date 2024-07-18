@@ -2,18 +2,22 @@
 
 <MudThemeProvider @ref="@mudThemeProvider"
                   @bind-IsDarkMode="@isDarkMode" />
+<MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
 <MudLayout>
     <MudAppBar>
-        <MudText Typo="@Typo.h4" class="d-none d-lg-flex">
+        <MudText Typo="@Typo.h4"
+                 class="d-none d-lg-flex">
             @AppTitle
         </MudText>
-        <MudText Typo="@Typo.h6" class="d-none d-md-flex d-lg-none">
+        <MudText Typo="@Typo.h6"
+                 class="d-none d-md-flex d-lg-none">
             @AppTitle
         </MudText>
-        <MudText Typo="@Typo.inherit" class="d-xs-flex d-md-none">
+        <MudText Typo="@Typo.inherit"
+                 class="d-xs-flex d-md-none">
             @AppTitle
         </MudText>
         <MudSpacer />
@@ -35,7 +39,7 @@
                            Icon="@Icons.Custom.Brands.GitHub"
                            Href="https://github.com/codemonkey85/MinecraftCommandBuilder"
                            Target="_blank"
-                           Title="Source code on GitHub"
+                           title="Source code on GitHub"
                            Color="@Color.Inherit"
                            Variant="@Variant.Outlined" />
         </MudStack>

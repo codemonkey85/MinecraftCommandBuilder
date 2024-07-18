@@ -360,7 +360,7 @@ public partial class EnchantsTab
             enchantment.name,
             enchantment.maxLevel);
 
-    private async Task<IEnumerable<Enchantment>> Search(string value)
+    private async Task<IEnumerable<Enchantment>> Search(string value, CancellationToken cancellationToken)
     {
         await Task.Yield();
 
