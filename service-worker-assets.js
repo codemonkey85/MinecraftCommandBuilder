@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "7aBYQmwh",
+  "version": "7GEXuu64",
   "assets": [
     {
       "hash": "sha256-2gItJ0j/o5RSWg7VYqCOBpSPI1dxTOG+mnEzWt7EvYw=",
@@ -78,8 +78,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.vbgjtaistr.wasm"
     },
     {
-      "hash": "sha256-arpHs7yCZrYh7mUIxg93mWF1u1h+VVDfGJUd++98p3o=",
-      "url": "_framework/MinecraftCommandBuilder.asjlz4luhp.wasm"
+      "hash": "sha256-gaS5Wqk0MA0n3hpuSzoQV8pdSa2zA51dNTcM6uYW7oY=",
+      "url": "_framework/MinecraftCommandBuilder.1gcil06kb4.wasm"
     },
     {
       "hash": "sha256-J/IB67HIrTlOyoidnNbThsjBcE8zOFA6mxc2/Ark4X0=",
@@ -194,7 +194,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.cjrcei28ym.wasm"
     },
     {
-      "hash": "sha256-iVFinI6krnstFQs4wMV/S8IMgU5qR/hoQsZADV/LTi8=",
+      "hash": "sha256-jsjPlaug5I7ep6CLXNduOiEBE495quO+DDjJgs2KhiI=",
       "url": "_framework/blazor.boot.json"
     },
     {
