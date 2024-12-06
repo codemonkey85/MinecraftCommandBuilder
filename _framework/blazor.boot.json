@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MinecraftCommandBuilder",
   "resources": {
-    "hash": "sha256-JN6wa6c+89FHpt/5mKesh3TG9wc99aF7k5AesECHgNE=",
+    "hash": "sha256-uyyRZNRBdqyakhzcTH75OMcnUwZqXo7YJ9F559x26Ec=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.Forms.aqnxj8lz9n.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.2dlef2x0lj.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -20,8 +20,8 @@
       "Microsoft.Extensions.Primitives.8omryeirak.wasm": "Microsoft.Extensions.Primitives.wasm",
       "Microsoft.JSInterop.vbgjtaistr.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.heoad7mujs.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
-      "MinecraftCommandBuilder.52m88okaf1.wasm": "MinecraftCommandBuilder.wasm",
-      "MinecraftDataCSharp.bfkjkcwrt5.wasm": "MinecraftDataCSharp.wasm",
+      "MinecraftCommandBuilder.qnw7uai8za.wasm": "MinecraftCommandBuilder.wasm",
+      "MinecraftDataCSharp.epyobmkarp.wasm": "MinecraftDataCSharp.wasm",
       "MudBlazor.i9rpjtj4z3.wasm": "MudBlazor.wasm",
       "System.Collections.Concurrent.yd67ay83mt.wasm": "System.Collections.Concurrent.wasm",
       "System.Collections.Immutable.8alnsyrrty.wasm": "System.Collections.Immutable.wasm",
@@ -93,8 +93,8 @@
       "Microsoft.Extensions.Primitives.8omryeirak.wasm": "sha256-iOXJ6xMILdIdSWDD2fNHtnrXI0YtuWx4chp/bwgCVgc=",
       "Microsoft.JSInterop.vbgjtaistr.wasm": "sha256-a55WYCaycB8aUpAsLC/Amip8LqEGJGwHC3Pjb3544lc=",
       "Microsoft.JSInterop.WebAssembly.heoad7mujs.wasm": "sha256-99wG3VH14sWkwPaF5rX6YAcJvtAhDuqonwihvj2m5HA=",
-      "MinecraftCommandBuilder.52m88okaf1.wasm": "sha256-rUmxjWRY6DwjBU50DLJLtzzCxMjtk5PpyNe9P8SRFug=",
-      "MinecraftDataCSharp.bfkjkcwrt5.wasm": "sha256-J/IB67HIrTlOyoidnNbThsjBcE8zOFA6mxc2/Ark4X0=",
+      "MinecraftCommandBuilder.qnw7uai8za.wasm": "sha256-6vhCJRvvrDzm8j6H1i8RhH1Rn0hS7TxaKJaiL0Y/h8w=",
+      "MinecraftDataCSharp.epyobmkarp.wasm": "sha256-sojAnGLmDDUDEVxwMKx0dU9fzBtt4dGRCN3NFbYTTSI=",
       "MudBlazor.i9rpjtj4z3.wasm": "sha256-Rg0EZBGnl1RpGjxJkDEg01808DD3pCrgpJBYdL/4COY=",
       "System.Collections.Concurrent.yd67ay83mt.wasm": "sha256-6pFjwsGc1pLsIMKazcSZPxDhdYarcozuhjQE/gyjsl4=",
       "System.Collections.Immutable.8alnsyrrty.wasm": "sha256-gGAL7pj7lR7D1kxOeG9zeInTG9jH38yRXJ8yd7lrcLQ=",
