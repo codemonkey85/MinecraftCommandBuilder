@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "qMUxpkqA",
+  "version": "EjtuUrvb",
   "assets": [
     {
       "hash": "sha256-2gItJ0j/o5RSWg7VYqCOBpSPI1dxTOG+mnEzWt7EvYw=",
@@ -78,12 +78,12 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.vbgjtaistr.wasm"
     },
     {
-      "hash": "sha256-6vhCJRvvrDzm8j6H1i8RhH1Rn0hS7TxaKJaiL0Y/h8w=",
-      "url": "_framework/MinecraftCommandBuilder.qnw7uai8za.wasm"
+      "hash": "sha256-PGdYneXXDGnrx9jzWXcTZIZbICWiZeJCs9fjhYYT7Bc=",
+      "url": "_framework/MinecraftCommandBuilder.0tvr7m48os.wasm"
     },
     {
-      "hash": "sha256-sojAnGLmDDUDEVxwMKx0dU9fzBtt4dGRCN3NFbYTTSI=",
-      "url": "_framework/MinecraftDataCSharp.epyobmkarp.wasm"
+      "hash": "sha256-fHJ0lO+n26WUw3df/gtvaC4bNZ5JG6njbWL7gCtnl7U=",
+      "url": "_framework/MinecraftDataCSharp.saoe3q51i9.wasm"
     },
     {
       "hash": "sha256-Rg0EZBGnl1RpGjxJkDEg01808DD3pCrgpJBYdL/4COY=",
@@ -194,7 +194,7 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.cjrcei28ym.wasm"
     },
     {
-      "hash": "sha256-rtioezXBFhCPOi+BrHOYsao5GHsuExmTsOuQ/nkG/nM=",
+      "hash": "sha256-wlh+c2CVlkI/9EsQACJT/erRVm635IGfqzTtYBv5I0c=",
       "url": "_framework/blazor.boot.json"
     },
     {
