@@ -11,7 +11,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.0" PrivateAssets="all" />
-		<PackageReference Include="MinecraftDataCSharp" Version="1.2.0.0" />
+		<PackageReference Include="MinecraftDataCSharp" Version="1.2.0" />
 		<PackageReference Include="MudBlazor" Version="7.15.0" />
 	</ItemGroup>
 
@@ -22,12 +22,12 @@
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' != 'Windows_NT'">
 		<!-- Unix-based systems (Linux and macOS) -->
 		<Exec Command="mkdir -p &quot;$(ProjectDir)wwwroot/data/data&quot;" />
-		<Exec Command="cp -r &quot;$(NuGetPackageRoot)minecraftdatacsharp/1.2.0.0/content/data/data/.&quot; &quot;$(ProjectDir)wwwroot/data/data&quot;" />
+		<Exec Command="cp -r &quot;$(NuGetPackageRoot)minecraftdatacsharp/1.2.0/content/data/data/.&quot; &quot;$(ProjectDir)wwwroot/data/data&quot;" />
 	</Target>
 	<Target Name="PostBuildWindows" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
 		<!-- Windows systems -->
 		<Exec Command="if not exist &quot;$(ProjectDir)wwwroot\data\data&quot; mkdir &quot;$(ProjectDir)wwwroot\data\data&quot;" />
-		<Exec Command="xcopy /Y /I /E &quot;$(NuGetPackageRoot)MinecraftDataCSharp\1.2.0.0\content\data\data\*.*&quot; &quot;$(ProjectDir)wwwroot\data\data\&quot;" />
+		<Exec Command="xcopy /Y /I /E &quot;$(NuGetPackageRoot)MinecraftDataCSharp\1.2.0\content\data\data\*.*&quot; &quot;$(ProjectDir)wwwroot\data\data\&quot;" />
 	</Target>
 
 </Project>
