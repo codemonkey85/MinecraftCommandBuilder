@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MinecraftCommandBuilder",
   "resources": {
-    "hash": "sha256-zkafM2G9q/MZFGVCOm5VwGZNLRHld/GX8L26LRrpK/0=",
+    "hash": "sha256-0VtdhxyDPwGZ6hPfCscpqipvV3a8YlcUnnREWaZM1pg=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.Forms.aqnxj8lz9n.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.2dlef2x0lj.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -20,8 +20,8 @@
       "Microsoft.Extensions.Primitives.8omryeirak.wasm": "Microsoft.Extensions.Primitives.wasm",
       "Microsoft.JSInterop.vbgjtaistr.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.heoad7mujs.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
-      "MinecraftCommandBuilder.vrflwy2wtx.wasm": "MinecraftCommandBuilder.wasm",
-      "MinecraftDataCSharp.dp51oj0gue.wasm": "MinecraftDataCSharp.wasm",
+      "MinecraftCommandBuilder.rotqif7vkf.wasm": "MinecraftCommandBuilder.wasm",
+      "MinecraftDataCSharp.ubp8e7cz9e.wasm": "MinecraftDataCSharp.wasm",
       "MudBlazor.i9rpjtj4z3.wasm": "MudBlazor.wasm",
       "System.Collections.Concurrent.yd67ay83mt.wasm": "System.Collections.Concurrent.wasm",
       "System.Collections.Immutable.8alnsyrrty.wasm": "System.Collections.Immutable.wasm",
@@ -45,7 +45,7 @@
       "System.Runtime.InteropServices.aiefayfgmw.wasm": "System.Runtime.InteropServices.wasm",
       "System.Runtime.6xrum2kgfi.wasm": "System.Runtime.wasm",
       "System.Text.Encodings.Web.3fsw0egfwc.wasm": "System.Text.Encodings.Web.wasm",
-      "System.Text.Json.7udxunx246.wasm": "System.Text.Json.wasm",
+      "System.Text.Json.9g37sr6c2m.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.lcnvh6t4gh.wasm": "System.Text.RegularExpressions.wasm",
       "System.Threading.cjrcei28ym.wasm": "System.Threading.wasm",
       "System.6bp5k9v1ih.wasm": "System.wasm",
@@ -93,8 +93,8 @@
       "Microsoft.Extensions.Primitives.8omryeirak.wasm": "sha256-iOXJ6xMILdIdSWDD2fNHtnrXI0YtuWx4chp/bwgCVgc=",
       "Microsoft.JSInterop.vbgjtaistr.wasm": "sha256-a55WYCaycB8aUpAsLC/Amip8LqEGJGwHC3Pjb3544lc=",
       "Microsoft.JSInterop.WebAssembly.heoad7mujs.wasm": "sha256-99wG3VH14sWkwPaF5rX6YAcJvtAhDuqonwihvj2m5HA=",
-      "MinecraftCommandBuilder.vrflwy2wtx.wasm": "sha256-G0uUhwYtUSp7ixFwbzG1BEXmmXwrCP1hy0F6AozwWkY=",
-      "MinecraftDataCSharp.dp51oj0gue.wasm": "sha256-IRdMJ8Ag2z181tcZcsWg8veTF6HaYNEY8FHOLR3OfsU=",
+      "MinecraftCommandBuilder.rotqif7vkf.wasm": "sha256-NclMDnLbPKSEvoNtxFCayU69jWg6+jY78IYYcoUiNNM=",
+      "MinecraftDataCSharp.ubp8e7cz9e.wasm": "sha256-Ovyf8/6u4ypDGwdZ/5UA8q8ZCYjEV43rfoePPRddPbI=",
       "MudBlazor.i9rpjtj4z3.wasm": "sha256-Rg0EZBGnl1RpGjxJkDEg01808DD3pCrgpJBYdL/4COY=",
       "System.Collections.Concurrent.yd67ay83mt.wasm": "sha256-6pFjwsGc1pLsIMKazcSZPxDhdYarcozuhjQE/gyjsl4=",
       "System.Collections.Immutable.8alnsyrrty.wasm": "sha256-gGAL7pj7lR7D1kxOeG9zeInTG9jH38yRXJ8yd7lrcLQ=",
@@ -116,7 +116,7 @@
       "System.Runtime.InteropServices.aiefayfgmw.wasm": "sha256-zgZvGVju6mvaQWrsjzcbbR2aNAZ1JVG8UKkpZyvYtkM=",
       "System.Runtime.6xrum2kgfi.wasm": "sha256-2kbn1FPmb+hWKsY5ooGjN1hsMoko6DrQU7MEd47QdBY=",
       "System.Text.Encodings.Web.3fsw0egfwc.wasm": "sha256-3w9jcvf72CdfcHber8bV+MG+QG9Eov1eSxYBJ65smAE=",
-      "System.Text.Json.7udxunx246.wasm": "sha256-T+5WWJRqYMAwggeplpYA38pToj95NI5oAoY+ONTClMI=",
+      "System.Text.Json.9g37sr6c2m.wasm": "sha256-OVVh480v+N9EJPLPK8NuWEte6+EqanWLGceifTIQHZ0=",
       "System.Text.RegularExpressions.lcnvh6t4gh.wasm": "sha256-Cx/k4/WaGVeCFIKRfTEZHm4U44wJs32iySmMKQ8XYwI=",
       "System.Threading.cjrcei28ym.wasm": "sha256-aIx5rnPej8hcc5oeMQsaB4zHJDz9pje2l1AYFmX3mMw=",
       "System.6bp5k9v1ih.wasm": "sha256-nmhUPBjB8ZbEN0U5j2acgnW4fkbSYlov7U3e30Lsp8A="
