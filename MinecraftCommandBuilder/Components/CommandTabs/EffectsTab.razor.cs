@@ -17,11 +17,11 @@ public partial class EffectsTab
         await base.OnInitializedAsync();
         if (Effects is [])
         {
-            Effects = await EffectRepository.GetAllEffects() ?? [];
+            Effects = await EffectRepository.GetAllEffects();
         }
     }
 
-    private void OnSelectedValuesChanged(IEnumerable<Effect> values) =>
+    private void OnSelectedValuesChanged(IEnumerable<Effect?>? values) =>
         SelectedEffect = values?.FirstOrDefault();
 
     private bool GenerateCommandDisabled => SelectedEffect is null;

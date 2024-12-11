@@ -17,7 +17,7 @@ public partial class FillTab
         await base.OnInitializedAsync();
         if (Blocks is [])
         {
-            Blocks = await BlockRepository.GetAllBlocks() ?? [];
+            Blocks = await BlockRepository.GetAllBlocks();
         }
     }
 
@@ -29,10 +29,9 @@ public partial class FillTab
 
         return string.IsNullOrEmpty(value)
             ? Blocks
-            .OrderBy(i => i.DisplayName)
-            .Take(10)
-
-            : (IEnumerable<Block>)Blocks
+                .OrderBy(i => i.DisplayName)
+                .Take(10)
+            : Blocks
                 .Where(block => block.DisplayName
                     .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(b => b.DisplayName);

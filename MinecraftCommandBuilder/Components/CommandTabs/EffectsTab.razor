@@ -1,17 +1,21 @@
 ﻿<h3>Effects</h3>
 
 <MudStack>
-    <PlayerNameComponent />
+    <PlayerNameComponent/>
 
-    <MudSelect T="Effect"
+    <MudSelect T="@(Effect?)"
                Placeholder="Select an effect"
                Class="mt-3"
                MultiSelection="@false"
                SelectedValuesChanged="@OnSelectedValuesChanged"
                Clearable>
+        <MudSelectItem T="@(Effect?)"
+                       Value="@null">
+            None
+        </MudSelectItem>
         @foreach (var effect in Effects.OrderBy(e => e.DisplayName))
         {
-            <MudSelectItem T="Effect"
+            <MudSelectItem T="@(Effect?)"
                            Value="@effect">
                 @effect.DisplayName
             </MudSelectItem>
@@ -21,17 +25,17 @@
     <MudNumericField T="int"
                      Label="Duration (seconds)"
                      Min="1"
-                     @bind-Value="@Duration" />
+                     @bind-Value="@Duration"/>
 
     <MudNumericField T="int"
                      Label="Amplifier"
                      Min="1"
                      Max="255"
-                     @bind-Value="@Amplifier" />
+                     @bind-Value="@Amplifier"/>
 
     <MudSwitch Label="Clear Effect"
                Color="@Color.Primary"
-               @bind-Value="@ClearEffect" />
+               @bind-Value="@ClearEffect"/>
 
     <MudButton ButtonType="@ButtonType.Submit"
                Variant="@Variant.Filled"

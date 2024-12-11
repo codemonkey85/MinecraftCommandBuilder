@@ -199,7 +199,7 @@ public partial class EnchantsTab
         await InitializeEnchantments();
         if (Items is [])
         {
-            Items = await ItemRepository.GetAllItems() ?? [];
+            Items = await ItemRepository.GetAllItems();
         }
     }
 
@@ -207,7 +207,7 @@ public partial class EnchantsTab
     {
         if (Enchantments is [])
         {
-            Enchantments = await EnchantmentRepository.GetAllEnchantments() ?? [];
+            Enchantments = await EnchantmentRepository.GetAllEnchantments();
         }
 
         if (BestPickaxeEnchantments is [])
@@ -366,33 +366,26 @@ public partial class EnchantsTab
 
         return string.IsNullOrEmpty(value)
             ? Enchantments
-            .OrderBy(i => i.DisplayName)
-            .Take(10)
-
-            : (IEnumerable<Enchantment>)Enchantments
+                .OrderBy(i => i.DisplayName)
+                .Take(10)
+            : Enchantments
                 .Where(enchantment => enchantment.DisplayName
                     .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(i => i.DisplayName);
     }
 
-    private Item? GetItem(string itemName)
-    {
-        return string.IsNullOrEmpty(itemName)
+    private Item? GetItem(string itemName) =>
+        string.IsNullOrEmpty(itemName)
             ? null
             : Items
                 .FirstOrDefault(item => item.DisplayName
-                .Equals(itemName.Trim(), StringComparison.InvariantCultureIgnoreCase));
-    }
+                    .Equals(itemName.Trim(), StringComparison.InvariantCultureIgnoreCase));
 
     private string GenerateGiveEnchantedItemCommand(string itemName, List<Enchantment> enchantments, int level) =>
         CommandService.GenerateGiveEnchantedItemCommand(
             itemName,
             enchantments
-                .Select(e => new EnchantmentModel
-                {
-                    Name = e.Name,
-                    Level = level,
-                }).ToList());
+                .Select(e => new EnchantmentModel { Name = e.Name, Level = level, }).ToList());
 
     private static string ToString(Enchantment? enchantment) =>
         enchantment?.DisplayName ?? string.Empty;

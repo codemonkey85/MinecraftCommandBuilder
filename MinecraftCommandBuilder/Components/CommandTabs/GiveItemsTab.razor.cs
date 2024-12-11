@@ -13,7 +13,7 @@ public partial class GiveItemsTab
         await base.OnInitializedAsync();
         if (Items is [])
         {
-            Items = await ItemRepository.GetAllItems() ?? [];
+            Items = await ItemRepository.GetAllItems();
         }
     }
 
@@ -23,10 +23,9 @@ public partial class GiveItemsTab
 
         return string.IsNullOrEmpty(value)
             ? Items
-            .OrderBy(i => i.DisplayName)
-            .Take(10)
-
-            : (IEnumerable<Item>)Items
+                .OrderBy(i => i.DisplayName)
+                .Take(10)
+            : Items
                 .Where(item => item.DisplayName
                     .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(i => i.DisplayName);

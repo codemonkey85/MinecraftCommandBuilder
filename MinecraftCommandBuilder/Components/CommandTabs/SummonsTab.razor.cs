@@ -11,7 +11,7 @@ public partial class SummonsTab
         await base.OnInitializedAsync();
         if (Entities is [])
         {
-            Entities = await EntityRepository.GetAllEntities() ?? [];
+            Entities = await EntityRepository.GetAllEntities();
         }
     }
 
@@ -23,10 +23,9 @@ public partial class SummonsTab
 
         return string.IsNullOrEmpty(value)
             ? Entities
-            .OrderBy(i => i.DisplayName)
-            .Take(10)
-
-            : (IEnumerable<Entity>)Entities
+                .OrderBy(i => i.DisplayName)
+                .Take(10)
+            : Entities
                 .Where(entity => entity.DisplayName
                     .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
                 .OrderBy(i => i.DisplayName);
