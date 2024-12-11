@@ -34,7 +34,7 @@ public partial class EffectsTab
         }
 
         CommandService.SetEffectCommand(
-            SelectedEffect.bedrock_name,
+            SelectedEffect.BedrockName,
             Duration,
             Amplifier,
             ClearEffect);

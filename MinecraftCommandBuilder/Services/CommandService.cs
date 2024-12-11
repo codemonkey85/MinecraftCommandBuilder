@@ -2,8 +2,10 @@
 
 namespace MinecraftCommandBuilder.Services;
 
-public class CommandService(IJSRuntime JSRuntime) : ICommandService
+public class CommandService(IJSRuntime jsRuntime) : ICommandService
 {
+    private IJSRuntime JsRuntime { get; } = jsRuntime;
+    
     public string PlayerName { get; set; } = "@s";
 
     public event Action? OnAppStateChanged;
@@ -12,6 +14,7 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
 
     public string CommandText { get; set; } = string.Empty;
 
+    // ReSharper disable once InconsistentNaming
     private IJSObjectReference? module;
 
     public async Task CopyTextToClipboard(string text)
@@ -21,7 +24,7 @@ public class CommandService(IJSRuntime JSRuntime) : ICommandService
             return;
         }
 
-        module ??= await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./js/app.js");
+        module ??= await JsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/app.js");
         await module.InvokeVoidAsync(nameof(CopyTextToClipboard), text);
     }
 

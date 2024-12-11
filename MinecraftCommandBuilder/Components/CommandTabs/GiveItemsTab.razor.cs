@@ -23,17 +23,17 @@ public partial class GiveItemsTab
 
         return string.IsNullOrEmpty(value)
             ? Items
-            .OrderBy(i => i.displayName)
+            .OrderBy(i => i.DisplayName)
             .Take(10)
 
             : (IEnumerable<Item>)Items
-                .Where(item => item.displayName
+                .Where(item => item.DisplayName
                     .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
-                .OrderBy(i => i.displayName);
+                .OrderBy(i => i.DisplayName);
     }
 
     private static string ToString(Item? item) =>
-        item?.displayName ?? string.Empty;
+        item?.DisplayName ?? string.Empty;
 
     private bool GenerateCommandDisabled => SelectedItem is null;
 
@@ -45,7 +45,7 @@ public partial class GiveItemsTab
         }
 
         CommandService.SetGiveItemCommand(
-            SelectedItem.name,
+            SelectedItem.Name,
             Count);
 
         await CommandService.CopyTextToClipboard(CommandService.CommandText);

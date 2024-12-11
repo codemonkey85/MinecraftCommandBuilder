@@ -23,17 +23,17 @@ public partial class SummonsTab
 
         return string.IsNullOrEmpty(value)
             ? Entities
-            .OrderBy(i => i.displayName)
+            .OrderBy(i => i.DisplayName)
             .Take(10)
 
             : (IEnumerable<Entity>)Entities
-                .Where(entity => entity.displayName
+                .Where(entity => entity.DisplayName
                     .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
-                .OrderBy(i => i.displayName);
+                .OrderBy(i => i.DisplayName);
     }
 
     private static string ToString(Entity? entity) =>
-        entity?.displayName ?? string.Empty;
+        entity?.DisplayName ?? string.Empty;
 
     private async Task GenerateCommand()
     {
@@ -42,7 +42,7 @@ public partial class SummonsTab
             return;
         }
 
-        CommandService.SetSummonCommand(SelectedEntity.name);
+        CommandService.SetSummonCommand(SelectedEntity.Name);
         await CommandService.CopyTextToClipboard(CommandService.CommandText);
     }
 }

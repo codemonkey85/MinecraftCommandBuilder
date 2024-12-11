@@ -13,7 +13,7 @@
     <MudNumericField T="int"
                      Label="Level"
                      Min="1"
-                     Max="@(SelectedEnchantment?.maxLevel ?? 1)"
+                     Max="@(SelectedEnchantment?.MaxLevel ?? 1)"
                      @bind-Value="@Level" />
 
     <MudButton ButtonType="@ButtonType.Submit"
@@ -81,7 +81,7 @@
             }
         }
 
-        var command = GenerateGiveEnchantedItemCommand(item.name, enchantments, BestEnchantsLevel);
+        var command = GenerateGiveEnchantedItemCommand(item.Name, enchantments, BestEnchantsLevel);
 
         return
     @<MudStack Class="my-3">

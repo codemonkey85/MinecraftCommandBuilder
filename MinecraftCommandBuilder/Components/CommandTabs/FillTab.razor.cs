@@ -29,17 +29,17 @@ public partial class FillTab
 
         return string.IsNullOrEmpty(value)
             ? Blocks
-            .OrderBy(i => i.displayName)
+            .OrderBy(i => i.DisplayName)
             .Take(10)
 
             : (IEnumerable<Block>)Blocks
-                .Where(block => block.displayName
+                .Where(block => block.DisplayName
                     .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
-                .OrderBy(b => b.displayName);
+                .OrderBy(b => b.DisplayName);
     }
 
     private static string ToString(Block? block) =>
-        block?.displayName ?? string.Empty;
+        block?.DisplayName ?? string.Empty;
 
     private async Task GenerateCommand()
     {
@@ -87,7 +87,7 @@ public partial class FillTab
             z2 = "~";
         }
 
-        CommandService.SetFillCommand(x1, y1, z1, x2, y2, z2, SelectedBlock.name);
+        CommandService.SetFillCommand(x1, y1, z1, x2, y2, z2, SelectedBlock.Name);
         await CommandService.CopyTextToClipboard(CommandService.CommandText);
     }
 }
