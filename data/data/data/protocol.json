@@ -1039,7 +1039,8 @@
           "crawling",
           "timer_flag_1",
           "timer_flag_2",
-          "timer_flag_3"
+          "timer_flag_3",
+          "body_rotation_blocked"
         ]
       }
     ],
@@ -1946,6 +1947,10 @@
                           "type": "zigzag32"
                         },
                         {
+                          "name": "assume_symmetry",
+                          "type": "bool"
+                        },
+                        {
                           "name": "network_id",
                           "type": "varint"
                         }
@@ -2003,6 +2008,10 @@
                         {
                           "name": "priority",
                           "type": "zigzag32"
+                        },
+                        {
+                          "name": "assume_symmetry",
+                          "type": "bool"
                         },
                         {
                           "name": "network_id",
@@ -4144,7 +4153,18 @@
           "506": "vault_activate",
           "507": "vault_deactivate",
           "508": "hurt_reduced",
-          "509": "wind_charge_burst"
+          "509": "wind_charge_burst",
+          "510": "_",
+          "511": "armor_crack_wolf",
+          "512": "armor_break_wolf",
+          "513": "armor_repair_wolf",
+          "514": "mace_smash_air",
+          "515": "mace_smash_ground",
+          "516": "trail_spawner_charge_activate",
+          "517": "trail_spawner_ambient_ominous",
+          "518": "ominous_item_spawner_spawn_item",
+          "519": "ominous_bottle_end_use",
+          "520": "mace_smash_heavy_ground"
         }
       }
     ],
@@ -4475,7 +4495,25 @@
           "87": "conn_inactivity_timeout",
           "88": "stale_connection_being_replaced",
           "89": "realms_session_not_found",
-          "90": "bad_packet"
+          "90": "bad_packet",
+          "91": "conn_failed_to_create_offer",
+          "92": "conn_failed_to_create_answer",
+          "93": "conn_failed_to_set_local_description",
+          "94": "conn_failed_to_set_remote_description",
+          "95": "conn_negotiation_timeout_waiting_for_response",
+          "96": "conn_negotiation_timeout_waiting_for_accept",
+          "97": "conn_incoming_connection_ignored",
+          "98": "conn_signaling_parsing_failure",
+          "99": "conn_signaling_unknown_error",
+          "100": "conn_signaling_unicast_delivery_failed",
+          "101": "conn_signaling_broadcast_delivery_failed",
+          "102": "conn_signaling_generic_delivery_failed",
+          "103": "editor_mismatch_editor_world",
+          "104": "editor_mismatch_vanilla_world",
+          "105": "world_transfer_not_primary_client",
+          "106": "server_shutdown",
+          "107": "game_setup_cancelled",
+          "108": "game_setup_failed"
         }
       }
     ],
@@ -5073,6 +5111,10 @@
         {
           "name": "experiments_previously_used",
           "type": "bool"
+        },
+        {
+          "name": "has_editor_packs",
+          "type": "bool"
         }
       ]
     ],
@@ -5367,6 +5409,10 @@
         {
           "name": "world_gamemode",
           "type": "GameMode"
+        },
+        {
+          "name": "hardcore",
+          "type": "bool"
         },
         {
           "name": "difficulty",
@@ -6193,6 +6239,7 @@
                 "3612": "particle_trial_spawner_spawning",
                 "3613": "particle_trial_spawner_ejecting",
                 "3614": "particle_wind_explosion",
+                "3615": "particle_wolf_armor_break",
                 "4000": "set_data",
                 "9800": "players_sleeping",
                 "9801": "sleeping_players",
@@ -10425,6 +10472,10 @@
         {
           "name": "player_unique_id",
           "type": "zigzag64"
+        },
+        {
+          "name": "tick",
+          "type": "varint"
         }
       ]
     ],
@@ -10639,12 +10690,37 @@
       "container",
       [
         {
+          "name": "prediction_type",
+          "type": [
+            "mapper",
+            {
+              "type": "u8",
+              "mappings": {
+                "0": "player",
+                "1": "vehicle"
+              }
+            }
+          ]
+        },
+        {
           "name": "position",
           "type": "vec3f"
         },
         {
           "name": "delta",
           "type": "vec3f"
+        },
+        {
+          "name": "vehicle_rotation",
+          "type": [
+            "switch",
+            {
+              "compareTo": "prediction_type",
+              "fields": {
+                "vehicle": "vec2f"
+              }
+            }
+          ]
         },
         {
           "name": "on_ground",
@@ -12146,7 +12222,9 @@
           "7": "ProgressBar",
           "8": "Hunger",
           "9": "AirBubbles",
-          "10": "HourseHealth"
+          "10": "VehicleHealth",
+          "11": "EffectsBar",
+          "12": "ItemTextPopup"
         }
       }
     ],

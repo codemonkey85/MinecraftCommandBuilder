@@ -1,18 +1,23 @@
 !StartDocs: Types
 
-TexturePackInfos: []li16
-   uuid: uuid
+BehaviourPackInfos: []li16
+   uuid: string
    version: string
    size: lu64
    content_key: string
    sub_pack_name: string
    content_identity: string
    has_scripts: bool
-   addon_pack: bool
+
+TexturePackInfos: []li16
+   uuid: string
+   version: string
+   size: lu64
+   content_key: string
+   sub_pack_name: string
+   content_identity: string
+   has_scripts: bool
    rtx_enabled: bool
-   # cdn_url is a URL that the client can use to download the pack instead of the server sending it in
-   # chunks, which it will continue to do if this field is left empty.
-   cdn_url: string
 
 ResourcePackIdVersions: []varint
    # The ID of the resource pack.
@@ -306,7 +311,6 @@ MetadataDictionary: []varint
       129: player_last_death_dimension
       130: player_has_died
       131: collision_box
-      132: visible_mob_effects
    type: varint =>
       0: byte
       1: short
@@ -470,8 +474,6 @@ Link:
    type: u8
    immediate: bool
    rider_initiated: bool
-   # angular velocity of the vehicle that the rider is riding.
-   angular_velocity: lf32
 
 Links: Link[]varint
 
@@ -503,8 +505,6 @@ PlayerAttributes: []varint
    min: lf32
    max: lf32
    current: lf32
-   default_min: lf32
-   default_max: lf32
    default: lf32
    name: string
    modifiers: []varint
@@ -524,14 +524,6 @@ TransactionUseItem:
       0: click_block
       1: click_air
       2: break_block
-   # TriggerType is the type of the trigger that caused the inventory transaction. It is one of the trigger
-   # types found in the constants above. If TriggerType is TriggerTypePlayerInput, the transaction is from
-   # the initial input of the player. If it is TriggerTypeSimulationTick, the transaction is from a simulation
-   # tick when the player is holding down the input.
-   trigger_type: varint =>
-   - unknown
-   - player_input
-   - simulation_tick
    # BlockPosition is the position of the block that was interacted with. This is only really a correct
    # block position if ActionType is not UseItemActionClickAir.
    block_position: BlockCoordinates
@@ -553,10 +545,6 @@ TransactionUseItem:
    # BlockRuntimeID is the runtime ID of the block that was clicked. It may be used by the server to verify
    # that the player's world client-side is synchronised with the server's.
    block_runtime_id: varint
-   # ClientPrediction is the client's prediction on the output of the transaction.
-   client_prediction: varint =>
-   - failure
-   - success
 
 # Actions is a list of actions that took place, that form the inventory transaction together. Each of
 # these actions hold one slot in which one item was changed to another. In general, the combination of
@@ -744,7 +732,6 @@ Recipes: []varint
          uuid: uuid
          block: string
          priority: zigzag32
-         unlocking_requirement: RecipeUnlockingRequirement
          network_id: varint
       if shaped or shaped_chemistry:
          recipe_id: LatinString
@@ -758,7 +745,6 @@ Recipes: []varint
          block: string
          priority: zigzag32
          assume_symmetry: bool
-         unlocking_requirement: RecipeUnlockingRequirement
          network_id: varint
       if furnace:
          input_id: zigzag32
@@ -796,15 +782,6 @@ Recipes: []varint
          addition: RecipeIngredient
          block: string
          network_id: varint
-
-RecipeUnlockingRequirement:
-   context: u8 =>
-      - none
-      - always_unlocked
-      - player_in_water
-      - player_has_many_items
-   ingredients: context?
-      if none: RecipeIngredient[]varint
 
 SkinImage:
    width: li32
@@ -923,13 +900,12 @@ Action: zigzag32 =>
    34: start_flying
    35: stop_flying
    36: received_server_data
-   37: start_using_item
 
 # Source and Destination point to the source slot from which Count of the item stack were taken and the
 # destination slot to which this item was moved.
 StackRequestSlotInfo:
    # ContainerID is the ID of the container that the slot was in.
-   slot_type: FullContainerName
+   slot_type: ContainerSlotType
    # Slot is the index of the slot within the container with the ContainerID above. 
    slot: u8
    # StackNetworkID is the unique stack ID that the client assumes to be present in this slot. The server
@@ -1061,24 +1037,19 @@ ItemStackRequest:
             # one of the recipes sent in the CraftingData packet, where each of the recipes have a RecipeNetworkID as
             # of 1.16.
             recipe_network_id: varint
-            times_crafted: u8
          if craft_recipe_auto:
             # RecipeNetworkID is the network ID of the recipe that is about to be crafted. This network ID matches
             # one of the recipes sent in the CraftingData packet, where each of the recipes have a RecipeNetworkID as
             recipe_network_id: varint
-            # TODO: Duplicate field?
-            times_crafted_2: u8
             times_crafted: u8
             ingredients: RecipeIngredient[]varint
          if craft_creative:
             # The stack ID of the creative item that is being created. This is one of the
             # creative item stack IDs sent in the CreativeContent packet.
             item_id: varint
-            times_crafted: u8
          if optional:
             # For the cartography table, if a certain MULTI recipe is being called, this points to the network ID that was assigned.
             recipe_network_id: varint
-            times_crafted: u8
             # Most likely the index in the request's filter strings that this action is using
             filtered_string_index: li32
          if craft_grindstone_request:
@@ -1137,7 +1108,7 @@ ItemStackResponses: []varint
             # inventory, this value seems to be 0x1b. For the cursor, this value seems to be 0x3a. For the crafting
             # grid, this value seems to be 0x0d.
             # * actually, this is ContainerSlotType - used by the inventory system that specifies the type of slot
-            slot_type: FullContainerName
+            slot_type: ContainerSlotType
             # SlotInfo holds information on what item stack should be present in specific slots in the container.
             slots: []varint
                # Slot and HotbarSlot seem to be the same value every time: The slot that was actually changed. I'm not
@@ -1151,9 +1122,6 @@ ItemStackResponses: []varint
                item_stack_id: zigzag32
                # CustomName is the custom name of the item stack. It is used in relation to text filtering.
                custom_name: string
-               # FilteredCustomName is a filtered version of CustomName with all the profanity removed. The client will
-               # use this over CustomName if this field is not empty and they have the "Filter Profanity" setting enabled.
-               filtered_custom_name: string
                # DurabilityCorrection is the current durability of the item stack. This durability will be shown
                # client-side after the response is sent to the client.
                durability_correction: zigzag32
@@ -1569,7 +1537,6 @@ ContainerSlotType: u8 =>
    - creative_output
    - smithing_table_template
    - crafter
-   - dynamic
 
 SoundType: varint =>
    - ItemUseOn
@@ -2082,8 +2049,6 @@ SoundType: varint =>
    - vault_deactivate
    - hurt_reduced
    - wind_charge_burst
-   - imitate_drowned
-   - bundle_insert_failed
    - _
    - armor_crack_wolf
    - armor_break_wolf
@@ -2095,15 +2060,6 @@ SoundType: varint =>
    - ominous_item_spawner_spawn_item
    - ominous_bottle_end_use
    - mace_smash_heavy_ground
-   - ominous_item_spawner_spawn_item_begin
-   - _
-   - apply_effect_bad_omen
-   - apply_effect_raid_omen
-   - apply_effect_trial_omen
-   - ominous_item_spawner_about_to_spawn_item
-   - record_creator
-   - record_creator_music_box
-   - record_precipice
 
 # TODO: remove?
 LegacyEntityType: li32 =>
@@ -2264,7 +2220,6 @@ AbilityLayers:
    - spectator
    - commands
    - editor
-   - loading_screen
    # The abilities that can be toggled between
    allowed: AbilitySet
    # The abilities that are currently active
@@ -2281,43 +2236,9 @@ CameraPresets:
    parent: string
    position: Vec3fopts
    rotation: Vec2fopts
-   # RotationSpeed is the speed at which the camera should rotate.
-   rotation_speed?: lf32
-   # SnapToTarget determines whether the camera should snap to the target entity or not.
-   snap_to_target?: bool
-   # horizontal_rotation_limit is the horizontal rotation limit of the camera.
-   horizontal_rotation_limit?: vec2f
-   # vertical_rotation_limit is the vertical rotation limit of the camera.
-   vertical_rotation_limit?: vec2f
-   # continue_targeting determines whether the camera should continue targeting the entity or not.
-   continue_targeting?: bool
-   # TrackingRadius is the radius around the camera that the aim assist should track targets.
-   tracking_radius?: lf32
-   # ViewOffset is only used in a follow_orbit camera and controls an offset based on a pivot point to the
-   # player, causing it to be shifted in a certain direction.
-   offset?: vec2f
-   # EntityOffset controls the offset from the entity that the camera should be rendered at.
-   entity_offset?: vec3f
-   # Radius is only used in a follow_orbit camera and controls how far away from the player the camera should
-   # be rendered.
-   radius?: lf32
    ## TODO: make this an enum afer adding proper optional support inside pdefyaml
    audio_listener?: u8
    player_effects?: bool
-   # align_target_and_camera_forward determines whether the camera should align the target and the camera forward or not.
-   align_target_and_camera_forward?: bool
-   aim_assist?:
-      # Preset is the ID of the preset that has previously been defined in the CameraAimAssistPresets packet.
-      preset_id?: string
-      target_mode?: li32 =>
-         - angle
-         - distance
-      # Angle is the maximum angle around the playes's cursor that the aim assist should check for a target,
-      # if `target_mode` is set to `angle`.
-      angle?: vec2f
-      # Distance is the maximum distance from the player's cursor should check for a target, if TargetMode is
-      # set to target_mode distance.
-      distance?: lf32
 
 DisconnectFailReason: zigzag32 =>
    - unknown
@@ -2429,11 +2350,3 @@ DisconnectFailReason: zigzag32 =>
    - server_shutdown
    - game_setup_cancelled
    - game_setup_failed
-
-FullContainerName:
-   container_id: ContainerSlotType
-   dynamic_container_id?: u32
-
-MovementEffectType: varint =>
-   -1: invalid
-   0: GLIDE_BOOST

@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "cA3xIcnY",
+  "version": "a7lCTBPD",
   "assets": [
     {
       "hash": "sha256-2gItJ0j/o5RSWg7VYqCOBpSPI1dxTOG+mnEzWt7EvYw=",
@@ -98,12 +98,12 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.Win32.Registry.9kg4xjpuie.wasm"
     },
     {
-      "hash": "sha256-I7jY3Bvg9i+SZjLjmnf/6IaqqTX7OlleS/z2MIdgcHQ=",
-      "url": "_framework/MinecraftCommandBuilder.9dc9hg3y1k.wasm"
+      "hash": "sha256-Q0qLCP7yW8GRdEL8da7Jl4bFTm3Pqyzmcy+6fcZEAyU=",
+      "url": "_framework/MinecraftCommandBuilder.PostBuild.9dqhyht0bf.wasm"
     },
     {
-      "hash": "sha256-m3yA8RcSfixVbgl5Az8mMBZmvRxjZ3Fq3CKmL2UZVKU=",
-      "url": "_framework/MinecraftCommandBuilder.PostBuild.npwcg78p60.wasm"
+      "hash": "sha256-+zoAv1qPJ7JoQq/9uKAVAn2ag+4OOD/ve9YSD69LyAw=",
+      "url": "_framework/MinecraftCommandBuilder.v37s4x4x0p.wasm"
     },
     {
       "hash": "sha256-Ovyf8/6u4ypDGwdZ/5UA8q8ZCYjEV43rfoePPRddPbI=",
@@ -314,7 +314,7 @@ self.assetsManifest = {
       "url": "_framework/System.Xml.XmlSerializer.s103ebtqit.wasm"
     },
     {
-      "hash": "sha256-jBMl1ss+wv008qM7rbWU30lCUhfSttc7HQcVhE+A3gY=",
+      "hash": "sha256-+lmdAxbMT+izLEIWzYJDQm0Qz+8YsoJDGb+IsgHL670=",
       "url": "_framework/blazor.boot.json"
     },
     {

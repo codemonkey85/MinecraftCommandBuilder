@@ -829,26 +829,5 @@
     "weight": 1,
     "tradeable": false,
     "discoverable": false
-  },
-  {
-    "id": 37,
-    "name": "swift_sneak",
-    "displayName": "Swift Sneak",
-    "maxLevel": 3,
-    "minCost": {
-      "a": 25,
-      "b": 0
-    },
-    "maxCost": {
-      "a": 25,
-      "b": 50
-    },
-    "treasureOnly": true,
-    "curse": false,
-    "exclude": [],
-    "category": "armor_legs",
-    "weight": 1,
-    "tradeable": false,
-    "discoverable": false
   }
 ]

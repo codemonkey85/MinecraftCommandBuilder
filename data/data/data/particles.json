@@ -1,19 +1,19 @@
 [
   {
     "id": 0,
-    "name": "ambient_entity_effect"
+    "name": "explode"
   },
   {
     "id": 1,
-    "name": "angry_villager"
+    "name": "largeexplode"
   },
   {
     "id": 2,
-    "name": "block"
+    "name": "hugeexplosion"
   },
   {
     "id": 3,
-    "name": "block_marker"
+    "name": "fireworksSpark"
   },
   {
     "id": 4,
@@ -21,354 +21,170 @@
   },
   {
     "id": 5,
-    "name": "cloud"
-  },
-  {
-    "id": 6,
-    "name": "crit"
-  },
-  {
-    "id": 7,
-    "name": "damage_indicator"
-  },
-  {
-    "id": 8,
-    "name": "dragon_breath"
-  },
-  {
-    "id": 9,
-    "name": "dripping_lava"
-  },
-  {
-    "id": 10,
-    "name": "falling_lava"
-  },
-  {
-    "id": 11,
-    "name": "landing_lava"
-  },
-  {
-    "id": 12,
-    "name": "dripping_water"
-  },
-  {
-    "id": 13,
-    "name": "falling_water"
-  },
-  {
-    "id": 14,
-    "name": "dust"
-  },
-  {
-    "id": 15,
-    "name": "dust_color_transition"
-  },
-  {
-    "id": 16,
-    "name": "effect"
-  },
-  {
-    "id": 17,
-    "name": "elder_guardian"
-  },
-  {
-    "id": 18,
-    "name": "enchanted_hit"
-  },
-  {
-    "id": 19,
-    "name": "enchant"
-  },
-  {
-    "id": 20,
-    "name": "end_rod"
-  },
-  {
-    "id": 21,
-    "name": "entity_effect"
-  },
-  {
-    "id": 22,
-    "name": "explosion_emitter"
-  },
-  {
-    "id": 23,
-    "name": "explosion"
-  },
-  {
-    "id": 24,
-    "name": "sonic_boom"
-  },
-  {
-    "id": 25,
-    "name": "falling_dust"
-  },
-  {
-    "id": 26,
-    "name": "firework"
-  },
-  {
-    "id": 27,
-    "name": "fishing"
-  },
-  {
-    "id": 28,
-    "name": "flame"
-  },
-  {
-    "id": 29,
-    "name": "sculk_soul"
-  },
-  {
-    "id": 30,
-    "name": "sculk_charge"
-  },
-  {
-    "id": 31,
-    "name": "sculk_charge_pop"
-  },
-  {
-    "id": 32,
-    "name": "soul_fire_flame"
-  },
-  {
-    "id": 33,
-    "name": "soul"
-  },
-  {
-    "id": 34,
-    "name": "flash"
-  },
-  {
-    "id": 35,
-    "name": "happy_villager"
-  },
-  {
-    "id": 36,
-    "name": "composter"
-  },
-  {
-    "id": 37,
-    "name": "heart"
-  },
-  {
-    "id": 38,
-    "name": "instant_effect"
-  },
-  {
-    "id": 39,
-    "name": "item"
-  },
-  {
-    "id": 40,
-    "name": "vibration"
-  },
-  {
-    "id": 41,
-    "name": "item_slime"
-  },
-  {
-    "id": 42,
-    "name": "item_snowball"
-  },
-  {
-    "id": 43,
-    "name": "large_smoke"
-  },
-  {
-    "id": 44,
-    "name": "lava"
-  },
-  {
-    "id": 45,
-    "name": "mycelium"
-  },
-  {
-    "id": 46,
-    "name": "note"
-  },
-  {
-    "id": 47,
-    "name": "poof"
-  },
-  {
-    "id": 48,
-    "name": "portal"
-  },
-  {
-    "id": 49,
-    "name": "rain"
-  },
-  {
-    "id": 50,
-    "name": "smoke"
-  },
-  {
-    "id": 51,
-    "name": "sneeze"
-  },
-  {
-    "id": 52,
-    "name": "spit"
-  },
-  {
-    "id": 53,
-    "name": "squid_ink"
-  },
-  {
-    "id": 54,
-    "name": "sweep_attack"
-  },
-  {
-    "id": 55,
-    "name": "totem_of_undying"
-  },
-  {
-    "id": 56,
-    "name": "underwater"
-  },
-  {
-    "id": 57,
     "name": "splash"
   },
   {
-    "id": 58,
-    "name": "witch"
+    "id": 6,
+    "name": "wake"
   },
   {
-    "id": 59,
-    "name": "bubble_pop"
+    "id": 7,
+    "name": "suspended"
   },
   {
-    "id": 60,
-    "name": "current_down"
+    "id": 8,
+    "name": "depthsuspend"
   },
   {
-    "id": 61,
-    "name": "bubble_column_up"
+    "id": 9,
+    "name": "crit"
   },
   {
-    "id": 62,
-    "name": "nautilus"
+    "id": 10,
+    "name": "magicCrit"
   },
   {
-    "id": 63,
-    "name": "dolphin"
+    "id": 11,
+    "name": "smoke"
   },
   {
-    "id": 64,
-    "name": "campfire_cosy_smoke"
+    "id": 12,
+    "name": "largesmoke"
   },
   {
-    "id": 65,
-    "name": "campfire_signal_smoke"
+    "id": 13,
+    "name": "spell"
   },
   {
-    "id": 66,
-    "name": "dripping_honey"
+    "id": 14,
+    "name": "instantSpell"
   },
   {
-    "id": 67,
-    "name": "falling_honey"
+    "id": 15,
+    "name": "mobSpell"
   },
   {
-    "id": 68,
-    "name": "landing_honey"
+    "id": 16,
+    "name": "mobSpellAmbient"
   },
   {
-    "id": 69,
-    "name": "falling_nectar"
+    "id": 17,
+    "name": "witchMagic"
   },
   {
-    "id": 70,
-    "name": "falling_spore_blossom"
+    "id": 18,
+    "name": "dripWater"
   },
   {
-    "id": 71,
-    "name": "ash"
+    "id": 19,
+    "name": "dripLava"
   },
   {
-    "id": 72,
-    "name": "crimson_spore"
+    "id": 20,
+    "name": "angryVillager"
   },
   {
-    "id": 73,
-    "name": "warped_spore"
+    "id": 21,
+    "name": "happyVillager"
   },
   {
-    "id": 74,
-    "name": "spore_blossom_air"
+    "id": 22,
+    "name": "townaura"
   },
   {
-    "id": 75,
-    "name": "dripping_obsidian_tear"
+    "id": 23,
+    "name": "note"
   },
   {
-    "id": 76,
-    "name": "falling_obsidian_tear"
+    "id": 24,
+    "name": "portal"
   },
   {
-    "id": 77,
-    "name": "landing_obsidian_tear"
+    "id": 25,
+    "name": "enchantmenttable"
   },
   {
-    "id": 78,
-    "name": "reverse_portal"
+    "id": 26,
+    "name": "flame"
   },
   {
-    "id": 79,
-    "name": "white_ash"
+    "id": 27,
+    "name": "lava"
   },
   {
-    "id": 80,
-    "name": "small_flame"
+    "id": 28,
+    "name": "footstep"
   },
   {
-    "id": 81,
-    "name": "snowflake"
+    "id": 29,
+    "name": "cloud"
   },
   {
-    "id": 82,
-    "name": "dripping_dripstone_lava"
+    "id": 30,
+    "name": "reddust"
   },
   {
-    "id": 83,
-    "name": "falling_dripstone_lava"
+    "id": 31,
+    "name": "snowballpoof"
   },
   {
-    "id": 84,
-    "name": "dripping_dripstone_water"
+    "id": 32,
+    "name": "snowshovel"
   },
   {
-    "id": 85,
-    "name": "falling_dripstone_water"
+    "id": 33,
+    "name": "slime"
   },
   {
-    "id": 86,
-    "name": "glow_squid_ink"
+    "id": 34,
+    "name": "heart"
   },
   {
-    "id": 87,
-    "name": "glow"
+    "id": 35,
+    "name": "barrier"
   },
   {
-    "id": 88,
-    "name": "wax_on"
+    "id": 36,
+    "name": "iconcrack"
   },
   {
-    "id": 89,
-    "name": "wax_off"
+    "id": 37,
+    "name": "blockcrack"
   },
   {
-    "id": 90,
-    "name": "electric_spark"
+    "id": 38,
+    "name": "blockdust"
   },
   {
-    "id": 91,
-    "name": "scrape"
+    "id": 39,
+    "name": "droplet"
   },
   {
-    "id": 92,
-    "name": "shriek"
+    "id": 40,
+    "name": "take"
+  },
+  {
+    "id": 41,
+    "name": "mobappearance"
+  },
+  {
+    "id": 42,
+    "name": "dragonbreath"
+  },
+  {
+    "id": 43,
+    "name": "endRod"
+  },
+  {
+    "id": 44,
+    "name": "damageIndicator"
+  },
+  {
+    "id": 45,
+    "name": "sweepAttack"
+  },
+  {
+    "id": 46,
+    "name": "fallingdust"
   }
 ]
