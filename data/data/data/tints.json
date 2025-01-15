@@ -3,6 +3,14 @@
     "data": [
       {
         "keys": [
+          "badlands",
+          "eroded_badlands",
+          "wooded_badlands"
+        ],
+        "color": 9470285
+      },
+      {
+        "keys": [
           "bamboo_jungle",
           "basalt_deltas",
           "beach",
@@ -65,6 +73,12 @@
       },
       {
         "keys": [
+          "cherry_grove"
+        ],
+        "color": 11983713
+      },
+      {
+        "keys": [
           "dark_forest"
         ],
         "color": 1317381
@@ -78,22 +92,22 @@
       },
       {
         "keys": [
-          "cherry_grove"
+          "pale_garden"
         ],
-        "color": 11983713
-      },
+        "color": 7832178
+      }
+    ]
+  },
+  "foliage": {
+    "data": [
       {
         "keys": [
           "badlands",
           "eroded_badlands",
           "wooded_badlands"
         ],
-        "color": 9470285
-      }
-    ]
-  },
-  "foliage": {
-    "data": [
+        "color": 10387789
+      },
       {
         "keys": [
           "bamboo_jungle",
@@ -159,20 +173,6 @@
       },
       {
         "keys": [
-          "swamp"
-        ],
-        "color": 6975545
-      },
-      {
-        "keys": [
-          "badlands",
-          "eroded_badlands",
-          "wooded_badlands"
-        ],
-        "color": 10387789
-      },
-      {
-        "keys": [
           "cherry_grove"
         ],
         "color": 11983713
@@ -182,59 +182,23 @@
           "mangrove_swamp"
         ],
         "color": 9285927
-      }
-    ]
-  },
-  "water": {
-    "data": [
-      {
-        "keys": [
-          "mangrove_swamp"
-        ],
-        "color": 3832426
       },
       {
         "keys": [
-          "deep_frozen_ocean",
-          "frozen_ocean",
-          "frozen_river"
+          "pale_garden"
         ],
-        "color": 3750089
-      },
-      {
-        "keys": [
-          "meadow"
-        ],
-        "color": 937679
-      },
-      {
-        "keys": [
-          "cherry_grove"
-        ],
-        "color": 6141935
+        "color": 8883574
       },
       {
         "keys": [
           "swamp"
         ],
-        "color": 6388580
-      },
-      {
-        "keys": [
-          "deep_lukewarm_ocean",
-          "lukewarm_ocean"
-        ],
-        "color": 4566514
-      },
-      {
-        "keys": [
-          "cold_ocean",
-          "deep_cold_ocean",
-          "snowy_beach",
-          "snowy_taiga"
-        ],
-        "color": 4020182
-      },
+        "color": 6975545
+      }
+    ]
+  },
+  "water": {
+    "data": [
       {
         "keys": [
           "badlands",
@@ -292,6 +256,60 @@
       },
       {
         "keys": [
+          "cherry_grove"
+        ],
+        "color": 6141935
+      },
+      {
+        "keys": [
+          "cold_ocean",
+          "deep_cold_ocean",
+          "snowy_beach",
+          "snowy_taiga"
+        ],
+        "color": 4020182
+      },
+      {
+        "keys": [
+          "deep_frozen_ocean",
+          "frozen_ocean",
+          "frozen_river"
+        ],
+        "color": 3750089
+      },
+      {
+        "keys": [
+          "deep_lukewarm_ocean",
+          "lukewarm_ocean"
+        ],
+        "color": 4566514
+      },
+      {
+        "keys": [
+          "mangrove_swamp"
+        ],
+        "color": 3832426
+      },
+      {
+        "keys": [
+          "meadow"
+        ],
+        "color": 937679
+      },
+      {
+        "keys": [
+          "pale_garden"
+        ],
+        "color": 7768221
+      },
+      {
+        "keys": [
+          "swamp"
+        ],
+        "color": 6388580
+      },
+      {
+        "keys": [
           "warm_ocean"
         ],
         "color": 4445678
@@ -304,144 +322,101 @@
         "keys": [
           0
         ],
-        "color": 4980736
+        "color": -11796480
       },
       {
         "keys": [
           1
         ],
-        "color": 7340032
+        "color": -9437184
       },
       {
         "keys": [
           2
         ],
-        "color": 7995392
+        "color": -8781824
       },
       {
         "keys": [
           3
         ],
-        "color": 8650752
+        "color": -8126464
       },
       {
         "keys": [
           4
         ],
-        "color": 9306112
+        "color": -7471104
       },
       {
         "keys": [
           5
         ],
-        "color": 10027008
+        "color": -6750208
       },
       {
         "keys": [
           6
         ],
-        "color": 10682368
+        "color": -6094848
       },
       {
         "keys": [
           7
         ],
-        "color": 11337728
+        "color": -5439488
       },
       {
         "keys": [
           8
         ],
-        "color": 11993088
+        "color": -4784128
       },
       {
         "keys": [
           9
         ],
-        "color": 12648448
+        "color": -4128768
       },
       {
         "keys": [
           10
         ],
-        "color": 13369344
+        "color": -3407872
       },
       {
         "keys": [
           11
         ],
-        "color": 14024704
+        "color": -2752512
       },
       {
         "keys": [
           12
         ],
-        "color": 14680064
+        "color": -2097152
       },
       {
         "keys": [
           13
         ],
-        "color": 15336960
+        "color": -1440256
       },
       {
         "keys": [
           14
         ],
-        "color": 15997696
+        "color": -779520
       },
       {
         "keys": [
           15
         ],
-        "color": 16724480
+        "color": -52736
       }
     ]
   },
   "constant": {
-    "data": [
-      {
-        "keys": [
-          "pumpkin_stem"
-        ],
-        "color": 65280
-      },
-      {
-        "keys": [
-          "lily_pad"
-        ],
-        "color": 2129968
-      },
-      {
-        "keys": [
-          "attached_melon_stem"
-        ],
-        "color": 14731036
-      },
-      {
-        "keys": [
-          "melon_stem"
-        ],
-        "color": 65280
-      },
-      {
-        "keys": [
-          "spruce_leaves"
-        ],
-        "color": -10380959
-      },
-      {
-        "keys": [
-          "attached_pumpkin_stem"
-        ],
-        "color": 14731036
-      },
-      {
-        "keys": [
-          "birch_leaves"
-        ],
-        "color": -8345771
-      }
-    ]
+    "data": []
   }
 }
