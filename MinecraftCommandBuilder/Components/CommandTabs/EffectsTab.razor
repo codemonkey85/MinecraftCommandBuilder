@@ -3,19 +3,19 @@
 <MudStack>
     <PlayerNameComponent/>
 
-    <MudSelect T="@(Effect?)"
+    <MudSelect T="@(Effect)"
                Placeholder="Select an effect"
                Class="mt-3"
                MultiSelection="@false"
                SelectedValuesChanged="@OnSelectedValuesChanged"
                Clearable>
-        <MudSelectItem T="@(Effect?)"
+        <MudSelectItem T="@(Effect)"
                        Value="@null">
             None
         </MudSelectItem>
         @foreach (var effect in Effects.OrderBy(e => e.DisplayName))
         {
-            <MudSelectItem T="@(Effect?)"
+            <MudSelectItem T="@(Effect)"
                            Value="@effect">
                 @effect.DisplayName
             </MudSelectItem>
