@@ -9,7 +9,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 1,
@@ -21,7 +21,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 2,
@@ -33,7 +33,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 3,
@@ -45,7 +45,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 4,
@@ -57,19 +57,19 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
-    "id": 5,
+    "name": "villager",
     "internalId": 15,
-    "name": "villager_v2",
-    "displayName": "Villager",
-    "height": 1.8,
-    "width": 0.6,
-    "length": 0.6,
-    "offset": 1.62,
-    "type": "passive",
-    "category": "Passive mobs"
+    "id": 123,
+    "displayName": "villager",
+    "width": null,
+    "height": null,
+    "length": null,
+    "offset": null,
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 6,
@@ -81,7 +81,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 7,
@@ -93,7 +93,7 @@
     "length": null,
     "offset": null,
     "type": "water_creature",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 8,
@@ -105,7 +105,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 9,
@@ -117,7 +117,7 @@
     "length": null,
     "offset": null,
     "type": "ambient",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 10,
@@ -129,7 +129,7 @@
     "length": null,
     "offset": null,
     "type": "mob",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 11,
@@ -141,7 +141,7 @@
     "length": null,
     "offset": null,
     "type": "mob",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 12,
@@ -153,7 +153,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 13,
@@ -165,7 +165,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 14,
@@ -177,7 +177,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 15,
@@ -189,7 +189,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 16,
@@ -201,7 +201,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 17,
@@ -213,7 +213,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 18,
@@ -225,7 +225,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 19,
@@ -237,7 +237,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 20,
@@ -249,7 +249,7 @@
     "length": 0,
     "offset": 0,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 21,
@@ -261,7 +261,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 22,
@@ -273,7 +273,7 @@
     "length": null,
     "offset": null,
     "type": "water_creature",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 23,
@@ -285,7 +285,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 24,
@@ -297,7 +297,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 25,
@@ -309,7 +309,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 26,
@@ -321,7 +321,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 27,
@@ -333,7 +333,7 @@
     "length": 1.4,
     "offset": 1,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 28,
@@ -345,7 +345,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 29,
@@ -357,7 +357,7 @@
     "length": null,
     "offset": null,
     "type": "mob",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 30,
@@ -369,7 +369,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 31,
@@ -381,7 +381,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 32,
@@ -393,7 +393,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 33,
@@ -405,7 +405,7 @@
     "length": null,
     "offset": null,
     "type": "mob",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 34,
@@ -417,7 +417,7 @@
     "length": null,
     "offset": null,
     "type": "mob",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 35,
@@ -429,19 +429,19 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
-    "id": 36,
+    "name": "zombie_villager",
     "internalId": 44,
-    "name": "zombie_villager_v2",
-    "displayName": "Zombie Villager",
-    "height": 1.8,
-    "width": 0.6,
-    "length": 0.6,
-    "offset": 1.62,
-    "type": "hostile",
-    "category": "Hostile mobs"
+    "id": 124,
+    "displayName": "zombie_villager",
+    "width": null,
+    "height": null,
+    "length": null,
+    "offset": null,
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 37,
@@ -453,7 +453,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 38,
@@ -465,7 +465,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 39,
@@ -477,7 +477,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 40,
@@ -489,7 +489,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 41,
@@ -501,7 +501,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 42,
@@ -513,7 +513,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 43,
@@ -524,7 +524,8 @@
     "width": 0.6,
     "length": 0.6,
     "offset": 1.62,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 44,
@@ -536,7 +537,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 45,
@@ -548,7 +549,7 @@
     "length": null,
     "offset": null,
     "type": "mob",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 46,
@@ -560,7 +561,7 @@
     "length": null,
     "offset": null,
     "type": "mob",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 47,
@@ -572,7 +573,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 48,
@@ -583,7 +584,8 @@
     "width": null,
     "length": null,
     "offset": null,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 49,
@@ -595,7 +597,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 50,
@@ -607,7 +609,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 51,
@@ -619,7 +621,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "passive",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 52,
@@ -631,7 +633,7 @@
     "length": 0.9,
     "offset": 0.6,
     "type": "mob",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 53,
@@ -643,7 +645,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 54,
@@ -655,7 +657,7 @@
     "length": null,
     "offset": null,
     "type": "living",
-    "category": "Immobile"
+    "category": "UNKNOWN"
   },
   {
     "id": 55,
@@ -666,7 +668,8 @@
     "width": null,
     "length": null,
     "offset": null,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 56,
@@ -701,7 +704,8 @@
     "width": 0.98,
     "length": 0.98,
     "offset": 0,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 59,
@@ -724,7 +728,8 @@
     "width": null,
     "length": null,
     "offset": null,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 61,
@@ -735,7 +740,8 @@
     "width": 0.25,
     "length": 0,
     "offset": 0,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 62,
@@ -771,7 +777,7 @@
     "length": 2,
     "offset": 0,
     "type": "other",
-    "category": "Immobile"
+    "category": "UNKNOWN"
   },
   {
     "id": 65,
@@ -783,7 +789,7 @@
     "length": 0.25,
     "offset": 0,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 66,
@@ -795,7 +801,7 @@
     "length": 0,
     "offset": 0,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 67,
@@ -807,7 +813,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 68,
@@ -819,7 +825,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 69,
@@ -831,7 +837,7 @@
     "length": null,
     "offset": null,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 70,
@@ -843,7 +849,7 @@
     "length": 0,
     "offset": 0,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 71,
@@ -854,7 +860,8 @@
     "width": null,
     "length": null,
     "offset": null,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 72,
@@ -866,7 +873,7 @@
     "length": null,
     "offset": null,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 73,
@@ -878,7 +885,7 @@
     "length": null,
     "offset": null,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 74,
@@ -890,7 +897,7 @@
     "length": 0.25,
     "offset": 0,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 75,
@@ -902,7 +909,7 @@
     "length": null,
     "offset": null,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 76,
@@ -913,7 +920,8 @@
     "width": 0.25,
     "length": 0.25,
     "offset": 0,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 77,
@@ -925,7 +933,7 @@
     "length": null,
     "offset": null,
     "type": "other",
-    "category": "Immobile"
+    "category": "UNKNOWN"
   },
   {
     "id": 78,
@@ -937,7 +945,7 @@
     "length": 0.98,
     "offset": 0.35,
     "type": "other",
-    "category": "Vehicles"
+    "category": "UNKNOWN"
   },
   {
     "id": 79,
@@ -949,7 +957,7 @@
     "length": null,
     "offset": null,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 80,
@@ -960,7 +968,8 @@
     "width": 0.25,
     "length": 0.25,
     "offset": 0,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 81,
@@ -971,7 +980,8 @@
     "width": 0.25,
     "length": 0.25,
     "offset": 0,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 82,
@@ -983,7 +993,7 @@
     "length": null,
     "offset": null,
     "type": "other",
-    "category": "Immobile"
+    "category": "UNKNOWN"
   },
   {
     "id": 83,
@@ -995,7 +1005,7 @@
     "length": null,
     "offset": null,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 84,
@@ -1007,7 +1017,7 @@
     "length": 1.6,
     "offset": 0.35,
     "type": "other",
-    "category": "Vehicles"
+    "category": "UNKNOWN"
   },
   {
     "id": 85,
@@ -1018,7 +1028,8 @@
     "width": null,
     "length": null,
     "offset": null,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 86,
@@ -1042,7 +1053,7 @@
     "length": null,
     "offset": null,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 88,
@@ -1065,7 +1076,8 @@
     "width": 0.98,
     "length": 0.98,
     "offset": 0.35,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 90,
@@ -1076,7 +1088,8 @@
     "width": 0.98,
     "length": 0.98,
     "offset": 0.35,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 91,
@@ -1087,7 +1100,8 @@
     "width": 0.98,
     "length": 0.98,
     "offset": 0.35,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 92,
@@ -1098,7 +1112,8 @@
     "width": 0.98,
     "length": 0.98,
     "offset": 0.35,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 93,
@@ -1109,7 +1124,8 @@
     "width": 0.98,
     "length": 0.98,
     "offset": 0.35,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 94,
@@ -1120,7 +1136,8 @@
     "width": 0.98,
     "length": 0.98,
     "offset": 0.35,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 95,
@@ -1131,7 +1148,8 @@
     "width": null,
     "length": null,
     "offset": null,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 96,
@@ -1143,7 +1161,7 @@
     "length": null,
     "offset": null,
     "type": "projectile",
-    "category": "Projectiles"
+    "category": "UNKNOWN"
   },
   {
     "id": 97,
@@ -1155,7 +1173,7 @@
     "length": 0.5,
     "offset": 0,
     "type": "other",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 98,
@@ -1167,7 +1185,7 @@
     "length": 0.6,
     "offset": 0,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 99,
@@ -1179,7 +1197,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 100,
@@ -1190,7 +1208,8 @@
     "width": null,
     "length": null,
     "offset": null,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 101,
@@ -1201,7 +1220,8 @@
     "width": null,
     "length": null,
     "offset": null,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
   },
   {
     "id": 102,
@@ -1213,7 +1233,7 @@
     "length": null,
     "offset": null,
     "type": "water_creature",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 103,
@@ -1225,7 +1245,7 @@
     "length": null,
     "offset": null,
     "type": "water_creature",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 104,
@@ -1237,7 +1257,7 @@
     "length": null,
     "offset": null,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 105,
@@ -1249,7 +1269,7 @@
     "length": 0,
     "offset": 0,
     "type": "water_creature",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 106,
@@ -1261,7 +1281,7 @@
     "length": null,
     "offset": null,
     "type": "water_creature",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 107,
@@ -1273,7 +1293,7 @@
     "length": 1.825,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 108,
@@ -1285,7 +1305,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 109,
@@ -1297,7 +1317,7 @@
     "length": null,
     "offset": null,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 110,
@@ -1309,7 +1329,7 @@
     "length": 0,
     "offset": 0,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 111,
@@ -1321,7 +1341,7 @@
     "length": 1.3965,
     "offset": 0,
     "type": "animal",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 112,
@@ -1333,7 +1353,7 @@
     "length": 1.3965,
     "offset": 0,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 113,
@@ -1345,7 +1365,7 @@
     "length": 0.6,
     "offset": 0,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 114,
@@ -1357,7 +1377,7 @@
     "length": 0.6,
     "offset": 0,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 115,
@@ -1369,7 +1389,7 @@
     "length": 0.7,
     "offset": 0,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 116,
@@ -1381,7 +1401,7 @@
     "length": 0.8,
     "offset": 0,
     "type": "water_creature",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 117,
@@ -1393,7 +1413,7 @@
     "length": 0.9,
     "offset": 0,
     "type": "animal",
-    "category": "Passive mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 118,
@@ -1405,7 +1425,7 @@
     "length": null,
     "offset": null,
     "type": "other",
-    "category": "Immobile"
+    "category": "UNKNOWN"
   },
   {
     "id": 119,
@@ -1417,7 +1437,7 @@
     "length": null,
     "offset": null,
     "type": "other",
-    "category": "Immobile"
+    "category": "UNKNOWN"
   },
   {
     "id": 120,
@@ -1429,7 +1449,7 @@
     "length": 0.6,
     "offset": 1.62,
     "type": "hostile",
-    "category": "Hostile mobs"
+    "category": "UNKNOWN"
   },
   {
     "id": 121,
@@ -1440,6 +1460,31 @@
     "width": 0,
     "length": 0,
     "offset": 0,
-    "type": ""
+    "type": "",
+    "category": "UNKNOWN"
+  },
+  {
+    "name": "zombie_villager_v2",
+    "internalId": 116,
+    "id": 125,
+    "displayName": "zombie_villager_v2",
+    "width": null,
+    "height": null,
+    "length": null,
+    "offset": null,
+    "type": "",
+    "category": "UNKNOWN"
+  },
+  {
+    "name": "elder_guardian_ghost",
+    "internalId": 120,
+    "id": 126,
+    "displayName": "elder_guardian_ghost",
+    "width": null,
+    "height": null,
+    "length": null,
+    "offset": null,
+    "type": "",
+    "category": "UNKNOWN"
   }
 ]

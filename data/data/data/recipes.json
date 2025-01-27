@@ -8464,7 +8464,7 @@
     "name": "minecraft:sealantern",
     "ingredients": [{"name": "prismarine_shard", "count": 4}, {"name": "prismarine_crystals", "count": 5}],
     "input": [[1, 2, 1], [2, 2, 2], [1, 2, 1]],
-    "output": [{"name": "sea_lantern", "metadata": 0, "count": 1}]
+    "output": [{"name": "sealantern", "metadata": 0, "count": 1}]
   },
   "1229": {
     "type": "crafting_table",

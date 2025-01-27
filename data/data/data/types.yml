@@ -41,8 +41,7 @@ GameMode: zigzag32 =>
    2: adventure
    3: survival_spectator
    4: creative_spectator
-   5: fallback
-   6: spectator
+   5: fallback  
 
 GameRule:
    name: string
@@ -150,11 +149,6 @@ vec3i:
    y: zigzag32
    z: zigzag32
 
-vec3li:
-   x: li32
-   y: li32
-   z: li32
-
 vec3u:
    x: varint
    y: varint
@@ -168,15 +162,6 @@ vec3f:
 vec2f:
    x: lf32
    z: lf32
-
-Vec3fopts:
-   x?: lf32
-   y?: lf32
-   z?: lf32
-
-Vec2fopts:
-   x?: lf32
-   y?: lf32
 
 MetadataDictionary: []varint
    # https://github.com/pmmp/PocketMine-MP/blob/stable/src/pocketmine/entity/Entity.php#L101
@@ -304,13 +289,6 @@ MetadataDictionary: []varint
       122: buoyancy_data
       123: goat_horn_count
       124: update_properties
-      125: movement_sound_distance_offset
-      126: heartbeat_interval_ticks
-      127: heartbeat_sound_event
-      128: player_last_death_position
-      129: player_last_death_dimension
-      130: player_has_died
-      131: collision_box
    type: varint =>
       0: byte
       1: short
@@ -385,7 +363,6 @@ MetadataFlags1: [ "bitflags", {
       "charge_attack",
       "wasd_controlled",
       "can_power_jump",
-      "can_dash",
       "linger",
       "has_collision",
       "affected_by_gravity",
@@ -444,27 +421,7 @@ MetadataFlags2: [ "bitflags", {
       "celebrating_special",
       "unknown95",               # 95
       "ram_attack",
-      "playing_dead",
-      "in_ascendable_block",
-      "over_descendable_block",
-      "croaking",
-      "eat_mob",
-      "jump_goal_jump",
-      "emerging",
-      "sniffing",
-      "digging",
-      "sonic_boom",
-      "has_dash_cooldown",
-      "push_towards_closest_space",
-      "scenting",
-      "rising",
-      "feeling_happy",
-      "searching",
-      "crawling",
-      "timer_flag_1",
-      "timer_flag_2",
-      "timer_flag_3",
-      "body_rotation_blocked"
+      "playing_dead"
    ]
 }]
 
@@ -483,14 +440,6 @@ EntityAttributes: []varint
    value: lf32
    max: lf32
 
-EntityProperties:
-   ints: []varint
-      index: varint
-      value: zigzag32
-   floats: []varint
-      index: varint
-      value: lf32
-
 Rotation:
    yaw: byterot
    pitch: byterot
@@ -507,13 +456,6 @@ PlayerAttributes: []varint
    current: lf32
    default: lf32
    name: string
-   modifiers: []varint
-      id: string
-      name: string
-      amount: lf32
-      operation: li32
-      operand: li32
-      serializable: bool
 
 # UseItemTransactionData represents an inventory transaction data object sent when the client uses an item on
 # a block. Also used in PlayerAuthoritativeInput packet
@@ -653,47 +595,12 @@ Transaction:
 ItemStacks: Item[]varint
 
 RecipeIngredient:
-   type: u8 =>
-      0: invalid
-      # DefaultItemDescriptor represents an item descriptor for regular items.
-      1: int_id_meta
-      # MoLangItemDescriptor represents an item descriptor for items that use MoLang (e.g. behaviour packs).
-      2: molang
-      # ItemTagItemDescriptor represents an item descriptor that uses item tagging. This should be used to reduce duplicative
-      # entries for items that can be grouped under a single tag.
-      3: item_tag
-      # DeferredItemDescriptor represents an item descriptor that uses a namespace and metadata value to identify the item.
-      # There is no clear benefit of using this item descriptor.
-      4: string_id_meta
-      # ComplexAliasItemDescriptor represents an item descriptor that uses a single name to identify the item. There is no
-      # clear benefit of using this item descriptor and only seem to be used for specific recipes.
-      5: complex_alias
-   _: type ?
-      if int_id_meta:
-         # NetworkID is the numerical network ID of the item. This is sometimes a positive ID, and sometimes a
-         # negative ID, depending on what item it concerns.
-         network_id: li16
-         metadata: network_id ?
-            if 0: void
-            default: li16
-      if molang:
-         # Expression represents the MoLang expression used to identify the item/it's associated tag.
-         expression: string
-         # Version represents the version of MoLang to use.
-         version: u8
-      if item_tag:
-         # Tag represents the tag that the item is part of.
-         tag: string
-      if string_id_meta:
-         # Name is the name of the item, which is a name like 'minecraft:stick'.
-         name: string
-         # MetadataValue is the metadata value of the item. For some items, this is the damage value, whereas for
-         # other items it is simply an identifier of a variant of the item.
-         metadata: li16
-      if complex_alias:
-         # Name is the name of the item, which is a name like 'minecraft:stick'.
-         name: string
-   count: zigzag32
+   network_id: zigzag32
+   _: network_id?
+      if 0: void
+      default:
+         network_data: zigzag32
+         count: zigzag32
 
 PotionTypeRecipes: []varint
    input_item_id: zigzag32
@@ -720,10 +627,6 @@ Recipes: []varint
       5: shulker_box #'ENTRY_SHULKER_BOX', //TODO
       6: shapeless_chemistry #'ENTRY_SHAPELESS_CHEMISTRY', //TODO
       7: shaped_chemistry #'ENTRY_SHAPED_CHEMISTRY', //TODO
-      # SmithingTransformRecipe is a recipe specifically used for smithing tables. It has two input items and adds them
-      # together, resulting in a new item.
-      8: smithing_transform
-      9: smithing_trim
    recipe: type?
       if shapeless or shulker_box or shapeless_chemistry:
          recipe_id: LatinString
@@ -744,7 +647,6 @@ Recipes: []varint
          uuid: uuid
          block: string
          priority: zigzag32
-         assume_symmetry: bool
          network_id: varint
       if furnace:
          input_id: zigzag32
@@ -757,30 +659,6 @@ Recipes: []varint
          block: string
       if multi:
          uuid: uuid
-         network_id: varint
-      if smithing_transform:
-         # RecipeID is a unique ID of the recipe. This ID must be unique amongst all other types of recipes too,
-         # but its functionality is not exactly known.
-         recipe_id: LatinString
-         template: RecipeIngredient
-         # Base is the item that the Addition is being applied to in the smithing table.
-         base: RecipeIngredient
-         # Addition is the item that is being added to the Base item to result in a modified item.
-         addition: RecipeIngredient
-         # Result is the resulting item from the two items being added together.
-         result: ItemLegacy
-         # Tag is a serialized compound tag in the network little endian format.
-         tag: string
-         # RecipeNetworkID is a unique ID used to identify the recipe over network. Each recipe must have a unique
-         # network ID. Recommended is to just increment a variable for each unique recipe registered.
-         # This field must never be 0.
-         network_id: varint
-      if smithing_trim:
-         recipe_id: LatinString
-         template: RecipeIngredient
-         input: RecipeIngredient
-         addition: RecipeIngredient
-         block: string
          network_id: varint
 
 SkinImage:
@@ -800,9 +678,10 @@ Skin:
       expression_type: lf32
    cape_data: SkinImage
    geometry_data: string
-   geometry_data_version: string
    animation_data: string
-
+   premium: bool
+   persona: bool
+   cape_on_classic: bool
    cape_id: string
    full_skin_id: string
    arm_size: string
@@ -816,13 +695,6 @@ Skin:
    piece_tint_colors: []li32
       piece_type: string
       colors: string[]li32
-   premium: bool
-   persona: bool
-   # PersonaCapeOnClassicSkin specifies if the skin had a Persona cape (in-game skin creator cape) equipped
-   # on a classic skin.
-   cape_on_classic: bool
-   primary_user: bool
-   overriding_player_appearance: bool
 
 PlayerRecords:
    type: u8 =>
@@ -841,7 +713,6 @@ PlayerRecords:
             skin_data: Skin
             is_teacher: bool
             is_host: bool
-            is_subclient: bool
          if remove:
             uuid: uuid
    verified: type ?
@@ -891,15 +762,6 @@ Action: zigzag32 =>
    25: interact_block
    26: predict_break
    27: continue_break
-   28: start_item_use_on
-   29: stop_item_use_on
-   30: handled_teleport
-   31: missed_swing
-   32: start_crawling
-   33: stop_crawling
-   34: start_flying
-   35: stop_flying
-   36: received_server_data
 
 # Source and Destination point to the source slot from which Count of the item stack were taken and the
 # destination slot to which this item was moved.
@@ -925,74 +787,64 @@ ItemStackRequest:
       type_id: u8 =>
          # TakeStackRequestAction is sent by the client to the server to take x amount of items from one slot in a
          # container to the cursor.
-         - take
+         0: take
          # PlaceStackRequestAction is sent by the client to the server to place x amount of items from one slot into
          # another slot, such as when shift clicking an item in the inventory to move it around or when moving an item
          # in the cursor into a slot.
-         - place
+         1: place
          # SwapStackRequestAction is sent by the client to swap the item in its cursor with an item present in another
          # container. The two item stacks swap places. 
-         - swap
+         2: swap
          # DropStackRequestAction is sent by the client when it drops an item out of the inventory when it has its
          # inventory opened. This action is not sent when a player drops an item out of the hotbar using the Q button
          # (or the equivalent on mobile). The InventoryTransaction packet is still used for that action, regardless of
          # whether the item stack network IDs are used or not.
-         - drop
+         3: drop
          # DestroyStackRequestAction is sent by the client when it destroys an item in creative mode by moving it
          # back into the creative inventory.
-         - destroy
+         4: destroy
          # ConsumeStackRequestAction is sent by the client when it uses an item to craft another item. The original
          # item is 'consumed'.
-         - consume
+         5: consume
          # CreateStackRequestAction is sent by the client when an item is created through being used as part of a
          # recipe. For example, when milk is used to craft a cake, the buckets are leftover. The buckets are moved to
          # the slot sent by the client here.
          # Note that before this is sent, an action for consuming all items in the crafting table/grid is sent. Items
          # that are not fully consumed when used for a recipe should not be destroyed there, but instead, should be
          # turned into their respective resulting items. 
-         - create
-         # (as of 1.18.10) Not currently used
-         - place_in_container
-         # (as of 1.18.10) Not currently used
-         - take_out_container
+         6: create 
          # LabTableCombineStackRequestAction is sent by the client when it uses a lab table to combine item stacks.
-         - lab_table_combine
+         7: lab_table_combine
          # BeaconPaymentStackRequestAction is sent by the client when it submits an item to enable effects from a
          # beacon. These items will have been moved into the beacon item slot in advance. 
-         - beacon_payment
+         8: beacon_payment
          # MineBlockStackRequestAction is sent by the client when it breaks a block.
-         - mine_block
+         9: mine_block
          # CraftRecipeStackRequestAction is sent by the client the moment it begins crafting an item. This is the
          # first action sent, before the Consume and Create item stack request actions.
          # This action is also sent when an item is enchanted. Enchanting should be treated mostly the same way as
          # crafting, where the old item is consumed.
-         - craft_recipe
+         10: craft_recipe
          # AutoCraftRecipeStackRequestAction is sent by the client similarly to the CraftRecipeStackRequestAction. The
          # only difference is that the recipe is automatically created and crafted by shift clicking the recipe book.
-         - craft_recipe_auto  #recipe book?
+         11: craft_recipe_auto  #recipe book?
          # CraftCreativeStackRequestAction is sent by the client when it takes an item out fo the creative inventory.
          # The item is thus not really crafted, but instantly created.
-         - craft_creative
+         12: craft_creative
          # CraftRecipeOptionalStackRequestAction is sent when using an anvil. When this action is sent, the
          # CustomNames field in the respective stack request is non-empty and contains the name of the item created
          # using the anvil.
-         - optional
-         # CraftGrindstoneRecipeStackRequestAction is sent when a grindstone recipe is crafted. It contains the RecipeNetworkID
-         # to identify the recipe crafted, and the cost for crafting the recipe.
-         - craft_grindstone_request
-         # CraftLoomRecipeStackRequestAction is sent when a loom recipe is crafted. It simply contains the
-         # pattern identifier to figure out what pattern is meant to be applied to the item.
-         - craft_loom_request
+         13: optional
          # CraftNonImplementedStackRequestAction is an action sent for inventory actions that aren't yet implemented
          # in the new system. These include, for example, anvils.
-         - non_implemented  # anvils aren't fully implemented yet
+         14: non_implemented  #anvils aren't fully implemented yet
          # CraftResultsDeprecatedStackRequestAction is an additional, deprecated packet sent by the client after
          # crafting. It holds the final results and the amount of times the recipe was crafted. It shouldn't be used.
          # This action is also sent when an item is enchanted. Enchanting should be treated mostly the same way as
          # crafting, where the old item is consumed.
-         - results_deprecated
+         15: results_deprecated
       _: type_id ?
-         if take or place or place_in_container or take_out_container:
+         if take or place:
             count: u8
             source: StackRequestSlotInfo
             destination: StackRequestSlotInfo
@@ -1042,7 +894,6 @@ ItemStackRequest:
             # one of the recipes sent in the CraftingData packet, where each of the recipes have a RecipeNetworkID as
             recipe_network_id: varint
             times_crafted: u8
-            ingredients: RecipeIngredient[]varint
          if craft_creative:
             # The stack ID of the creative item that is being created. This is one of the
             # creative item stack IDs sent in the CreativeContent packet.
@@ -1052,15 +903,6 @@ ItemStackRequest:
             recipe_network_id: varint
             # Most likely the index in the request's filter strings that this action is using
             filtered_string_index: li32
-         if craft_grindstone_request:
-            # RecipeNetworkID is the network ID of the recipe that is about to be crafted. This network ID matches
-            # one of the recipes sent in the CraftingData packet, where each of the recipes have a RecipeNetworkID as
-            recipe_network_id: varint
-            # Cost is the cost of the recipe that was crafted.
-            cost: varint
-         if craft_loom_request:
-            # Pattern is the pattern identifier for the loom recipe.
-            pattern: string
          if non_implemented: void
          if results_deprecated:
             result_items: ItemLegacy[]varint
@@ -1069,23 +911,6 @@ ItemStackRequest:
    # when an anvil is used.
    # * Used for the server to determine which strings should be filtered. Used in anvils to verify a renamed item.
    custom_names: string[]varint
-   # FilterCause represents the cause of any potential filtering. This is one of the constants above.
-   cause: li32 =>
-     - chat_public
-     - chat_whisper
-     - sign_text
-     - anvil_text
-     - book_and_quill_text
-     - command_block_text
-     - block_actor_data_text
-     - join_event_text
-     - leave_event_text
-     - slash_command_chat
-     - cartography_text
-     - kick_command
-     - title_command
-     - summon_command
-
 
 # ItemStackResponse is a response to an individual ItemStackRequest.
 ItemStackResponses: []varint
@@ -1153,7 +978,6 @@ CommandOrigin:
       12: precompiled
       13: game_director_entity_server # ?
       14: script
-      15: executor
 
    # UUID is the UUID of the command called. This UUID is a bit odd as it is not specified by the server. It
    # is not clear what exactly this UUID is meant to identify, but it is unique for each command called.
@@ -1213,30 +1037,6 @@ MapDecoration:
    - village_snowy
    - village_taiga
    - jungle_temple
-   - witch_hut =>
-   - marker_white
-   - marker_green
-   - marker_red
-   - marker_blue
-   - cross_white
-   - triangle_red
-   - square_white
-   - marker_sign
-   - marker_pink
-   - marker_orange
-   - marker_yellow
-   - marker_teal
-   - triangle_green
-   - small_square_white
-   - mansion
-   - monument
-   - no_draw
-   - village_desert
-   - village_plains
-   - village_savanna
-   - village_snowy
-   - village_taiga
-   - jungle_temple
    - witch_hut
    # Rotation is the rotation of the map decoration. It is byte due to the 16 fixed directions that the
    # map decoration may face.
@@ -1262,7 +1062,6 @@ StructureBlockSettings:
    # IgnoreBlocks specifies if the structure should ignore blocks or include them. If set to false, blocks
    # will show up in the exported structure.
    ignore_blocks: bool
-   non_ticking_players_and_ticking_areas: bool
    # Size is the size of the area that is about to be exported. The area exported will start at the
    # Position + Offset, and will extend as far as Size specifies.
    size: BlockCoordinates
@@ -1301,74 +1100,6 @@ StructureBlockSettings:
    seed: lu32
    # Pivot is the pivot around which the structure may be rotated.
    pivot: vec3f
-
-# EducationSharedResourceURI is an education edition feature that is used for transmitting
-# education resource settings to clients. It contains a button name and a link URL.
-EducationSharedResourceURI:
-   # ButtonName is the button name of the resource URI.
-   button_name: string
-   # LinkURI is the link URI for the resource URI.
-   link_uri: string
-
-EducationExternalLinkSettings:
-   # URL is the external link URL.
-   url: string
-   # DisplayName is the display name in game.
-   display_name: string
-
-BlockUpdate:
-   position: BlockCoordinates
-   runtime_id: varint
-   flags: varint
-   # EntityUniqueID is the unique ID of the falling block entity that the block transitions to or that the
-   # entity transitions from.
-   # Note that for both possible values for TransitionType, the EntityUniqueID should point to the falling
-   # block entity involved.
-   entity_unique_id: zigzag64
-   # TransitionType is the type of the transition that happened. It is either BlockToEntityTransition, when
-   # a block placed becomes a falling entity, or EntityToBlockTransition, when a falling entity hits the
-   # ground and becomes a solid block again.
-   transition_type: varint => TransitionType
-
-TransitionType: =>
-   # For falling sand, when a sand turns to an entity
-   0: entity
-   # When sand turns back to a new block
-   1: create
-   2: destroy
-
-MaterialReducer:
-   mix: zigzag32
-   items:
-      network_id: zigzag32
-      count: zigzag32
-
-## Permissions
-
-# The permission level of a player, for example whether they are an Server Operator or not.
-PermissionLevel: u8 =>
-   0: visitor
-   1: member
-   2: operator
-   3: custom
-
-# The command permission level, for example if being run by a Player, an Op, or a Command Block.
-CommandPermissionLevel: u8 =>
-   0: normal
-   1: operator
-   2: automation
-   3: host
-   4: owner
-   5: internal
-
-# The command permission level, for example if being run by a Player, an Op, or a Command Block.
-CommandPermissionLevelVarint: u8 =>
-   0: normal
-   1: operator
-   2: automation
-   3: host
-   4: owner
-   5: internal
 
 # List of Window IDs. When a new container is opened (container_open), a new sequential Window ID is created.
 # Below window IDs are hard-coded and created when the game starts and the server does not 
@@ -1468,9 +1199,6 @@ WindowType: i8 =>
    31: hud
    32: jigsaw_editor
    33: smithing_table
-   34: chest_boat
-   35: decorated_pot
-   36: crafter
 
 # Used in inventory transactions. 
 ContainerSlotType: u8 =>
@@ -1495,7 +1223,6 @@ ContainerSlotType: u8 =>
    - recipe_search
    - recipe_search_bar
    - recipe_equipment
-   - recipe_book
    - enchanting_input
    - enchanting_lapis
    - furnace_fuel
@@ -1535,8 +1262,6 @@ ContainerSlotType: u8 =>
    - barrel
    - cursor
    - creative_output
-   - smithing_table_template
-   - crafter
 
 SoundType: varint =>
    - ItemUseOn
@@ -1652,9 +1377,9 @@ SoundType: varint =>
    - RecordWard
    - Record11
    - RecordWait
-   - StopRecord
+   - unknown1
    - Flop
-   - GuardianCurse
+   - ElderGuardianCurse
    - MobWarning
    - MobWarningBaby
    - Teleport
@@ -1669,7 +1394,7 @@ SoundType: varint =>
    - Glass
    - PotionBrewed
    - CastSpell
-   - PrepareAttackSpell
+   - PrepareAttack
    - PrepareSummon
    - PrepareWololo
    - Fang
@@ -1677,20 +1402,20 @@ SoundType: varint =>
    - CameraTakePicture
    - LeashKnotPlace
    - LeashKnotBreak
-   - AmbientGrowl
-   - AmbientWhine
-   - AmbientPant
-   - AmbientPurr
-   - AmbientPurreow
+   - Growl
+   - Whine
+   - Pant
+   - Purr
+   - Purreow
    - DeathMinVolume
    - DeathMidVolume
-   - ImitateBlaze
+   - unknown2
    - ImitateCaveSpider
    - ImitateCreeper
    - ImitateElderGuardian
    - ImitateEnderDragon
    - ImitateEnderman
-   - ImitateEndermite
+   - unknown3
    - ImitateEvocationIllager
    - ImitateGhast
    - ImitateHusk
@@ -1712,62 +1437,58 @@ SoundType: varint =>
    - ImitateZombie
    - ImitateZombiePigman
    - ImitateZombieVillager
-   - EnderEyePlaced
-   - EndPortalCreated
-   - AnvilUse
+   - BlockEndPortalFrameFill
+   - BlockEndPortalSpawn
+   - RandomAnvilUse
    - BottleDragonBreath
    - PortalTravel
-   - TridentHit
-   - TridentReturn
-   - TridentRiptide1
-   - TridentRiptide2
-   - TridentRiptide3
-   - TridentThrow
-   - TridentThunder
-   - TridentHitGround
+   - ItemTridentHit
+   - ItemTridentReturn
+   - ItemTridentRiptide1
+   - ItemTridentRiptide2
+   - ItemTridentRiptide3
+   - ItemTridentThrow
+   - ItemTridentThunder
+   - ItemTridentHitGround
    - Default
-   - FletchingTableUse
+   - BlockFletchingTableUse
    - ElemConstructOpen
    - IceBombHit
    - BalloonPop
    - LtReactionIceBomb
    - LtReactionBleach
-   - LtReactionElephantToothpaste
-   - LtReactionElephantToothpaste2
-   - LtReactionGlowStick
-   - LtReactionGlowStick2
-   - LtReactionLuminol
-   - LtReactionSalt
+   - LtReactionEPaste
+   - LtReactionEPaste2
    - LtReactionFertilizer
    - LtReactionFireball
-   - LtReactionMagnesiumSalt
-   - LtReactionMiscFire
+   - LtReactionMgsalt
+   - LtReactionMiscfire
    - LtReactionFire
-   - LtReactionMiscExplosion
-   - LtReactionMiscMystical
-   - LtReactionMiscMystical2
+   - LtReactionMiscexplosion
+   - LtReactionMiscmystical
+   - LtReactionMiscmystical2
    - LtReactionProduct
    - SparklerUse
-   - GlowStickUse
+   - GlowstickUse
    - SparklerActive
    - ConvertToDrowned
    - BucketFillFish
    - BucketEmptyFish
-   - BubbleColumnUpwards
-   - BubbleColumnDownwards
+   - BubbleUp
+   - BubbleDown
    - BubblePop
    - BubbleUpInside
    - BubbleDownInside
    - HurtBaby
    - DeathBaby
    - StepBaby
-   - SpawnBaby
+   - BabySpawn
    - Born
-   - TurtleEggBreak
-   - TurtleEggCrack
-   - TurtleEggHatched
-   - LayEgg
-   - TurtleEggAttacked
+   - BlockTurtleEggBreak
+   - BlockTurtleEggCrack
+   - BlockTurtleEggHatch
+   - TurtleLayEgg
+   - BlockTurtleEggAttack
    - BeaconActivate
    - BeaconAmbient
    - BeaconDeactivate
@@ -1778,12 +1499,12 @@ SoundType: varint =>
    - ConduitDeactivate
    - ConduitShort
    - Swoop
-   - BambooSaplingPlace
+   - BlockBambooSaplingPlace
    - PreSneeze
    - Sneeze
    - AmbientTame
    - Scared
-   - ScaffoldingClimb
+   - BlockScaffoldingClimb
    - CrossbowLoadingStart
    - CrossbowLoadingMiddle
    - CrossbowLoadingEnd
@@ -1794,29 +1515,29 @@ SoundType: varint =>
    - AmbientAggressive
    - AmbientWorried
    - CantBreed
-   - ShieldBlock
-   - LecternBookPlace
-   - GrindstoneUse
-   - Bell
-   - CampfireCrackle
+   - ItemShieldBlock
+   - ItemBookPut
+   - BlockGrindstoneUse
+   - BlockBellHit
+   - BlockCampfireCrackle
    - Roar
    - Stun
-   - SweetBerryBushHurt
-   - SweetBerryBushPick
-   - CartographyTableUse
-   - StonecutterUse
-   - ComposterEmpty
-   - ComposterFill
-   - ComposterFillLayer
-   - ComposterReady
-   - BarrelOpen
-   - BarrelClose
+   - BlockSweetBerryBushHurt
+   - BlockSweetBerryBushPick
+   - UICartographyTableTakeResult
+   - UIStoneCutterTakeResult
+   - BlockComposterEmpty
+   - BlockComposterFill
+   - BlockComposterFillSuccess
+   - BlockComposterReady
+   - BlockBarrelOpen
+   - BlockBarrelClose
    - RaidHorn
-   - LoomUse
-   - AmbientInRaid
-   - UicartographyTableUse
-   - UistonecutterUse
-   - UiloomUse
+   - BlockLoomUse
+   - AmbientRaid
+   - UICartographyTableUse
+   - UIStoneCutterUse
+   - UILoomUse
    - SmokerUse
    - BlastFurnaceUse
    - SmithingTableUse
@@ -1828,12 +1549,12 @@ SoundType: varint =>
    - Celebrate
    - JumpPrevent
    - AmbientPollinate
-   - BeehiveDrip
-   - BeehiveEnter
-   - BeehiveExit
-   - BeehiveWork
-   - BeehiveShear
-   - HoneybottleDrink
+   - BeeHiveDrip
+   - BeeHiveEnter
+   - BeeHiveExit
+   - BeeHiveWork
+   - BeeHiveShear
+   - HoneyBottleDrink
    - AmbientCave
    - Retreat
    - ConvertToZombified
@@ -1842,11 +1563,11 @@ SoundType: varint =>
    - Tempt
    - Panic
    - Angry
-   - AmbientMoodWarpedForest
-   - AmbientMoodSoulsandValley
-   - AmbientMoodNetherWastes
-   - AmbientMoodBasaltDeltas
-   - AmbientMoodCrimsonForest
+   - AmbientWarpedForest
+   - AmbientSoulsandValley
+   - AmbientNetherWastes
+   - AmbientBasaltDeltas
+   - AmbientCrimsonForest
    - RespawnAnchorCharge
    - RespawnAnchorDeplete
    - RespawnAnchorSetSpawn
@@ -1855,7 +1576,7 @@ SoundType: varint =>
    - SoulEscapeLoud
    - RecordPigstep
    - LinkCompassToLodestone
-   - UseSmithingTable
+   - BlockSmithingTableUse
    - EquipNetherite
    - AmbientLoopWarpedForest
    - AmbientLoopSoulsandValley
@@ -1878,188 +1599,32 @@ SoundType: varint =>
    - CaveVinesPickBerries
    - BigDripleafTiltDown
    - BigDripleafTiltUp
-   - CopperWaxOn
-   - CopperWaxOff
-   - Scrape
-   - PlayerHurtDrown
-   - PlayerHurtOnFire
-   - PlayerHurtFreeze
-   - UseSpyglass
-   - StopUsingSpyglass
-   - AmethystBlockChime
-   - AmbientScreamer
-   - HurtScreamer
-   - DeathScreamer
-   - MilkScreamer
-   - JumpToBlock
-   - PreRam
-   - PreRamScreamer
-   - RamImpact
-   - RamImpactScreamer
-   - SquidInkSquirt
-   - GlowSquidInkSquirt
-   - ConvertToStray
-   - CakeAddCandle
-   - ExtinguishCandle
-   - AmbientCandle
-   - BlockClick
-   - BlockClickFail
-   - SculkCatalystBloom
-   - SculkShriekerShriek
-   - WardenNearbyClose
-   - WardenNearbyCloser
-   - WardenNearbyClosest
-   - WardenSlightlyAngry
-   - RecordOtherside
-   - Tongue
-   - CrackIronGolem
-   - RepairIronGolem
-   - Listening
-   - Heartbeat
-   - HornBreak
-   - SculkPlace
-   - SculkSpread
-   - SculkCharge
-   - SculkSensorPlace
-   - SculkShriekerPlace
-   - goat_call_0
-   - goat_call_1
-   - goat_call_2
-   - goat_call_3
-   - goat_call_4
-   - goat_call_5
-   - goat_call_6
-   - goat_call_7
-   - goat_call_8
-   - goat_call_9
-   - goat_harmony_0
-   - goat_harmony_1
-   - goat_harmony_2
-   - goat_harmony_3
-   - goat_harmony_4
-   - goat_harmony_5
-   - goat_harmony_6
-   - goat_harmony_7
-   - goat_harmony_8
-   - goat_harmony_9
-   - goat_melody_0
-   - goat_melody_1
-   - goat_melody_2
-   - goat_melody_3
-   - goat_melody_4
-   - goat_melody_5
-   - goat_melody_6
-   - goat_melody_7
-   - goat_melody_8
-   - goat_melody_9
-   - goat_bass_0
-   - goat_bass_1
-   - goat_bass_2
-   - goat_bass_3
-   - goat_bass_4
-   - goat_bass_5
-   - goat_bass_6
-   - goat_bass_7
-   - goat_bass_8
-   - goat_bass_9
-   - _
-   - _
-   - _
-   - ImitateWarden
-   - ListeningAngry
-   - ItemGiven
-   - ItemTaken
-   - Disappeared
-   - Reappeared
-   - DrinkMilk
-   - FrogspawnHatched
-   - LaySpawn
-   - FrogspawnBreak
-   - SonicBoom
-   - SonicCharge
-   - SoundeventItemThrown
-   - Record5
-   - ConvertToFrog
-   - RecordPlaying
-   - EnchantingTableUse
-   - StepSand
-   - DashReady
-   - BundleDropContents
-   - BundleInsert
-   - BundleRemoveOne
-   - PressurePlateClickOff
-   - PressurePlateClickOn
-   - ButtonClickOff
-   - ButtonClickOn
-   - DoorOpen
-   - DoorClose
-   - TrapdoorOpen
-   - TrapdoorClose
-   - FenceGateOpen
-   - FenceGateClose
-   - Insert
-   - Pickup
-   - InsertEnchanted
-   - PickupEnchanted
-   - Brush
-   - BrushCompleted
-   - ShatterDecoratedPot
-   - BreakDecoratedPot
-   - SnifferEggCrack
-   - SnifferEggHatched
-   - WaxedSignInteractFail
-   - RecordRelic
-   - Bump
-   - PumpkinCarve
-   - ConvertHuskToZombie
-   - PigDeath
-   - HoglinZombified
-   - AmbientUnderwaterEnter
-   - AmbientUnderwaterExit
-   - bottle_fill
-   - bottle_empty
-   - crafter_craft
-   - crafter_fail
-   - block_decorated_pot_insert
-   - block_decorated_pot_insert_fail
-   - crafter_disable_slot
-   - trial_spawner_open_shutter
-   - trial_spawner_eject_item
-   - trial_spawner_detect_player
-   - trial_spawner_spawn_mob
-   - trial_spawner_close_shutter
-   - trial_spawner_ambient
-   - block_copper_bulb_turn_on
-   - block_copper_bulb_turn_off
-   - ambient_in_air
-   - breeze_wind_charge_burst
-   - imitate_breeze
-   - mob_armadillo_brush
-   - mob_armadillo_scute_drop
-   - armor_equip_wolf
-   - armor_unequip_wolf
-   - reflect
-   - vault_open_shutter
-   - vault_close_shutter
-   - vault_eject_item
-   - vault_insert_item
-   - vault_insert_item_fail
-   - vault_ambient
-   - vault_activate
-   - vault_deactivate
-   - hurt_reduced
-   - wind_charge_burst
-   - _
-   - armor_crack_wolf
-   - armor_break_wolf
-   - armor_repair_wolf
-   - mace_smash_air
-   - mace_smash_ground
-   - trail_spawner_charge_activate
-   - trail_spawner_ambient_ominous
-   - ominous_item_spawner_spawn_item
-   - ominous_bottle_end_use
-   - mace_smash_heavy_ground
+   - unknown335
+   - unknown336
+   - unknown337
+   - unknown338
+   - copper_wax_on
+   - copper_wax_off
+   - scrape
+   - player_hurt_drown
+   - player_hurt_on_fire
+   - player_hurt_freeze
+   - use_spyglass
+   - stop_using_spyglass
+   - amethyst_block_chime
+   - ambient_screamer
+   - hurt_screamer
+   - death_screamer
+   - milk_screamer
+   - jump_to_block
+   - pre_ram
+   - pre_ram_screamer
+   - ram_impact
+   - ram_impact_screamer
+   - squid_ink_squirt
+   - glow_squid_ink_squirt
+   - convert_to_stray
+   - Undefined
 
 # TODO: remove?
 LegacyEntityType: li32 =>
@@ -2163,190 +1728,3 @@ LegacyEntityType: li32 =>
    111: tropicalfish
    112: cod
    113: panda
-
-DeviceOS: li32 =>
-- Undefined
-- Android
-- IOS
-- OSX
-- FireOS
-- GearVR
-- Hololens
-- Win10
-- Win32
-- Dedicated
-- TVOS
-- Orbis
-- NintendoSwitch
-- Xbox
-- WindowsPhone
-- Linux
-
-
-AbilitySet: ["bitflags",
-   {
-      "type": "lu32",
-      "flags": [
-         "build",
-         "mine",
-         "doors_and_switches",
-         "open_containers",
-         "attack_players",
-         "attack_mobs",
-         "operator_commands",
-         "teleport",
-         "invulnerable",
-         "flying",
-         "may_fly",
-         "instant_build",
-         "lightning",
-         "fly_speed",
-         "walk_speed",
-         "muted",
-         "world_builder",
-         "no_clip",
-         "privileged_builder",
-         "count"
-      ]
-   }
-]
-
-# AbilityLayer represents the abilities of a specific layer, such as the base layer or the spectator layer.
-AbilityLayers:
-   # Type represents the type of the layer. This is one of the AbilityLayerType constants defined above.
-   type: lu16 =>
-   - cache
-   - base
-   - spectator
-   - commands
-   - editor
-   # The abilities that can be toggled between
-   allowed: AbilitySet
-   # The abilities that are currently active
-   enabled: AbilitySet
-   # FlySpeed is the default fly speed of the layer.
-   fly_speed: lf32
-   # WalkSpeed is the default walk speed of the layer.
-   walk_speed: lf32
-
-CameraPresets:
-   # Name is the name of the preset. Each preset must have their own unique name.
-   name: string
-   # Parent is the name of the preset that this preset extends upon. This can be left empty.
-   parent: string
-   position: Vec3fopts
-   rotation: Vec2fopts
-   ## TODO: make this an enum afer adding proper optional support inside pdefyaml
-   audio_listener?: u8
-   player_effects?: bool
-
-DisconnectFailReason: zigzag32 =>
-   - unknown
-   - cant_connect_no_internet
-   - no_permissions
-   - unrecoverable_error
-   - third_party_blocked
-   - third_party_no_internet
-   - third_party_bad_ip
-   - third_party_no_server_or_server_locked
-   - version_mismatch
-   - skin_issue
-   - invite_session_not_found
-   - edu_level_settings_missing
-   - local_server_not_found
-   - legacy_disconnect
-   - user_leave_game_attempted
-   - platform_locked_skins_error
-   - realms_world_unassigned
-   - realms_server_cant_connect
-   - realms_server_hidden
-   - realms_server_disabled_beta
-   - realms_server_disabled
-   - cross_platform_disallowed
-   - cant_connect
-   - session_not_found
-   - client_settings_incompatible_with_server
-   - server_full
-   - invalid_platform_skin
-   - edition_version_mismatch
-   - edition_mismatch
-   - level_newer_than_exe_version
-   - no_fail_occurred
-   - banned_skin
-   - timeout
-   - server_not_found
-   - outdated_server
-   - outdated_client
-   - no_premium_platform
-   - multiplayer_disabled
-   - no_wifi
-   - world_corruption
-   - no_reason
-   - disconnected
-   - invalid_player
-   - logged_in_other_location
-   - server_id_conflict
-   - not_allowed
-   - not_authenticated
-   - invalid_tenant
-   - unknown_packet
-   - unexpected_packet
-   - invalid_command_request_packet
-   - host_suspended
-   - login_packet_no_request
-   - login_packet_no_cert
-   - missing_client
-   - kicked
-   - kicked_for_exploit
-   - kicked_for_idle
-   - resource_pack_problem
-   - incompatible_pack
-   - out_of_storage
-   - invalid_level
-   - disconnect_packet_deprecated
-   - block_mismatch
-   - invalid_heights
-   - invalid_widths
-   - connection_lost
-   - zombie_connection
-   - shutdown
-   - reason_not_set
-   - loading_state_timeout
-   - resource_pack_loading_failed
-   - searching_for_session_loading_screen_failed
-   - conn_protocol_version
-   - subsystem_status_error
-   - empty_auth_from_discovery
-   - empty_url_from_discovery
-   - expired_auth_from_discovery
-   - unknown_signal_service_sign_in_failure
-   - xbl_join_lobby_failure
-   - unspecified_client_instance_disconnection
-   - conn_session_not_found
-   - conn_create_peer_connection
-   - conn_ice
-   - conn_connect_request
-   - conn_connect_response
-   - conn_negotiation_timeout
-   - conn_inactivity_timeout
-   - stale_connection_being_replaced
-   - realms_session_not_found
-   - bad_packet
-   - conn_failed_to_create_offer
-   - conn_failed_to_create_answer
-   - conn_failed_to_set_local_description
-   - conn_failed_to_set_remote_description
-   - conn_negotiation_timeout_waiting_for_response
-   - conn_negotiation_timeout_waiting_for_accept
-   - conn_incoming_connection_ignored
-   - conn_signaling_parsing_failure
-   - conn_signaling_unknown_error
-   - conn_signaling_unicast_delivery_failed
-   - conn_signaling_broadcast_delivery_failed
-   - conn_signaling_generic_delivery_failed
-   - editor_mismatch_editor_world
-   - editor_mismatch_vanilla_world
-   - world_transfer_not_primary_client
-   - server_shutdown
-   - game_setup_cancelled
-   - game_setup_failed

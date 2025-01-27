@@ -685,6 +685,12 @@
     "name": "crimson_stem"
   },
   {
+    "id": 107,
+    "displayName": "Piston Head",
+    "name": "pistonArmCollision",
+    "stackSize": 64
+  },
+  {
     "id": 108,
     "stackSize": 64,
     "displayName": "Warped Stem",
@@ -749,6 +755,12 @@
     "stackSize": 64,
     "displayName": "Stripped Warped Hyphae",
     "name": "stripped_warped_hyphae"
+  },
+  {
+    "id": 124,
+    "displayName": "Moving Piston",
+    "name": "movingBlock",
+    "stackSize": 64
   },
   {
     "id": 125,
@@ -1880,6 +1892,12 @@
     ]
   },
   {
+    "id": 285,
+    "displayName": "Tripwire",
+    "name": "tripWire",
+    "stackSize": 64
+  },
+  {
     "id": 287,
     "stackSize": 64,
     "displayName": "Deepslate Bricks",
@@ -2753,6 +2771,12 @@
     ]
   },
   {
+    "id": 403,
+    "displayName": "Sea Lantern",
+    "name": "seaLantern",
+    "stackSize": 64
+  },
+  {
     "id": 416,
     "displayName": "White Stained Glass Pane",
     "name": "stained_glass_pane",
@@ -2911,7 +2935,7 @@
     "id": 438,
     "stackSize": 64,
     "displayName": "Sea Lantern",
-    "name": "sea_lantern"
+    "name": "sealantern"
   },
   {
     "id": 439,
@@ -3152,12 +3176,6 @@
     "stackSize": 64,
     "displayName": "Lime Glazed Terracotta",
     "name": "lime_glazed_terracotta"
-  },
-  {
-    "id": 473,
-    "displayName": "Smooth Stone Slab",
-    "name": "stone_slab",
-    "stackSize": 64
   },
   {
     "id": 474,
@@ -3885,6 +3903,12 @@
         "stackSize": 64
       }
     ]
+  },
+  {
+    "id": 572,
+    "displayName": "White Concrete Powder",
+    "name": "concretePowder",
+    "stackSize": 64
   },
   {
     "id": 580,
@@ -7745,6 +7769,18 @@
     "name": "pointed_dripstone"
   },
   {
+    "id": 5133,
+    "displayName": "InvisibleBedrock",
+    "name": "invisibleBedrock",
+    "stackSize": 64
+  },
+  {
+    "id": 8002,
+    "displayName": "Piston Head",
+    "name": "stickyPistonArmCollision",
+    "stackSize": 64
+  },
+  {
     "id": 8011,
     "displayName": "Prismarine Slab",
     "name": "stone_slab2",
@@ -7757,286 +7793,304 @@
     "stackSize": 64
   },
   {
+    "id": 8014,
+    "displayName": "Smooth Stone Slab",
+    "name": "stone_slab",
+    "stackSize": 64
+  },
+  {
     "id": 8015,
     "displayName": "Polished Granite Slab",
     "name": "stone_slab3",
     "stackSize": 64
   },
   {
-    "id": 9006,
+    "id": 9005,
     "stackSize": 1,
     "name": "air",
     "displayName": "Air"
   },
   {
-    "id": 9010,
-    "stackSize": 1,
-    "name": "element_25",
-    "displayName": "Element 25"
-  },
-  {
-    "id": 9011,
-    "stackSize": 1,
-    "name": "mangrove_leaves",
-    "displayName": "Mangrove Leaves"
-  },
-  {
-    "id": 9017,
+    "id": 9012,
     "stackSize": 1,
     "name": "element_50",
     "displayName": "Element 50"
   },
   {
-    "id": 9026,
+    "id": 9022,
     "stackSize": 1,
     "name": "element_15",
     "displayName": "Element 15"
   },
   {
-    "id": 9028,
+    "id": 9024,
     "stackSize": 1,
     "name": "item.dark_oak_door",
     "displayName": "Dark Oak Door"
   },
   {
-    "id": 9031,
+    "id": 9028,
     "stackSize": 1,
     "name": "portal",
     "displayName": "Portal"
   },
   {
-    "id": 9033,
-    "stackSize": 1,
-    "name": "oak_chest_boat",
-    "displayName": "Oak Chest Boat"
-  },
-  {
-    "id": 9039,
+    "id": 9034,
     "stackSize": 1,
     "name": "element_7",
     "displayName": "Element 7"
   },
   {
-    "id": 9048,
+    "id": 9043,
     "stackSize": 1,
     "name": "item.iron_door",
     "displayName": "Iron Door"
   },
   {
-    "id": 9063,
+    "id": 9053,
+    "stackSize": 1,
+    "name": "tripwire",
+    "displayName": "Tripwire"
+  },
+  {
+    "id": 9059,
     "stackSize": 1,
     "name": "sparkler",
     "displayName": "Sparkler"
   },
   {
-    "id": 9065,
+    "id": 9061,
     "stackSize": 1,
     "name": "element_61",
     "displayName": "Element 61"
   },
   {
-    "id": 9072,
+    "id": 9068,
     "stackSize": 1,
     "name": "item.campfire",
     "displayName": "Campfire"
   },
   {
-    "id": 9073,
+    "id": 9069,
     "stackSize": 1,
     "name": "magenta_candle_cake",
     "displayName": "Magenta Candle Cake"
   },
   {
-    "id": 9077,
+    "id": 9073,
     "stackSize": 1,
     "name": "element_1",
     "displayName": "Element 1"
   },
   {
-    "id": 9079,
+    "id": 9075,
     "stackSize": 1,
     "name": "fire",
     "displayName": "Fire"
   },
   {
-    "id": 9093,
+    "id": 9089,
     "stackSize": 1,
     "name": "element_62",
     "displayName": "Element 62"
   },
   {
-    "id": 9109,
+    "id": 9104,
     "stackSize": 1,
     "name": "element_13",
     "displayName": "Element 13"
   },
   {
-    "id": 9117,
+    "id": 9112,
     "stackSize": 1,
     "name": "element_43",
     "displayName": "Element 43"
   },
   {
-    "id": 9126,
+    "id": 9117,
     "stackSize": 1,
-    "name": "element_2",
-    "displayName": "Element 2"
+    "name": "invisiblebedrock",
+    "displayName": "Invisiblebedrock"
   },
   {
-    "id": 9128,
+    "id": 9120,
     "stackSize": 1,
     "name": "item.crimson_door",
     "displayName": "Crimson Door"
   },
   {
-    "id": 9130,
+    "id": 9121,
+    "stackSize": 1,
+    "name": "element_2",
+    "displayName": "Element 2"
+  },
+  {
+    "id": 9126,
     "stackSize": 1,
     "name": "spawn_egg",
     "displayName": "Spawn Egg"
   },
   {
-    "id": 9134,
+    "id": 9130,
     "stackSize": 1,
     "name": "element_35",
     "displayName": "Element 35"
   },
   {
-    "id": 9137,
+    "id": 9133,
     "stackSize": 1,
     "name": "element_104",
     "displayName": "Element 104"
   },
   {
-    "id": 9144,
+    "id": 9140,
     "stackSize": 1,
     "name": "real_double_stone_slab2",
     "displayName": "Real Double Stone Slab2"
   },
   {
-    "id": 9147,
+    "id": 9143,
     "stackSize": 1,
     "name": "carrots",
     "displayName": "Carrots"
   },
   {
-    "id": 9167,
+    "id": 9162,
+    "stackSize": 1,
+    "name": "frog_egg",
+    "displayName": "Frog Egg"
+  },
+  {
+    "id": 9164,
     "stackSize": 1,
     "name": "flowing_water",
     "displayName": "Flowing Water"
   },
   {
-    "id": 9170,
+    "id": 9167,
     "stackSize": 1,
     "name": "lit_deepslate_redstone_ore",
     "displayName": "Lit Deepslate Redstone Ore"
   },
   {
-    "id": 9174,
+    "id": 9171,
     "stackSize": 1,
     "name": "lit_redstone_lamp",
     "displayName": "Lit Redstone Lamp"
   },
   {
-    "id": 9176,
+    "id": 9173,
     "stackSize": 1,
     "name": "element_52",
     "displayName": "Element 52"
   },
   {
-    "id": 9177,
+    "id": 9174,
     "stackSize": 1,
     "name": "real_double_stone_slab4",
     "displayName": "Real Double Stone Slab4"
   },
   {
-    "id": 9188,
+    "id": 9185,
     "stackSize": 1,
     "name": "element_86",
     "displayName": "Element 86"
   },
   {
-    "id": 9202,
+    "id": 9199,
     "stackSize": 1,
     "name": "end_gateway",
     "displayName": "End Gateway"
   },
   {
-    "id": 9204,
+    "id": 9201,
     "stackSize": 1,
     "name": "item.beetroot",
     "displayName": "Beetroot"
   },
   {
-    "id": 9205,
+    "id": 9202,
     "stackSize": 1,
     "name": "element_101",
     "displayName": "Element 101"
   },
   {
-    "id": 9207,
+    "id": 9204,
     "stackSize": 1,
     "name": "element_49",
     "displayName": "Element 49"
   },
   {
-    "id": 9216,
+    "id": 9213,
     "stackSize": 1,
     "name": "real_double_stone_slab3",
     "displayName": "Real Double Stone Slab3"
   },
   {
-    "id": 9230,
+    "id": 9217,
+    "stackSize": 1,
+    "name": "stickypistonarmcollision",
+    "displayName": "Stickypistonarmcollision"
+  },
+  {
+    "id": 9228,
     "stackSize": 1,
     "name": "element_51",
     "displayName": "Element 51"
   },
   {
-    "id": 9231,
+    "id": 9229,
     "stackSize": 1,
     "name": "double_wooden_slab",
     "displayName": "Double Wooden Slab"
   },
   {
-    "id": 9232,
+    "id": 9230,
     "stackSize": 1,
     "name": "hard_stained_glass",
     "displayName": "Hard Stained Glass"
   },
   {
-    "id": 9233,
+    "id": 9231,
     "stackSize": 1,
     "name": "element_84",
     "displayName": "Element 84"
   },
   {
-    "id": 9240,
+    "id": 9239,
     "stackSize": 1,
     "name": "flowing_lava",
     "displayName": "Flowing Lava"
   },
   {
-    "id": 9242,
+    "id": 9241,
     "stackSize": 1,
     "name": "agent_spawn_egg",
     "displayName": "Agent Spawn Egg"
   },
   {
-    "id": 9248,
+    "id": 9247,
     "stackSize": 1,
     "name": "element_55",
     "displayName": "Element 55"
   },
   {
-    "id": 9253,
+    "id": 9252,
     "stackSize": 1,
     "name": "tadpole_bucket",
     "displayName": "Tadpole Bucket"
   },
   {
-    "id": 9256,
+    "id": 9255,
     "stackSize": 1,
     "name": "element_74",
     "displayName": "Element 74"
+  },
+  {
+    "id": 9265,
+    "stackSize": 1,
+    "name": "element_6",
+    "displayName": "Element 6"
   },
   {
     "id": 9267,
@@ -8045,7 +8099,7 @@
     "displayName": "Birch Door"
   },
   {
-    "id": 9270,
+    "id": 9271,
     "stackSize": 1,
     "name": "item.nether_wart",
     "displayName": "Nether Wart"
@@ -8081,10 +8135,10 @@
     "displayName": "Tadpole Spawn Egg"
   },
   {
-    "id": 9313,
+    "id": 9310,
     "stackSize": 1,
-    "name": "mud_bricks",
-    "displayName": "Mud Bricks"
+    "name": "end_portal",
+    "displayName": "End Portal"
   },
   {
     "id": 9318,
@@ -8093,40 +8147,40 @@
     "displayName": "Reeds"
   },
   {
-    "id": 9323,
+    "id": 9324,
     "stackSize": 1,
     "name": "reserved6",
     "displayName": "Reserved6"
   },
   {
-    "id": 9332,
+    "id": 9329,
+    "stackSize": 1,
+    "name": "red_candle_cake",
+    "displayName": "Red Candle Cake"
+  },
+  {
+    "id": 9333,
     "stackSize": 1,
     "name": "deny",
     "displayName": "Deny"
   },
   {
-    "id": 9333,
+    "id": 9335,
     "stackSize": 1,
-    "name": "mud_brick_slab",
-    "displayName": "Mud Brick Slab"
+    "name": "brewingstandblock",
+    "displayName": "Brewingstandblock"
   },
   {
-    "id": 9338,
+    "id": 9339,
     "stackSize": 1,
     "name": "item.cake",
     "displayName": "Cake"
   },
   {
-    "id": 9339,
+    "id": 9340,
     "stackSize": 1,
     "name": "dye",
     "displayName": "Dye"
-  },
-  {
-    "id": 9344,
-    "stackSize": 1,
-    "name": "sticky_piston_arm_collision",
-    "displayName": "Sticky Piston Arm Collision"
   },
   {
     "id": 9346,
@@ -8141,67 +8195,61 @@
     "displayName": "Flower Pot"
   },
   {
-    "id": 9362,
-    "stackSize": 1,
-    "name": "unknown",
-    "displayName": "Unknown"
-  },
-  {
-    "id": 9364,
+    "id": 9363,
     "stackSize": 1,
     "name": "camera",
     "displayName": "Camera"
   },
   {
-    "id": 9381,
-    "stackSize": 1,
-    "name": "unpowered_comparator",
-    "displayName": "Unpowered Comparator"
-  },
-  {
-    "id": 9388,
+    "id": 9386,
     "stackSize": 1,
     "name": "element_44",
     "displayName": "Element 44"
   },
   {
-    "id": 9390,
+    "id": 9388,
     "stackSize": 1,
     "name": "green_candle_cake",
     "displayName": "Green Candle Cake"
   },
   {
-    "id": 9399,
+    "id": 9394,
+    "stackSize": 1,
+    "name": "mysterious_frame",
+    "displayName": "Mysterious Frame"
+  },
+  {
+    "id": 9398,
     "stackSize": 1,
     "name": "element_111",
     "displayName": "Element 111"
   },
   {
-    "id": 9404,
+    "id": 9403,
     "stackSize": 1,
     "name": "firefly_spawn_egg",
     "displayName": "Firefly Spawn Egg"
   },
   {
-    "id": 9410,
+    "id": 9409,
     "stackSize": 1,
     "name": "colored_torch_rg",
     "displayName": "Colored Torch Rg"
   },
   {
-    "id": 9411,
+    "id": 9410,
     "stackSize": 1,
     "name": "bleach",
     "displayName": "Bleach"
   },
   {
-    "id": 9413,
+    "id": 9412,
     "stackSize": 1,
     "name": "element_21",
     "displayName": "Element 21"
   },
   {
-    "id": 9418,
+    "id": 9417,
     "stackSize": 1,
     "name": "powered_comparator",
     "displayName": "Powered Comparator"
@@ -8213,7 +8261,7 @@
     "displayName": "Element 0"
   },
   {
-    "id": 9435,
+    "id": 9436,
     "stackSize": 1,
     "name": "pink_candle_cake",
     "displayName": "Pink Candle Cake"
@@ -8237,31 +8285,25 @@
     "displayName": "Npc Spawn Egg"
   },
   {
-    "id": 9449,
-    "stackSize": 1,
-    "name": "element_80",
-    "displayName": "Element 80"
-  },
-  {
-    "id": 9451,
+    "id": 9448,
     "stackSize": 1,
     "name": "powder_snow",
     "displayName": "Powder Snow"
   },
   {
-    "id": 9453,
+    "id": 9450,
+    "stackSize": 1,
+    "name": "element_80",
+    "displayName": "Element 80"
+  },
+  {
+    "id": 9454,
     "stackSize": 1,
     "name": "spruce_wall_sign",
     "displayName": "Spruce Wall Sign"
   },
   {
-    "id": 9455,
-    "stackSize": 1,
-    "name": "warden_spawn_egg",
-    "displayName": "Warden Spawn Egg"
-  },
-  {
-    "id": 9456,
+    "id": 9457,
     "stackSize": 1,
     "name": "daylight_detector_inverted",
     "displayName": "Daylight Detector Inverted"
@@ -8273,79 +8315,79 @@
     "displayName": "Rapid Fertilizer"
   },
   {
-    "id": 9464,
+    "id": 9463,
     "stackSize": 1,
     "name": "standing_sign",
     "displayName": "Standing Sign"
   },
   {
-    "id": 9467,
+    "id": 9466,
     "stackSize": 1,
     "name": "item.frame",
     "displayName": "Frame"
   },
   {
-    "id": 9475,
+    "id": 9474,
     "stackSize": 1,
     "name": "double_cut_copper_slab",
     "displayName": "Double Cut Copper Slab"
   },
   {
-    "id": 9476,
+    "id": 9475,
     "stackSize": 1,
     "name": "element_28",
     "displayName": "Element 28"
   },
   {
-    "id": 9479,
+    "id": 9478,
     "stackSize": 1,
     "name": "item.acacia_door",
     "displayName": "Acacia Door"
   },
   {
-    "id": 9490,
+    "id": 9489,
     "stackSize": 1,
     "name": "orange_candle_cake",
     "displayName": "Orange Candle Cake"
   },
   {
-    "id": 9501,
+    "id": 9499,
     "stackSize": 1,
     "name": "sculk_vein",
     "displayName": "Sculk Vein"
   },
   {
-    "id": 9507,
+    "id": 9505,
     "stackSize": 1,
     "name": "element_47",
     "displayName": "Element 47"
   },
   {
-    "id": 9512,
+    "id": 9510,
     "stackSize": 1,
     "name": "element_69",
     "displayName": "Element 69"
   },
   {
-    "id": 9514,
+    "id": 9512,
     "stackSize": 1,
     "name": "deepslate_brick_double_slab",
     "displayName": "Deepslate Brick Double Slab"
   },
   {
-    "id": 9519,
+    "id": 9517,
     "stackSize": 1,
     "name": "colored_torch_bp",
     "displayName": "Colored Torch Bp"
   },
   {
-    "id": 9521,
+    "id": 9519,
     "stackSize": 1,
     "name": "element_102",
     "displayName": "Element 102"
   },
   {
-    "id": 9525,
+    "id": 9523,
     "stackSize": 1,
     "name": "element_63",
     "displayName": "Element 63"
@@ -8357,133 +8399,139 @@
     "displayName": "Info Update2"
   },
   {
-    "id": 9550,
+    "id": 9548,
     "stackSize": 1,
     "name": "element_42",
     "displayName": "Element 42"
   },
   {
-    "id": 9554,
+    "id": 9552,
     "stackSize": 1,
     "name": "element_73",
     "displayName": "Element 73"
   },
   {
-    "id": 9560,
+    "id": 9558,
     "stackSize": 1,
     "name": "coral_fan_hang2",
     "displayName": "Coral Fan Hang2"
   },
   {
-    "id": 9561,
+    "id": 9559,
     "stackSize": 1,
     "name": "balloon",
     "displayName": "Balloon"
   },
   {
-    "id": 9567,
+    "id": 9565,
     "stackSize": 1,
     "name": "frog_spawn_egg",
     "displayName": "Frog Spawn Egg"
   },
   {
-    "id": 9568,
+    "id": 9566,
     "stackSize": 1,
     "name": "field_masoned_banner_pattern",
     "displayName": "Field Masoned Banner Pattern"
   },
   {
-    "id": 9571,
+    "id": 9569,
     "stackSize": 1,
     "name": "bordure_indented_banner_pattern",
     "displayName": "Bordure Indented Banner Pattern"
   },
   {
-    "id": 9572,
+    "id": 9570,
     "stackSize": 1,
     "name": "purple_candle_cake",
     "displayName": "Purple Candle Cake"
   },
   {
-    "id": 9574,
+    "id": 9572,
     "stackSize": 1,
     "name": "potatoes",
     "displayName": "Potatoes"
   },
   {
-    "id": 9575,
+    "id": 9573,
     "stackSize": 1,
     "name": "element_78",
     "displayName": "Element 78"
   },
   {
-    "id": 9580,
+    "id": 9578,
     "stackSize": 1,
     "name": "compound",
     "displayName": "Compound"
   },
   {
-    "id": 9581,
+    "id": 9579,
     "stackSize": 1,
     "name": "ice_bomb",
     "displayName": "Ice Bomb"
   },
   {
-    "id": 9582,
+    "id": 9580,
     "stackSize": 1,
     "name": "medicine",
     "displayName": "Medicine"
   },
   {
-    "id": 9585,
+    "id": 9581,
     "stackSize": 1,
     "name": "element_92",
     "displayName": "Element 92"
   },
   {
-    "id": 9586,
+    "id": 9584,
     "stackSize": 1,
     "name": "glow_stick",
     "displayName": "Glow Stick"
   },
   {
-    "id": 9588,
+    "id": 9586,
     "stackSize": 1,
     "name": "lodestone_compass",
     "displayName": "Lodestone Compass"
   },
   {
-    "id": 9589,
+    "id": 9587,
     "stackSize": 1,
     "name": "element_83",
     "displayName": "Element 83"
   },
   {
-    "id": 9594,
+    "id": 9590,
     "stackSize": 1,
     "name": "polished_deepslate_double_slab",
     "displayName": "Polished Deepslate Double Slab"
   },
   {
-    "id": 9595,
-    "stackSize": 1,
-    "name": "item.warped_door",
-    "displayName": "Warped Door"
-  },
-  {
-    "id": 9599,
-    "stackSize": 1,
-    "name": "mud",
-    "displayName": "Mud"
-  },
-  {
-    "id": 9601,
+    "id": 9596,
     "stackSize": 1,
     "name": "black_candle_cake",
     "displayName": "Black Candle Cake"
   },
   {
-    "id": 9614,
+    "id": 9606,
+    "stackSize": 1,
+    "name": "goat_horn",
+    "displayName": "Goat Horn"
+  },
+  {
+    "id": 9608,
+    "stackSize": 1,
+    "name": "item.hopper",
+    "displayName": "Hopper"
+  },
+  {
+    "id": 9609,
+    "stackSize": 1,
+    "name": "cave_vines_head_with_berries",
+    "displayName": "Cave Vines Head With Berries"
+  },
+  {
+    "id": 9615,
     "stackSize": 1,
     "name": "hard_glass",
     "displayName": "Hard Glass"
@@ -8495,12 +8543,6 @@
     "displayName": "Element 76"
   },
   {
-    "id": 9618,
-    "stackSize": 1,
-    "name": "birch_chest_boat",
-    "displayName": "Birch Chest Boat"
-  },
-  {
     "id": 9619,
     "stackSize": 1,
     "name": "element_33",
@@ -8509,8 +8551,8 @@
   {
     "id": 9621,
     "stackSize": 1,
-    "name": "frog_spawn",
-    "displayName": "Frog Spawn"
+    "name": "waxed_weathered_double_cut_copper_slab",
+    "displayName": "Waxed Weathered Double Cut Copper Slab"
   },
   {
     "id": 9622,
@@ -8519,1161 +8561,1065 @@
     "displayName": "Allay Spawn Egg"
   },
   {
-    "id": 9623,
-    "stackSize": 1,
-    "name": "waxed_weathered_double_cut_copper_slab",
-    "displayName": "Waxed Weathered Double Cut Copper Slab"
-  },
-  {
-    "id": 9626,
-    "stackSize": 1,
-    "name": "mangrove_propagule",
-    "displayName": "Mangrove Propagule"
-  },
-  {
-    "id": 9629,
-    "stackSize": 1,
-    "name": "cyan_candle_cake",
-    "displayName": "Cyan Candle Cake"
-  },
-  {
-    "id": 9630,
-    "stackSize": 1,
-    "name": "candle_cake",
-    "displayName": "Candle Cake"
-  },
-  {
-    "id": 9632,
-    "stackSize": 1,
-    "name": "jungle_chest_boat",
-    "displayName": "Jungle Chest Boat"
-  },
-  {
-    "id": 9633,
-    "stackSize": 1,
-    "name": "spruce_chest_boat",
-    "displayName": "Spruce Chest Boat"
-  },
-  {
-    "id": 9634,
-    "stackSize": 1,
-    "name": "acacia_chest_boat",
-    "displayName": "Acacia Chest Boat"
-  },
-  {
-    "id": 9635,
-    "stackSize": 1,
-    "name": "dark_oak_chest_boat",
-    "displayName": "Dark Oak Chest Boat"
-  },
-  {
-    "id": 9636,
-    "stackSize": 1,
-    "name": "chest_boat",
-    "displayName": "Chest Boat"
-  },
-  {
-    "id": 9639,
+    "id": 9624,
     "stackSize": 1,
     "name": "element_53",
     "displayName": "Element 53"
   },
   {
-    "id": 9640,
+    "id": 9625,
     "stackSize": 1,
     "name": "lit_blast_furnace",
     "displayName": "Lit Blast Furnace"
   },
   {
-    "id": 9641,
+    "id": 9626,
     "stackSize": 1,
     "name": "element_100",
     "displayName": "Element 100"
   },
   {
-    "id": 9644,
+    "id": 9629,
     "stackSize": 1,
     "name": "real_double_stone_slab",
     "displayName": "Real Double Stone Slab"
   },
   {
-    "id": 9651,
+    "id": 9636,
     "stackSize": 1,
     "name": "polished_blackstone_double_slab",
     "displayName": "Polished Blackstone Double Slab"
   },
   {
-    "id": 9652,
+    "id": 9638,
     "stackSize": 1,
     "name": "blackstone_double_slab",
     "displayName": "Blackstone Double Slab"
   },
   {
-    "id": 9656,
+    "id": 9641,
     "stackSize": 1,
     "name": "soul_fire",
     "displayName": "Soul Fire"
   },
   {
-    "id": 9661,
+    "id": 9645,
     "stackSize": 1,
     "name": "element_103",
     "displayName": "Element 103"
   },
   {
-    "id": 9664,
+    "id": 9648,
     "stackSize": 1,
     "name": "element_22",
     "displayName": "Element 22"
   },
   {
-    "id": 9665,
+    "id": 9649,
     "stackSize": 1,
     "name": "blue_candle_cake",
     "displayName": "Blue Candle Cake"
   },
   {
-    "id": 9668,
+    "id": 9652,
     "stackSize": 1,
     "name": "spruce_standing_sign",
     "displayName": "Spruce Standing Sign"
   },
   {
-    "id": 9676,
+    "id": 9656,
     "stackSize": 1,
-    "name": "item.hopper",
-    "displayName": "Hopper"
+    "name": "cyan_candle_cake",
+    "displayName": "Cyan Candle Cake"
   },
   {
-    "id": 9677,
-    "stackSize": 1,
-    "name": "mud_brick_double_slab",
-    "displayName": "Mud Brick Double Slab"
-  },
-  {
-    "id": 9679,
+    "id": 9662,
     "stackSize": 1,
     "name": "hard_stained_glass_pane",
     "displayName": "Hard Stained Glass Pane"
   },
   {
-    "id": 9692,
+    "id": 9677,
     "stackSize": 1,
     "name": "birch_wall_sign",
     "displayName": "Birch Wall Sign"
   },
   {
-    "id": 9695,
+    "id": 9678,
     "stackSize": 1,
     "name": "element_3",
     "displayName": "Element 3"
   },
   {
-    "id": 9696,
+    "id": 9679,
     "stackSize": 1,
     "name": "element_4",
     "displayName": "Element 4"
   },
   {
-    "id": 9698,
+    "id": 9681,
     "stackSize": 1,
     "name": "element_5",
     "displayName": "Element 5"
   },
   {
-    "id": 9700,
-    "stackSize": 1,
-    "name": "element_6",
-    "displayName": "Element 6"
-  },
-  {
-    "id": 9701,
+    "id": 9682,
     "stackSize": 1,
     "name": "element_8",
     "displayName": "Element 8"
   },
   {
-    "id": 9702,
+    "id": 9683,
     "stackSize": 1,
     "name": "element_9",
     "displayName": "Element 9"
   },
   {
-    "id": 9704,
+    "id": 9685,
     "stackSize": 1,
     "name": "element_10",
     "displayName": "Element 10"
   },
   {
-    "id": 9705,
+    "id": 9686,
     "stackSize": 1,
     "name": "element_11",
     "displayName": "Element 11"
   },
   {
-    "id": 9706,
+    "id": 9687,
     "stackSize": 1,
     "name": "element_12",
     "displayName": "Element 12"
   },
   {
-    "id": 9707,
+    "id": 9688,
     "stackSize": 1,
     "name": "element_14",
     "displayName": "Element 14"
   },
   {
-    "id": 9708,
+    "id": 9689,
     "stackSize": 1,
     "name": "element_16",
     "displayName": "Element 16"
   },
   {
-    "id": 9709,
+    "id": 9690,
     "stackSize": 1,
     "name": "element_17",
     "displayName": "Element 17"
   },
   {
-    "id": 9710,
+    "id": 9691,
     "stackSize": 1,
     "name": "client_request_placeholder_block",
     "displayName": "Client Request Placeholder Block"
   },
   {
-    "id": 9711,
+    "id": 9692,
     "stackSize": 1,
     "name": "element_18",
     "displayName": "Element 18"
   },
   {
-    "id": 9712,
+    "id": 9693,
     "stackSize": 1,
     "name": "element_19",
     "displayName": "Element 19"
   },
   {
-    "id": 9713,
+    "id": 9694,
     "stackSize": 1,
     "name": "element_20",
     "displayName": "Element 20"
   },
   {
-    "id": 9714,
+    "id": 9695,
     "stackSize": 1,
     "name": "pearlescent_froglight",
     "displayName": "Pearlescent Froglight"
   },
   {
-    "id": 9715,
+    "id": 9696,
     "stackSize": 1,
     "name": "element_24",
     "displayName": "Element 24"
   },
   {
-    "id": 9716,
+    "id": 9697,
+    "stackSize": 1,
+    "name": "element_25",
+    "displayName": "Element 25"
+  },
+  {
+    "id": 9698,
     "stackSize": 1,
     "name": "element_26",
     "displayName": "Element 26"
   },
   {
-    "id": 9717,
+    "id": 9699,
     "stackSize": 1,
     "name": "element_27",
     "displayName": "Element 27"
   },
   {
-    "id": 9718,
+    "id": 9700,
     "stackSize": 1,
     "name": "element_29",
     "displayName": "Element 29"
   },
   {
-    "id": 9719,
+    "id": 9701,
     "stackSize": 1,
     "name": "element_30",
     "displayName": "Element 30"
   },
   {
-    "id": 9720,
+    "id": 9702,
     "stackSize": 1,
     "name": "element_31",
     "displayName": "Element 31"
   },
   {
-    "id": 9721,
+    "id": 9703,
     "stackSize": 1,
     "name": "element_32",
     "displayName": "Element 32"
   },
   {
-    "id": 9722,
+    "id": 9704,
     "stackSize": 1,
     "name": "element_34",
     "displayName": "Element 34"
   },
   {
-    "id": 9723,
+    "id": 9705,
     "stackSize": 1,
     "name": "element_36",
     "displayName": "Element 36"
   },
   {
-    "id": 9725,
+    "id": 9707,
     "stackSize": 1,
     "name": "element_37",
     "displayName": "Element 37"
   },
   {
-    "id": 9726,
+    "id": 9708,
     "stackSize": 1,
     "name": "element_38",
     "displayName": "Element 38"
   },
   {
-    "id": 9727,
+    "id": 9709,
     "stackSize": 1,
     "name": "element_39",
     "displayName": "Element 39"
   },
   {
-    "id": 9728,
+    "id": 9710,
     "stackSize": 1,
     "name": "element_40",
     "displayName": "Element 40"
   },
   {
-    "id": 9729,
+    "id": 9712,
     "stackSize": 1,
     "name": "element_45",
     "displayName": "Element 45"
   },
   {
-    "id": 9730,
+    "id": 9713,
     "stackSize": 1,
     "name": "element_46",
     "displayName": "Element 46"
   },
   {
-    "id": 9731,
+    "id": 9714,
     "stackSize": 1,
     "name": "element_48",
     "displayName": "Element 48"
   },
   {
-    "id": 9732,
+    "id": 9715,
     "stackSize": 1,
     "name": "element_54",
     "displayName": "Element 54"
   },
   {
-    "id": 9733,
+    "id": 9716,
     "stackSize": 1,
     "name": "element_56",
     "displayName": "Element 56"
   },
   {
-    "id": 9734,
-    "stackSize": 1,
-    "name": "element_57",
-    "displayName": "Element 57"
-  },
-  {
-    "id": 9736,
+    "id": 9718,
     "stackSize": 1,
     "name": "lit_redstone_ore",
     "displayName": "Lit Redstone Ore"
   },
   {
-    "id": 9738,
+    "id": 9719,
+    "stackSize": 1,
+    "name": "element_57",
+    "displayName": "Element 57"
+  },
+  {
+    "id": 9721,
     "stackSize": 1,
     "name": "element_58",
     "displayName": "Element 58"
   },
   {
-    "id": 9739,
+    "id": 9722,
     "stackSize": 1,
     "name": "element_59",
     "displayName": "Element 59"
   },
   {
-    "id": 9740,
+    "id": 9723,
     "stackSize": 1,
     "name": "element_60",
     "displayName": "Element 60"
   },
   {
-    "id": 9741,
+    "id": 9724,
     "stackSize": 1,
     "name": "light_gray_candle_cake",
     "displayName": "Light Gray Candle Cake"
   },
   {
-    "id": 9742,
+    "id": 9725,
     "stackSize": 1,
     "name": "element_64",
     "displayName": "Element 64"
   },
   {
-    "id": 9743,
+    "id": 9726,
     "stackSize": 1,
     "name": "element_65",
     "displayName": "Element 65"
   },
   {
-    "id": 9744,
+    "id": 9727,
     "stackSize": 1,
     "name": "element_66",
     "displayName": "Element 66"
   },
   {
-    "id": 9745,
+    "id": 9728,
     "stackSize": 1,
     "name": "element_67",
     "displayName": "Element 67"
   },
   {
-    "id": 9746,
+    "id": 9729,
     "stackSize": 1,
     "name": "element_68",
     "displayName": "Element 68"
   },
   {
-    "id": 9747,
+    "id": 9730,
     "stackSize": 1,
     "name": "element_70",
     "displayName": "Element 70"
   },
   {
-    "id": 9748,
+    "id": 9731,
     "stackSize": 1,
     "name": "element_71",
     "displayName": "Element 71"
   },
   {
-    "id": 9750,
+    "id": 9733,
     "stackSize": 1,
     "name": "element_72",
     "displayName": "Element 72"
   },
   {
-    "id": 9751,
+    "id": 9734,
+    "stackSize": 1,
+    "name": "mysterious_frame_slot",
+    "displayName": "Mysterious Frame Slot"
+  },
+  {
+    "id": 9735,
     "stackSize": 1,
     "name": "element_75",
     "displayName": "Element 75"
   },
   {
-    "id": 9753,
+    "id": 9737,
     "stackSize": 1,
     "name": "element_77",
     "displayName": "Element 77"
   },
   {
-    "id": 9755,
+    "id": 9738,
     "stackSize": 1,
     "name": "element_79",
     "displayName": "Element 79"
   },
   {
-    "id": 9757,
+    "id": 9741,
     "stackSize": 1,
     "name": "element_81",
     "displayName": "Element 81"
   },
   {
-    "id": 9758,
+    "id": 9742,
     "stackSize": 1,
     "name": "element_82",
     "displayName": "Element 82"
   },
   {
-    "id": 9760,
+    "id": 9744,
     "stackSize": 1,
     "name": "element_85",
     "displayName": "Element 85"
   },
   {
-    "id": 9761,
+    "id": 9745,
     "stackSize": 1,
     "name": "element_87",
     "displayName": "Element 87"
   },
   {
-    "id": 9762,
+    "id": 9746,
     "stackSize": 1,
     "name": "element_88",
     "displayName": "Element 88"
   },
   {
-    "id": 9763,
+    "id": 9747,
     "stackSize": 1,
     "name": "element_89",
     "displayName": "Element 89"
   },
   {
-    "id": 9764,
+    "id": 9748,
     "stackSize": 1,
     "name": "element_90",
     "displayName": "Element 90"
   },
   {
-    "id": 9765,
+    "id": 9749,
     "stackSize": 1,
     "name": "element_91",
     "displayName": "Element 91"
   },
   {
-    "id": 9766,
+    "id": 9750,
     "stackSize": 1,
     "name": "element_93",
     "displayName": "Element 93"
   },
   {
-    "id": 9767,
+    "id": 9751,
     "stackSize": 1,
     "name": "element_94",
     "displayName": "Element 94"
   },
   {
-    "id": 9768,
+    "id": 9752,
     "stackSize": 1,
     "name": "element_95",
     "displayName": "Element 95"
   },
   {
-    "id": 9769,
+    "id": 9754,
     "stackSize": 1,
     "name": "element_96",
     "displayName": "Element 96"
   },
   {
-    "id": 9771,
+    "id": 9755,
     "stackSize": 1,
     "name": "element_98",
     "displayName": "Element 98"
   },
   {
-    "id": 9772,
+    "id": 9756,
     "stackSize": 1,
     "name": "element_99",
     "displayName": "Element 99"
   },
   {
-    "id": 9774,
+    "id": 9758,
     "stackSize": 1,
     "name": "element_105",
     "displayName": "Element 105"
   },
   {
-    "id": 9775,
+    "id": 9759,
     "stackSize": 1,
     "name": "element_106",
     "displayName": "Element 106"
   },
   {
-    "id": 9777,
+    "id": 9761,
     "stackSize": 1,
     "name": "element_107",
     "displayName": "Element 107"
   },
   {
-    "id": 9778,
+    "id": 9762,
     "stackSize": 1,
     "name": "element_108",
     "displayName": "Element 108"
   },
   {
-    "id": 9779,
+    "id": 9763,
     "stackSize": 1,
     "name": "element_110",
     "displayName": "Element 110"
   },
   {
-    "id": 9780,
+    "id": 9764,
     "stackSize": 1,
     "name": "element_112",
     "displayName": "Element 112"
   },
   {
-    "id": 9782,
+    "id": 9766,
     "stackSize": 1,
     "name": "element_113",
     "displayName": "Element 113"
   },
   {
-    "id": 9783,
+    "id": 9768,
     "stackSize": 1,
     "name": "element_114",
     "displayName": "Element 114"
   },
   {
-    "id": 9787,
+    "id": 9771,
     "stackSize": 1,
     "name": "element_115",
     "displayName": "Element 115"
   },
   {
-    "id": 9788,
+    "id": 9772,
     "stackSize": 1,
     "name": "element_117",
     "displayName": "Element 117"
   },
   {
-    "id": 9789,
+    "id": 9773,
     "stackSize": 1,
     "name": "element_118",
     "displayName": "Element 118"
   },
   {
-    "id": 9791,
+    "id": 9775,
     "stackSize": 1,
     "name": "white_candle_cake",
     "displayName": "White Candle Cake"
   },
   {
-    "id": 9794,
+    "id": 9778,
     "stackSize": 1,
     "name": "boat",
     "displayName": "Boat"
   },
   {
-    "id": 9795,
+    "id": 9779,
     "stackSize": 1,
     "name": "banner_pattern",
     "displayName": "Banner Pattern"
   },
   {
-    "id": 9800,
-    "stackSize": 1,
-    "name": "birch_standing_sign",
-    "displayName": "Birch Standing Sign"
-  },
-  {
-    "id": 9801,
-    "stackSize": 1,
-    "name": "item.glow_frame",
-    "displayName": "Glow Frame"
-  },
-  {
-    "id": 9804,
-    "stackSize": 1,
-    "name": "piston_arm_collision",
-    "displayName": "Piston Arm Collision"
-  },
-  {
-    "id": 9808,
-    "stackSize": 1,
-    "name": "gray_candle_cake",
-    "displayName": "Gray Candle Cake"
-  },
-  {
-    "id": 9809,
-    "stackSize": 1,
-    "name": "crimson_wall_sign",
-    "displayName": "Crimson Wall Sign"
-  },
-  {
-    "id": 9815,
-    "stackSize": 1,
-    "name": "info_update",
-    "displayName": "Info Update"
-  },
-  {
-    "id": 9816,
-    "stackSize": 1,
-    "name": "sculk_shrieker",
-    "displayName": "Sculk Shrieker"
-  },
-  {
-    "id": 9823,
-    "stackSize": 1,
-    "name": "warped_wall_sign",
-    "displayName": "Warped Wall Sign"
-  },
-  {
-    "id": 9825,
-    "stackSize": 1,
-    "name": "coral_fan_hang",
-    "displayName": "Coral Fan Hang"
-  },
-  {
-    "id": 9827,
-    "stackSize": 1,
-    "name": "packed_mud",
-    "displayName": "Packed Mud"
-  },
-  {
-    "id": 9829,
-    "stackSize": 1,
-    "name": "light_blue_candle_cake",
-    "displayName": "Light Blue Candle Cake"
-  },
-  {
-    "id": 9835,
-    "stackSize": 1,
-    "name": "deepslate_tile_double_slab",
-    "displayName": "Deepslate Tile Double Slab"
-  },
-  {
-    "id": 9836,
-    "stackSize": 1,
-    "name": "oxidized_double_cut_copper_slab",
-    "displayName": "Oxidized Double Cut Copper Slab"
-  },
-  {
-    "id": 9839,
-    "stackSize": 1,
-    "name": "lava_cauldron",
-    "displayName": "Lava Cauldron"
-  },
-  {
-    "id": 9840,
-    "stackSize": 1,
-    "name": "exposed_double_cut_copper_slab",
-    "displayName": "Exposed Double Cut Copper Slab"
-  },
-  {
-    "id": 9843,
-    "stackSize": 1,
-    "name": "hard_glass_pane",
-    "displayName": "Hard Glass Pane"
-  },
-  {
-    "id": 9844,
-    "stackSize": 1,
-    "name": "polished_blackstone_brick_double_slab",
-    "displayName": "Polished Blackstone Brick Double Slab"
-  },
-  {
-    "id": 9845,
-    "stackSize": 1,
-    "name": "crimson_double_slab",
-    "displayName": "Crimson Double Slab"
-  },
-  {
-    "id": 9849,
-    "stackSize": 1,
-    "name": "mud_brick_wall",
-    "displayName": "Mud Brick Wall"
-  },
-  {
-    "id": 9854,
-    "stackSize": 1,
-    "name": "stonecutter",
-    "displayName": "Stonecutter"
-  },
-  {
-    "id": 9856,
-    "stackSize": 1,
-    "name": "invisible_bedrock",
-    "displayName": "Invisible Bedrock"
-  },
-  {
-    "id": 9858,
-    "stackSize": 1,
-    "name": "warped_standing_sign",
-    "displayName": "Warped Standing Sign"
-  },
-  {
-    "id": 9860,
-    "stackSize": 1,
-    "name": "wall_sign",
-    "displayName": "Wall Sign"
-  },
-  {
-    "id": 9867,
-    "stackSize": 1,
-    "name": "underwater_torch",
-    "displayName": "Underwater Torch"
-  },
-  {
-    "id": 9868,
-    "stackSize": 1,
-    "name": "ochre_froglight",
-    "displayName": "Ochre Froglight"
-  },
-  {
-    "id": 9871,
-    "stackSize": 1,
-    "name": "moving_block",
-    "displayName": "Moving Block"
-  },
-  {
-    "id": 9875,
-    "stackSize": 1,
-    "name": "cave_vines_body_with_berries",
-    "displayName": "Cave Vines Body With Berries"
-  },
-  {
-    "id": 9876,
-    "stackSize": 1,
-    "name": "sculk_catalyst",
-    "displayName": "Sculk Catalyst"
-  },
-  {
-    "id": 9877,
-    "stackSize": 1,
-    "name": "brown_candle_cake",
-    "displayName": "Brown Candle Cake"
-  },
-  {
-    "id": 9879,
-    "stackSize": 1,
-    "name": "acacia_wall_sign",
-    "displayName": "Acacia Wall Sign"
-  },
-  {
-    "id": 9884,
-    "stackSize": 1,
-    "name": "item.wooden_door",
-    "displayName": "Wooden Door"
-  },
-  {
-    "id": 9887,
-    "stackSize": 1,
-    "name": "redstone_wire",
-    "displayName": "Redstone Wire"
-  },
-  {
-    "id": 9888,
-    "stackSize": 1,
-    "name": "lava",
-    "displayName": "Lava"
-  },
-  {
-    "id": 9890,
-    "stackSize": 1,
-    "name": "coral_fan_hang3",
-    "displayName": "Coral Fan Hang3"
-  },
-  {
-    "id": 9904,
-    "stackSize": 1,
-    "name": "warped_double_slab",
-    "displayName": "Warped Double Slab"
-  },
-  {
-    "id": 9905,
-    "stackSize": 1,
-    "name": "jungle_wall_sign",
-    "displayName": "Jungle Wall Sign"
-  },
-  {
-    "id": 9911,
-    "stackSize": 1,
-    "name": "powered_repeater",
-    "displayName": "Powered Repeater"
-  },
-  {
-    "id": 9915,
-    "stackSize": 1,
-    "name": "mangrove_propagule_hanging",
-    "displayName": "Mangrove Propagule Hanging"
-  },
-  {
-    "id": 9916,
-    "stackSize": 1,
-    "name": "yellow_candle_cake",
-    "displayName": "Yellow Candle Cake"
-  },
-  {
-    "id": 9922,
-    "stackSize": 1,
-    "name": "item.wheat",
-    "displayName": "Wheat"
-  },
-  {
-    "id": 9923,
-    "stackSize": 1,
-    "name": "item.spruce_door",
-    "displayName": "Spruce Door"
-  },
-  {
-    "id": 9924,
-    "stackSize": 1,
-    "name": "frosted_ice",
-    "displayName": "Frosted Ice"
-  },
-  {
-    "id": 9927,
-    "stackSize": 1,
-    "name": "cave_vines",
-    "displayName": "Cave Vines"
-  },
-  {
-    "id": 9929,
-    "stackSize": 1,
-    "name": "melon_stem",
-    "displayName": "Melon Stem"
-  },
-  {
-    "id": 9931,
-    "stackSize": 1,
-    "name": "border_block",
-    "displayName": "Border Block"
-  },
-  {
-    "id": 9935,
-    "stackSize": 1,
-    "name": "item.skull",
-    "displayName": "Skull"
-  },
-  {
-    "id": 9936,
-    "stackSize": 1,
-    "name": "darkoak_wall_sign",
-    "displayName": "Darkoak Wall Sign"
-  },
-  {
-    "id": 9939,
-    "stackSize": 1,
-    "name": "waxed_double_cut_copper_slab",
-    "displayName": "Waxed Double Cut Copper Slab"
-  },
-  {
-    "id": 9941,
-    "stackSize": 1,
-    "name": "item.kelp",
-    "displayName": "Kelp"
-  },
-  {
-    "id": 9943,
-    "stackSize": 1,
-    "name": "water",
-    "displayName": "Water"
-  },
-  {
-    "id": 9944,
-    "stackSize": 1,
-    "name": "chemical_heat",
-    "displayName": "Chemical Heat"
-  },
-  {
-    "id": 9945,
-    "stackSize": 1,
-    "name": "mud_brick_stairs",
-    "displayName": "Mud Brick Stairs"
-  },
-  {
-    "id": 9946,
-    "stackSize": 1,
-    "name": "unpowered_repeater",
-    "displayName": "Unpowered Repeater"
-  },
-  {
-    "id": 9951,
-    "stackSize": 1,
-    "name": "wall_banner",
-    "displayName": "Wall Banner"
-  },
-  {
-    "id": 9954,
-    "stackSize": 1,
-    "name": "bubble_column",
-    "displayName": "Bubble Column"
-  },
-  {
-    "id": 9956,
-    "stackSize": 1,
-    "name": "reinforced_deepslate",
-    "displayName": "Reinforced Deepslate"
-  },
-  {
-    "id": 9958,
-    "stackSize": 1,
-    "name": "cobbled_deepslate_double_slab",
-    "displayName": "Cobbled Deepslate Double Slab"
-  },
-  {
-    "id": 9959,
-    "stackSize": 1,
-    "name": "item.nether_sprouts",
-    "displayName": "Nether Sprouts"
-  },
-  {
-    "id": 9964,
-    "stackSize": 1,
-    "name": "sweet_berry_bush",
-    "displayName": "Sweet Berry Bush"
-  },
-  {
-    "id": 9965,
-    "stackSize": 1,
-    "name": "jungle_standing_sign",
-    "displayName": "Jungle Standing Sign"
-  },
-  {
-    "id": 9968,
-    "stackSize": 1,
-    "name": "item.jungle_door",
-    "displayName": "Jungle Door"
-  },
-  {
-    "id": 9974,
+    "id": 9788,
     "stackSize": 1,
     "name": "acacia_standing_sign",
     "displayName": "Acacia Standing Sign"
   },
   {
-    "id": 9976,
+    "id": 9790,
     "stackSize": 1,
-    "name": "pumpkin_stem",
-    "displayName": "Pumpkin Stem"
+    "name": "acacia_wall_sign",
+    "displayName": "Acacia Wall Sign"
   },
   {
-    "id": 9980,
-    "stackSize": 1,
-    "name": "verdant_froglight",
-    "displayName": "Verdant Froglight"
-  },
-  {
-    "id": 9983,
-    "stackSize": 1,
-    "name": "cocoa",
-    "displayName": "Cocoa"
-  },
-  {
-    "id": 9988,
-    "stackSize": 1,
-    "name": "item.bed",
-    "displayName": "Bed"
-  },
-  {
-    "id": 9991,
-    "stackSize": 1,
-    "name": "waxed_exposed_double_cut_copper_slab",
-    "displayName": "Waxed Exposed Double Cut Copper Slab"
-  },
-  {
-    "id": 9994,
-    "stackSize": 1,
-    "name": "bamboo_sapling",
-    "displayName": "Bamboo Sapling"
-  },
-  {
-    "id": 9995,
-    "stackSize": 1,
-    "name": "standing_banner",
-    "displayName": "Standing Banner"
-  },
-  {
-    "id": 10003,
-    "stackSize": 1,
-    "name": "sculk",
-    "displayName": "Sculk"
-  },
-  {
-    "id": 10004,
-    "stackSize": 1,
-    "name": "weathered_double_cut_copper_slab",
-    "displayName": "Weathered Double Cut Copper Slab"
-  },
-  {
-    "id": 10006,
+    "id": 9792,
     "stackSize": 1,
     "name": "allow",
     "displayName": "Allow"
   },
   {
-    "id": 10007,
+    "id": 9795,
     "stackSize": 1,
-    "name": "item.chain",
-    "displayName": "Chain"
+    "name": "bamboo_sapling",
+    "displayName": "Bamboo Sapling"
   },
   {
-    "id": 10009,
+    "id": 9796,
     "stackSize": 1,
-    "name": "lit_furnace",
-    "displayName": "Lit Furnace"
+    "name": "standing_banner",
+    "displayName": "Standing Banner"
   },
   {
-    "id": 10014,
+    "id": 9798,
+    "stackSize": 1,
+    "name": "frosted_ice",
+    "displayName": "Frosted Ice"
+  },
+  {
+    "id": 9800,
+    "stackSize": 1,
+    "name": "item.bed",
+    "displayName": "Bed"
+  },
+  {
+    "id": 9811,
+    "stackSize": 1,
+    "name": "birch_standing_sign",
+    "displayName": "Birch Standing Sign"
+  },
+  {
+    "id": 9820,
+    "stackSize": 1,
+    "name": "border_block",
+    "displayName": "Border Block"
+  },
+  {
+    "id": 9822,
+    "stackSize": 1,
+    "name": "wall_sign",
+    "displayName": "Wall Sign"
+  },
+  {
+    "id": 9824,
+    "stackSize": 1,
+    "name": "brown_candle_cake",
+    "displayName": "Brown Candle Cake"
+  },
+  {
+    "id": 9826,
+    "stackSize": 1,
+    "name": "bubble_column",
+    "displayName": "Bubble Column"
+  },
+  {
+    "id": 9828,
     "stackSize": 1,
     "name": "item.camera",
     "displayName": "Camera"
   },
   {
-    "id": 10017,
+    "id": 9829,
     "stackSize": 1,
-    "name": "crimson_standing_sign",
-    "displayName": "Crimson Standing Sign"
+    "name": "candle_cake",
+    "displayName": "Candle Cake"
   },
   {
-    "id": 10018,
-    "stackSize": 1,
-    "name": "darkoak_standing_sign",
-    "displayName": "Darkoak Standing Sign"
-  },
-  {
-    "id": 10022,
-    "stackSize": 1,
-    "name": "netherreactor",
-    "displayName": "Netherreactor"
-  },
-  {
-    "id": 10025,
-    "stackSize": 1,
-    "name": "trip_wire",
-    "displayName": "Trip Wire"
-  },
-  {
-    "id": 10026,
+    "id": 9832,
     "stackSize": 1,
     "name": "item.cauldron",
     "displayName": "Cauldron"
   },
   {
-    "id": 10027,
+    "id": 9833,
     "stackSize": 1,
-    "name": "cave_vines_head_with_berries",
-    "displayName": "Cave Vines Head With Berries"
+    "name": "cave_vines",
+    "displayName": "Cave Vines"
   },
   {
-    "id": 10030,
+    "id": 9835,
     "stackSize": 1,
-    "name": "item.brewing_stand",
-    "displayName": "Brewing Stand"
+    "name": "cave_vines_body_with_berries",
+    "displayName": "Cave Vines Body With Berries"
   },
   {
-    "id": 10031,
+    "id": 9837,
     "stackSize": 1,
-    "name": "end_portal",
-    "displayName": "End Portal"
+    "name": "item.chain",
+    "displayName": "Chain"
   },
   {
-    "id": 10033,
+    "id": 9838,
     "stackSize": 1,
-    "name": "lit_smoker",
-    "displayName": "Lit Smoker"
+    "name": "chemical_heat",
+    "displayName": "Chemical Heat"
   },
   {
-    "id": 10035,
+    "id": 9844,
     "stackSize": 1,
-    "name": "red_candle_cake",
-    "displayName": "Red Candle Cake"
+    "name": "item.kelp",
+    "displayName": "Kelp"
   },
   {
-    "id": 10037,
+    "id": 9846,
     "stackSize": 1,
-    "name": "waxed_oxidized_double_cut_copper_slab",
-    "displayName": "Waxed Oxidized Double Cut Copper Slab"
+    "name": "cobbled_deepslate_double_slab",
+    "displayName": "Cobbled Deepslate Double Slab"
   },
   {
-    "id": 10044,
+    "id": 9848,
     "stackSize": 1,
-    "name": "item.soul_campfire",
-    "displayName": "Soul Campfire"
+    "name": "cocoa",
+    "displayName": "Cocoa"
   },
   {
-    "id": 10046,
+    "id": 9851,
+    "stackSize": 1,
+    "name": "coral_fan_hang",
+    "displayName": "Coral Fan Hang"
+  },
+  {
+    "id": 9852,
+    "stackSize": 1,
+    "name": "coral_fan_hang3",
+    "displayName": "Coral Fan Hang3"
+  },
+  {
+    "id": 9856,
+    "stackSize": 1,
+    "name": "crimson_double_slab",
+    "displayName": "Crimson Double Slab"
+  },
+  {
+    "id": 9861,
+    "stackSize": 1,
+    "name": "crimson_standing_sign",
+    "displayName": "Crimson Standing Sign"
+  },
+  {
+    "id": 9863,
+    "stackSize": 1,
+    "name": "crimson_wall_sign",
+    "displayName": "Crimson Wall Sign"
+  },
+  {
+    "id": 9867,
+    "stackSize": 1,
+    "name": "darkoak_standing_sign",
+    "displayName": "Darkoak Standing Sign"
+  },
+  {
+    "id": 9868,
+    "stackSize": 1,
+    "name": "darkoak_wall_sign",
+    "displayName": "Darkoak Wall Sign"
+  },
+  {
+    "id": 9874,
+    "stackSize": 1,
+    "name": "deepslate_tile_double_slab",
+    "displayName": "Deepslate Tile Double Slab"
+  },
+  {
+    "id": 9880,
+    "stackSize": 1,
+    "name": "lava_cauldron",
+    "displayName": "Lava Cauldron"
+  },
+  {
+    "id": 9889,
+    "stackSize": 1,
+    "name": "exposed_double_cut_copper_slab",
+    "displayName": "Exposed Double Cut Copper Slab"
+  },
+  {
+    "id": 9897,
+    "stackSize": 1,
+    "name": "item.glow_frame",
+    "displayName": "Glow Frame"
+  },
+  {
+    "id": 9904,
+    "stackSize": 1,
+    "name": "gray_candle_cake",
+    "displayName": "Gray Candle Cake"
+  },
+  {
+    "id": 9908,
+    "stackSize": 1,
+    "name": "hard_glass_pane",
+    "displayName": "Hard Glass Pane"
+  },
+  {
+    "id": 9911,
+    "stackSize": 1,
+    "name": "sculk_shrieker",
+    "displayName": "Sculk Shrieker"
+  },
+  {
+    "id": 9912,
+    "stackSize": 1,
+    "name": "info_update",
+    "displayName": "Info Update"
+  },
+  {
+    "id": 9915,
+    "stackSize": 1,
+    "name": "item.jungle_door",
+    "displayName": "Jungle Door"
+  },
+  {
+    "id": 9916,
+    "stackSize": 1,
+    "name": "jungle_standing_sign",
+    "displayName": "Jungle Standing Sign"
+  },
+  {
+    "id": 9917,
+    "stackSize": 1,
+    "name": "lit_furnace",
+    "displayName": "Lit Furnace"
+  },
+  {
+    "id": 9918,
+    "stackSize": 1,
+    "name": "jungle_wall_sign",
+    "displayName": "Jungle Wall Sign"
+  },
+  {
+    "id": 9919,
+    "stackSize": 1,
+    "name": "unlit_redstone_torch",
+    "displayName": "Unlit Redstone Torch"
+  },
+  {
+    "id": 9923,
+    "stackSize": 1,
+    "name": "lava",
+    "displayName": "Lava"
+  },
+  {
+    "id": 9927,
+    "stackSize": 1,
+    "name": "light_blue_candle_cake",
+    "displayName": "Light Blue Candle Cake"
+  },
+  {
+    "id": 9928,
     "stackSize": 1,
     "name": "lime_candle_cake",
     "displayName": "Lime Candle Cake"
   },
   {
-    "id": 10050,
+    "id": 9930,
     "stackSize": 1,
-    "name": "unlit_redstone_torch",
-    "displayName": "Unlit Redstone Torch"
+    "name": "lit_smoker",
+    "displayName": "Lit Smoker"
+  },
+  {
+    "id": 9931,
+    "stackSize": 1,
+    "name": "melon_stem",
+    "displayName": "Melon Stem"
+  },
+  {
+    "id": 9932,
+    "stackSize": 1,
+    "name": "item.nether_sprouts",
+    "displayName": "Nether Sprouts"
+  },
+  {
+    "id": 9934,
+    "stackSize": 1,
+    "name": "movingblock",
+    "displayName": "Movingblock"
+  },
+  {
+    "id": 9940,
+    "stackSize": 1,
+    "name": "weathered_double_cut_copper_slab",
+    "displayName": "Weathered Double Cut Copper Slab"
+  },
+  {
+    "id": 9942,
+    "stackSize": 1,
+    "name": "netherreactor",
+    "displayName": "Netherreactor"
+  },
+  {
+    "id": 9946,
+    "stackSize": 1,
+    "name": "ochre_froglight",
+    "displayName": "Ochre Froglight"
+  },
+  {
+    "id": 9948,
+    "stackSize": 1,
+    "name": "oxidized_double_cut_copper_slab",
+    "displayName": "Oxidized Double Cut Copper Slab"
+  },
+  {
+    "id": 9949,
+    "stackSize": 1,
+    "name": "pistonarmcollision",
+    "displayName": "Pistonarmcollision"
+  },
+  {
+    "id": 9953,
+    "stackSize": 1,
+    "name": "polished_blackstone_brick_double_slab",
+    "displayName": "Polished Blackstone Brick Double Slab"
+  },
+  {
+    "id": 9954,
+    "stackSize": 1,
+    "name": "warped_standing_sign",
+    "displayName": "Warped Standing Sign"
+  },
+  {
+    "id": 9959,
+    "stackSize": 1,
+    "name": "powered_repeater",
+    "displayName": "Powered Repeater"
+  },
+  {
+    "id": 9961,
+    "stackSize": 1,
+    "name": "pumpkin_stem",
+    "displayName": "Pumpkin Stem"
+  },
+  {
+    "id": 9968,
+    "stackSize": 1,
+    "name": "redstone_wire",
+    "displayName": "Redstone Wire"
+  },
+  {
+    "id": 9970,
+    "stackSize": 1,
+    "name": "sculk",
+    "displayName": "Sculk"
+  },
+  {
+    "id": 9971,
+    "stackSize": 1,
+    "name": "sculk_catalyst",
+    "displayName": "Sculk Catalyst"
+  },
+  {
+    "id": 9974,
+    "stackSize": 1,
+    "name": "item.skull",
+    "displayName": "Skull"
+  },
+  {
+    "id": 9976,
+    "stackSize": 1,
+    "name": "item.soul_campfire",
+    "displayName": "Soul Campfire"
+  },
+  {
+    "id": 9979,
+    "stackSize": 1,
+    "name": "item.wheat",
+    "displayName": "Wheat"
+  },
+  {
+    "id": 9980,
+    "stackSize": 1,
+    "name": "item.spruce_door",
+    "displayName": "Spruce Door"
+  },
+  {
+    "id": 9985,
+    "stackSize": 1,
+    "name": "stonecutter",
+    "displayName": "Stonecutter"
+  },
+  {
+    "id": 9993,
+    "stackSize": 1,
+    "name": "sweet_berry_bush",
+    "displayName": "Sweet Berry Bush"
+  },
+  {
+    "id": 9999,
+    "stackSize": 1,
+    "name": "underwater_torch",
+    "displayName": "Underwater Torch"
+  },
+  {
+    "id": 10000,
+    "stackSize": 1,
+    "name": "unknown",
+    "displayName": "Unknown"
+  },
+  {
+    "id": 10001,
+    "stackSize": 1,
+    "name": "unpowered_comparator",
+    "displayName": "Unpowered Comparator"
+  },
+  {
+    "id": 10002,
+    "stackSize": 1,
+    "name": "unpowered_repeater",
+    "displayName": "Unpowered Repeater"
+  },
+  {
+    "id": 10003,
+    "stackSize": 1,
+    "name": "verdant_froglight",
+    "displayName": "Verdant Froglight"
+  },
+  {
+    "id": 10006,
+    "stackSize": 1,
+    "name": "wall_banner",
+    "displayName": "Wall Banner"
+  },
+  {
+    "id": 10007,
+    "stackSize": 1,
+    "name": "item.warped_door",
+    "displayName": "Warped Door"
+  },
+  {
+    "id": 10008,
+    "stackSize": 1,
+    "name": "warped_double_slab",
+    "displayName": "Warped Double Slab"
+  },
+  {
+    "id": 10017,
+    "stackSize": 1,
+    "name": "warped_wall_sign",
+    "displayName": "Warped Wall Sign"
+  },
+  {
+    "id": 10018,
+    "stackSize": 1,
+    "name": "water",
+    "displayName": "Water"
+  },
+  {
+    "id": 10021,
+    "stackSize": 1,
+    "name": "waxed_double_cut_copper_slab",
+    "displayName": "Waxed Double Cut Copper Slab"
+  },
+  {
+    "id": 10024,
+    "stackSize": 1,
+    "name": "waxed_exposed_double_cut_copper_slab",
+    "displayName": "Waxed Exposed Double Cut Copper Slab"
+  },
+  {
+    "id": 10027,
+    "stackSize": 1,
+    "name": "waxed_oxidized_double_cut_copper_slab",
+    "displayName": "Waxed Oxidized Double Cut Copper Slab"
+  },
+  {
+    "id": 10036,
+    "stackSize": 1,
+    "name": "item.wooden_door",
+    "displayName": "Wooden Door"
+  },
+  {
+    "id": 10038,
+    "stackSize": 1,
+    "name": "yellow_candle_cake",
+    "displayName": "Yellow Candle Cake"
   }
 ]
