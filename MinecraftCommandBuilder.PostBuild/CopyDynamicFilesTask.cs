@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using Microsoft.Build.Framework;
 using Task = Microsoft.Build.Utilities.Task;
@@ -22,7 +23,7 @@ namespace MinecraftCommandBuilder.PostBuild
 
             if (string.IsNullOrEmpty(SourceDirectory) || string.IsNullOrEmpty(TargetDirectory))
             {
-                Log.LogError("SourceDirectory and TargetDirectory must be set.");
+                LogError("SourceDirectory and TargetDirectory must be set.");
                 return false;
             }
 
@@ -62,12 +63,27 @@ namespace MinecraftCommandBuilder.PostBuild
             }
             catch (Exception ex)
             {
-                Log.LogErrorFromException(ex);
+                LogError(ex);
                 return false;
             }
         }
 
-        private void LogMessage(string message) =>
-            Log.LogMessage(MessageImportance.Normal, message);
+        private void LogMessage(string message)
+        {
+            Log.LogMessage(MessageImportance.High, message);
+            Console.WriteLine(message);
+        }
+
+        private void LogError(string message)
+        {
+            Log.LogError(message);
+            Console.WriteLine(message);
+        }
+
+        private void LogError(Exception ex)
+        {
+            Log.LogErrorFromException(ex);
+            Console.WriteLine(ex);
+        }
     }
 }
