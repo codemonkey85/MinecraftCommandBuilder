@@ -9,13 +9,17 @@ namespace MinecraftCommandBuilder.PostBuild
     public class CopyDynamicFilesTask : Task
     {
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        [Required] public string SourceDirectory { get; set; }
+        [Required]
+        public string SourceDirectory { get; set; }
 
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        [Required] public string TargetDirectory { get; set; }
+        [Required]
+        public string TargetDirectory { get; set; }
 
         public override bool Execute()
         {
+            LogMessage($"Copying dynamic files from {SourceDirectory} to {TargetDirectory}");
+
             if (string.IsNullOrEmpty(SourceDirectory) || string.IsNullOrEmpty(TargetDirectory))
             {
                 Log.LogError("SourceDirectory and TargetDirectory must be set.");
@@ -26,6 +30,7 @@ namespace MinecraftCommandBuilder.PostBuild
             {
                 if (!Directory.Exists(TargetDirectory))
                 {
+                    LogMessage($"Creating directory {TargetDirectory}");
                     Directory.CreateDirectory(TargetDirectory);
                 }
 
@@ -33,14 +38,22 @@ namespace MinecraftCommandBuilder.PostBuild
                 {
                     if (!dir.EndsWith("content/data/data", StringComparison.OrdinalIgnoreCase))
                     {
+                        LogMessage($"Skipping directory {dir}");
                         continue;
                     }
 
                     var targetSubDir = Path.Combine(TargetDirectory, Path.GetFileName(dir));
-                    Directory.CreateDirectory(targetSubDir);
+
+                    if (!Directory.Exists(targetSubDir))
+                    {
+                        LogMessage($"Creating directory {targetSubDir}");
+                        Directory.CreateDirectory(targetSubDir);
+                    }
+
                     foreach (var file in Directory.GetFiles(dir, "*", SearchOption.AllDirectories))
                     {
                         var destFile = Path.Combine(targetSubDir, Path.GetFileName(file));
+                        LogMessage($"Copying {file} to {destFile}");
                         File.Copy(file, destFile, overwrite: true);
                     }
                 }
@@ -53,5 +66,8 @@ namespace MinecraftCommandBuilder.PostBuild
                 return false;
             }
         }
+
+        private void LogMessage(string message) =>
+            Log.LogMessage(MessageImportance.Normal, message);
     }
 }
