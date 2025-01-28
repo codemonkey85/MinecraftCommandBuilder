@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using Microsoft.Build.Framework;
 using Task = Microsoft.Build.Utilities.Task;
 
@@ -19,11 +19,9 @@ namespace MinecraftCommandBuilder.PostBuild
 
         public override bool Execute()
         {
-            LogMessage($"Copying dynamic files from {SourceDirectory} to {TargetDirectory}");
-
-            if (string.IsNullOrEmpty(SourceDirectory) || string.IsNullOrEmpty(TargetDirectory))
+            if (SourceDirectory == null || TargetDirectory == null)
             {
-                LogError("SourceDirectory and TargetDirectory must be set.");
+                Log.LogError("SourceDirectory and TargetDirectory must be set.");
                 return false;
             }
 
@@ -31,30 +29,27 @@ namespace MinecraftCommandBuilder.PostBuild
             {
                 if (!Directory.Exists(TargetDirectory))
                 {
-                    LogMessage($"Creating directory {TargetDirectory}");
                     Directory.CreateDirectory(TargetDirectory);
                 }
 
-                foreach (var dir in Directory.GetDirectories(SourceDirectory, "*", SearchOption.AllDirectories))
+                // Locate all `content/data/data` directories under the NuGet package root.
+                var dataDirectories = Directory.GetDirectories(SourceDirectory, "data", SearchOption.AllDirectories)
+                    .Where(dir => dir.EndsWith("content" + Path.DirectorySeparatorChar + "data" + Path.DirectorySeparatorChar + "data", StringComparison.OrdinalIgnoreCase));
+
+                foreach (var dataDirectory in dataDirectories)
                 {
-                    if (!dir.EndsWith("content/data/data", StringComparison.OrdinalIgnoreCase))
+                    // Recursively copy files from `content/data/data` to the target directory.
+                    foreach (var file in Directory.GetFiles(dataDirectory, "*", SearchOption.AllDirectories))
                     {
-                        LogMessage($"Skipping directory {dir}");
-                        continue;
-                    }
+                        var relativePath = GetRelativePath(dataDirectory, file);
+                        var destFile = Path.Combine(TargetDirectory, relativePath);
 
-                    var targetSubDir = Path.Combine(TargetDirectory, Path.GetFileName(dir));
+                        var destDir = Path.GetDirectoryName(destFile);
+                        if (!string.IsNullOrEmpty(destDir) && !Directory.Exists(destDir))
+                        {
+                            Directory.CreateDirectory(destDir);
+                        }
 
-                    if (!Directory.Exists(targetSubDir))
-                    {
-                        LogMessage($"Creating directory {targetSubDir}");
-                        Directory.CreateDirectory(targetSubDir);
-                    }
-
-                    foreach (var file in Directory.GetFiles(dir, "*", SearchOption.AllDirectories))
-                    {
-                        var destFile = Path.Combine(targetSubDir, Path.GetFileName(file));
-                        LogMessage($"Copying {file} to {destFile}");
                         File.Copy(file, destFile, overwrite: true);
                     }
                 }
@@ -63,30 +58,35 @@ namespace MinecraftCommandBuilder.PostBuild
             }
             catch (Exception ex)
             {
-                LogError(ex);
+                Log.LogErrorFromException(ex);
                 return false;
             }
         }
-
-        [Conditional("DEBUG")]
-        private void LogMessage(string message)
+        
+        /// <summary>
+        /// Custom implementation of Path.GetRelativePath for .NET Standard 2.0.
+        /// </summary>
+        private static string GetRelativePath(string basePath, string path)
         {
-            Log.LogMessage(MessageImportance.High, message);
-            Console.WriteLine(message);
+            var baseUri = new Uri(AppendDirectorySeparator(basePath));
+            var pathUri = new Uri(path);
+
+            if (baseUri.Scheme != pathUri.Scheme)
+            {
+                throw new InvalidOperationException("Paths must have the same scheme.");
+            }
+
+            var relativeUri = baseUri.MakeRelativeUri(pathUri);
+            return Uri.UnescapeDataString(relativeUri.ToString().Replace('/', Path.DirectorySeparatorChar));
         }
 
-        [Conditional("DEBUG")]
-        private void LogError(string message)
+        private static string AppendDirectorySeparator(string path)
         {
-            Log.LogError(message);
-            Console.WriteLine(message);
-        }
-
-        [Conditional("DEBUG")]
-        private void LogError(Exception ex)
-        {
-            Log.LogErrorFromException(ex);
-            Console.WriteLine(ex);
+            if (!path.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
+            {
+                return path + Path.DirectorySeparatorChar;
+            }
+            return path;
         }
     }
 }

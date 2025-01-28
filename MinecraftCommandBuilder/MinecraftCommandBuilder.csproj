@@ -29,7 +29,7 @@
 
 	<UsingTask TaskName="CopyDynamicFilesTask" AssemblyFile="$(OutputPath)MinecraftCommandBuilder.PostBuild.dll" />
 	<Target Name="PostBuild" AfterTargets="Build">
-		<CopyDynamicFilesTask SourceDirectory="$(NuGetPackageRoot)" TargetDirectory="$(ProjectDir)wwwroot/data" />
+		<CopyDynamicFilesTask SourceDirectory="$(NuGetPackageRoot)" TargetDirectory="$(ProjectDir)wwwroot/data/data" />
 	</Target>
 
 </Project>
