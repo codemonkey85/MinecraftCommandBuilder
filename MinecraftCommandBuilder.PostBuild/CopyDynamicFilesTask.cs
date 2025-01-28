@@ -68,18 +68,21 @@ namespace MinecraftCommandBuilder.PostBuild
             }
         }
 
+        [Conditional("DEBUG")]
         private void LogMessage(string message)
         {
             Log.LogMessage(MessageImportance.High, message);
             Console.WriteLine(message);
         }
 
+        [Conditional("DEBUG")]
         private void LogError(string message)
         {
             Log.LogError(message);
             Console.WriteLine(message);
         }
 
+        [Conditional("DEBUG")]
         private void LogError(Exception ex)
         {
             Log.LogErrorFromException(ex);
