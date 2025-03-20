@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "iKpyP5m6",
+  "version": "SXr1eRK5",
   "assets": [
     {
       "hash": "sha256-d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU=",
@@ -98,16 +98,16 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.Win32.Registry.0j7obnj853.wasm"
     },
     {
-      "hash": "sha256-ZHxpXNXNaUpYqK17WgLfAPbHZoHjPqnrca09Pozv1TU=",
-      "url": "_framework/MinecraftCommandBuilder.PostBuild.kgd55x29cv.wasm"
+      "hash": "sha256-ycWrdLo7NqHxl8HUh/9IN3VpgbivZKqCFLZAiY53DIg=",
+      "url": "_framework/MinecraftCommandBuilder.7wr44gpecl.wasm"
     },
     {
-      "hash": "sha256-rmSIesSpHYN2RxEm+qF3Kq2+4moyELpfoOAibTTHgE4=",
-      "url": "_framework/MinecraftCommandBuilder.qlur142h43.wasm"
+      "hash": "sha256-sEDwLXBxp3QJqVqScjimR2h61uYm0eVHZr4tlomKaSQ=",
+      "url": "_framework/MinecraftCommandBuilder.PostBuild.4vdi2i2x8l.wasm"
     },
     {
-      "hash": "sha256-UKU+EFX+kshFZ2fuaEiIpE64Tf166OYIS2n87vJHe1w=",
-      "url": "_framework/MinecraftDataCSharp.c94z54nayw.wasm"
+      "hash": "sha256-jqw0ggVg7qQnoQS3RRvXXRISlcKJOIqHun7z/EZHopQ=",
+      "url": "_framework/MinecraftDataCSharp.6mrb4m7p2r.wasm"
     },
     {
       "hash": "sha256-SSKeXe8dneSncaTh5r7fA2daHJRPnxjZYJJtPKlLfCg=",
@@ -314,7 +314,7 @@ self.assetsManifest = {
       "url": "_framework/System.icunsnzrqy.wasm"
     },
     {
-      "hash": "sha256-UFtr/EQBkwKfl9pDZlTolZrP9cXN+1LnLAJ2ISkgogk=",
+      "hash": "sha256-9zQTMak8N0Gr+NAnQFe0rGgLwAQ4UFXWDOfWDZkBXyM=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -354,7 +354,7 @@ self.assetsManifest = {
       "url": "_framework/netstandard.xktuj6m9v7.wasm"
     },
     {
-      "hash": "sha256-qSa9utJYGKjRCFUXFYv+stCTWCuE7uOD1+NynJ42V9I=",
+      "hash": "sha256-dKSey6Htfy5YsrgR3MazXa7oUPnPbPfmDQTJcKhde30=",
       "url": "css/app.css"
     },
     {
@@ -366,11 +366,11 @@ self.assetsManifest = {
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-UIpRbshADXlVpB+ciG5e0vCsb7PaM2bJH1PB2pFVAcQ=",
+      "hash": "sha256-FkJcIOl9nptTPWnovRmoRH4QjgDK6oVcKOEIG7I8CE8=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-uLsJ4ong4nWScG+Xw4twlXe0HlJoV46QVOuIKhbVvYk=",
+      "hash": "sha256-GO8pC4wYxrkNsFgcGV0OCPYbQTlbhhvZomOzt8PoIgs=",
       "url": "js/app.js"
     },
     {
