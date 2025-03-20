@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MinecraftCommandBuilder",
   "resources": {
-    "hash": "sha256-5MKwI2ETR88IlUZ+q+WBTEvwkB3qkt2O+4qI59HIWWM=",
+    "hash": "sha256-8Fw3jAb/8U9ZBRJqgJeLsyT+SnE84wqRDasOvfsw9bE=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.Forms.pl7ta3gmle.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.yt70mrnuu7.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -25,8 +25,8 @@
       "Microsoft.NET.StringTools.xqpmblatxi.wasm": "Microsoft.NET.StringTools.wasm",
       "Microsoft.Win32.Primitives.ln9p2dayjh.wasm": "Microsoft.Win32.Primitives.wasm",
       "Microsoft.Win32.Registry.0j7obnj853.wasm": "Microsoft.Win32.Registry.wasm",
-      "MinecraftCommandBuilder.PostBuild.4vdi2i2x8l.wasm": "MinecraftCommandBuilder.PostBuild.wasm",
-      "MinecraftCommandBuilder.7wr44gpecl.wasm": "MinecraftCommandBuilder.wasm",
+      "MinecraftCommandBuilder.PostBuild.60a3upvzz2.wasm": "MinecraftCommandBuilder.PostBuild.wasm",
+      "MinecraftCommandBuilder.3110ogyceg.wasm": "MinecraftCommandBuilder.wasm",
       "MinecraftDataCSharp.6mrb4m7p2r.wasm": "MinecraftDataCSharp.wasm",
       "MudBlazor.bv1l5v2ba1.wasm": "MudBlazor.wasm",
       "netstandard.xktuj6m9v7.wasm": "netstandard.wasm",
@@ -129,8 +129,8 @@
       "Microsoft.NET.StringTools.xqpmblatxi.wasm": "sha256-J5Wp/4Ffed79/pcfMGWixLukJw02QpBHrO4AKRSdcyI=",
       "Microsoft.Win32.Primitives.ln9p2dayjh.wasm": "sha256-30xO+FUzOa+7erb3K4Vs4Mw4xddwMQwXmalKInZSXEQ=",
       "Microsoft.Win32.Registry.0j7obnj853.wasm": "sha256-HBNRT6XlpQsbzobYJB2P1/kJUvH7sugKvxn6yO6TDOA=",
-      "MinecraftCommandBuilder.PostBuild.4vdi2i2x8l.wasm": "sha256-sEDwLXBxp3QJqVqScjimR2h61uYm0eVHZr4tlomKaSQ=",
-      "MinecraftCommandBuilder.7wr44gpecl.wasm": "sha256-ycWrdLo7NqHxl8HUh/9IN3VpgbivZKqCFLZAiY53DIg=",
+      "MinecraftCommandBuilder.PostBuild.60a3upvzz2.wasm": "sha256-Zuftu7vfrA8sRCMy+tXEMn0fNn2psbEJyx7C+QZz/VY=",
+      "MinecraftCommandBuilder.3110ogyceg.wasm": "sha256-N336U+pAL1krkdq2SrheON6wAcId6wg0MqddUhK7Vu8=",
       "MinecraftDataCSharp.6mrb4m7p2r.wasm": "sha256-jqw0ggVg7qQnoQS3RRvXXRISlcKJOIqHun7z/EZHopQ=",
       "MudBlazor.bv1l5v2ba1.wasm": "sha256-SSKeXe8dneSncaTh5r7fA2daHJRPnxjZYJJtPKlLfCg=",
       "netstandard.xktuj6m9v7.wasm": "sha256-v6NsREq7XSup5Pjp+e00sKgUgzKK5XJr+UuhgKrFndM=",
