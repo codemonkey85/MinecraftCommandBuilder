@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "PGHm+2mA",
+  "version": "iKpyP5m6",
   "assets": [
     {
       "hash": "sha256-d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU=",
@@ -46,8 +46,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.Extensions.Configuration.icatoxhjsq.wasm"
     },
     {
-      "hash": "sha256-Rw7nAXbOz9siNbaY8PJW43bzeGeUpsBOSMfwM63e6qY=",
-      "url": "_framework/Microsoft.Extensions.DependencyInjection.Abstractions.3drrffw95f.wasm"
+      "hash": "sha256-TrEhokJYAh5zdHEF613X3nT6S/igGDvQXQG/soTtt6c=",
+      "url": "_framework/Microsoft.Extensions.DependencyInjection.Abstractions.yz8r3m5w09.wasm"
     },
     {
       "hash": "sha256-DnnRKy8PZBHtfhziO6DfIwoozcHbfQiGwcXDh5nRSZc=",
@@ -98,16 +98,16 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.Win32.Registry.0j7obnj853.wasm"
     },
     {
-      "hash": "sha256-owBZtSj/sn7abCpICBdUT8ETiGAkpTmPtFDlnt8srHg=",
-      "url": "_framework/MinecraftCommandBuilder.PostBuild.tspzqyvuzq.wasm"
+      "hash": "sha256-ZHxpXNXNaUpYqK17WgLfAPbHZoHjPqnrca09Pozv1TU=",
+      "url": "_framework/MinecraftCommandBuilder.PostBuild.kgd55x29cv.wasm"
     },
     {
-      "hash": "sha256-hKkMRKDZopJtwOEw8F+phHB4M/aGT0C+wTh3jv1utys=",
-      "url": "_framework/MinecraftCommandBuilder.ks8gxyl5mg.wasm"
+      "hash": "sha256-rmSIesSpHYN2RxEm+qF3Kq2+4moyELpfoOAibTTHgE4=",
+      "url": "_framework/MinecraftCommandBuilder.qlur142h43.wasm"
     },
     {
-      "hash": "sha256-a9KMRoViqGKdPWPH2BdQsBVaZTwyghqFotWs1HtuXJg=",
-      "url": "_framework/MinecraftDataCSharp.5cat4wpfd6.wasm"
+      "hash": "sha256-UKU+EFX+kshFZ2fuaEiIpE64Tf166OYIS2n87vJHe1w=",
+      "url": "_framework/MinecraftDataCSharp.c94z54nayw.wasm"
     },
     {
       "hash": "sha256-SSKeXe8dneSncaTh5r7fA2daHJRPnxjZYJJtPKlLfCg=",
@@ -254,8 +254,8 @@ self.assetsManifest = {
       "url": "_framework/System.Runtime.Serialization.Xml.m4lq8qrk9d.wasm"
     },
     {
-      "hash": "sha256-2U20aIbCzuHFNDDDgLRy8KG83nERYovJau6LSuxT1Es=",
-      "url": "_framework/System.Runtime.fy1dnwf6dn.wasm"
+      "hash": "sha256-2uUuOs313MegVRUh4/rIxCN9/KU++b1bM5RW9KlsZzE=",
+      "url": "_framework/System.Runtime.qzulyyuu9e.wasm"
     },
     {
       "hash": "sha256-dee5o31rNI8KDBlWNmKt0UP4jsiZlsBeQQq1yoBVSOM=",
@@ -314,7 +314,7 @@ self.assetsManifest = {
       "url": "_framework/System.icunsnzrqy.wasm"
     },
     {
-      "hash": "sha256-rQUklz8PYfqc2hoCMOqOh2hbC2j/fXrhRpM/Yj/OyBg=",
+      "hash": "sha256-UFtr/EQBkwKfl9pDZlTolZrP9cXN+1LnLAJ2ISkgogk=",
       "url": "_framework/blazor.boot.json"
     },
     {
