@@ -6,11 +6,11 @@ public interface ICommandService
 {
     string PlayerName { get; set; }
 
+    string CommandText { get; set; }
+
     event Action? OnAppStateChanged;
 
     void Refresh();
-
-    string CommandText { get; set; }
 
     Task CopyTextToClipboard(string text);
 

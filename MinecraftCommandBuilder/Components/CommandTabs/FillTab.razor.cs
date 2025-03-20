@@ -12,6 +12,8 @@ public partial class FillTab
 
     private Block? SelectedBlock { get; set; }
 
+    private bool GenerateCommandDisabled => SelectedBlock is null;
+
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
@@ -20,8 +22,6 @@ public partial class FillTab
             Blocks = await BlockRepository.GetAllBlocks();
         }
     }
-
-    private bool GenerateCommandDisabled => SelectedBlock is null;
 
     private async Task<IEnumerable<Block>> Search(string value, CancellationToken cancellationToken)
     {

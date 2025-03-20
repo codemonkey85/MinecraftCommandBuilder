@@ -1,35 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
-	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
-		<Nullable>enable</Nullable>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+    </PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-	</PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.3" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.3" PrivateAssets="all" />
-		<PackageReference Include="MinecraftDataCSharp" Version="2.0.0-prerelease-2" />
-		<PackageReference Include="MudBlazor" Version="8.3.0" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.3"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.3" PrivateAssets="all"/>
+        <PackageReference Include="MinecraftDataCSharp" Version="2.0.0-prerelease-2"/>
+        <PackageReference Include="MudBlazor" Version="8.3.0"/>
+    </ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\MinecraftCommandBuilder.PostBuild\MinecraftCommandBuilder.PostBuild.csproj" />
-	</ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\MinecraftCommandBuilder.PostBuild\MinecraftCommandBuilder.PostBuild.csproj"/>
+    </ItemGroup>
 
-	<ItemGroup>
-		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
-	</ItemGroup>
+    <ItemGroup>
+        <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js"/>
+    </ItemGroup>
 
-	<UsingTask TaskName="CopyDynamicFilesTask" AssemblyFile="$(OutputPath)MinecraftCommandBuilder.PostBuild.dll" />
-	<Target Name="PostBuild" AfterTargets="Build">
-		<CopyDynamicFilesTask SourceDirectory="$(NuGetPackageRoot)" TargetDirectory="$(ProjectDir)wwwroot/data/data" />
-	</Target>
+    <UsingTask TaskName="CopyDynamicFilesTask" AssemblyFile="$(OutputPath)MinecraftCommandBuilder.PostBuild.dll"/>
+    <Target Name="PostBuild" AfterTargets="Build">
+        <CopyDynamicFilesTask SourceDirectory="$(NuGetPackageRoot)" TargetDirectory="$(ProjectDir)wwwroot/data/data"/>
+    </Target>
 
 </Project>

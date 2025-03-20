@@ -8,6 +8,8 @@ public partial class GiveItemsTab
 
     private int Count { get; set; } = 1;
 
+    private bool GenerateCommandDisabled => SelectedItem is null;
+
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
@@ -33,8 +35,6 @@ public partial class GiveItemsTab
 
     private static string ToString(Item? item) =>
         item?.DisplayName ?? string.Empty;
-
-    private bool GenerateCommandDisabled => SelectedItem is null;
 
     private async Task GenerateCommand()
     {

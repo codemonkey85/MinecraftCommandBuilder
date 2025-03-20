@@ -12,6 +12,8 @@ public partial class EffectsTab
 
     private bool ClearEffect { get; set; }
 
+    private bool GenerateCommandDisabled => SelectedEffect is null;
+
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
@@ -23,8 +25,6 @@ public partial class EffectsTab
 
     private void OnSelectedValuesChanged(IEnumerable<Effect?>? values) =>
         SelectedEffect = values?.FirstOrDefault();
-
-    private bool GenerateCommandDisabled => SelectedEffect is null;
 
     private async Task GenerateCommand()
     {

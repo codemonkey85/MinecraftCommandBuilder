@@ -4,8 +4,10 @@ namespace MinecraftCommandBuilder.Services;
 
 public class CommandService(IJSRuntime jsRuntime) : ICommandService
 {
+    // ReSharper disable once InconsistentNaming
+    private IJSObjectReference? module;
     private IJSRuntime JsRuntime { get; } = jsRuntime;
-    
+
     public string PlayerName { get; set; } = "@s";
 
     public event Action? OnAppStateChanged;
@@ -13,9 +15,6 @@ public class CommandService(IJSRuntime jsRuntime) : ICommandService
     public void Refresh() => OnAppStateChanged?.Invoke();
 
     public string CommandText { get; set; } = string.Empty;
-
-    // ReSharper disable once InconsistentNaming
-    private IJSObjectReference? module;
 
     public async Task CopyTextToClipboard(string text)
     {
@@ -59,8 +58,8 @@ public class CommandService(IJSRuntime jsRuntime) : ICommandService
             foreach (var enchantment in enchantments)
             {
                 sbEnchantments.Append($"{enchantment.Name}:{enchantment.Level},");
-
             }
+
             sbEnchantments.Length--;
             sbEnchantments.Append('}');
             enchantmentsString = $"[minecraft:enchantments={sbEnchantments}]";

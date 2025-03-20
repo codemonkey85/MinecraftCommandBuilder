@@ -4,6 +4,7 @@
     Minecraft Command Builder
 </PageTitle>
 
+@* 
 <MudButton OnClick="@(_ => ChangeVersion("1.14"))">
     Change to 1.14
 </MudButton>
@@ -11,12 +12,13 @@
 <MudButton OnClick="@(_ => ChangeVersion("1.16"))">
     Change to 1.16
 </MudButton>
+ *@
 
 <MudStack Class="mt-3">
     <MudInput T="string"
               Label="Command Text"
               @bind-Value="@CommandService.CommandText"
               Variant="@Variant.Outlined"
-              ReadOnly />
-    <CommandsTabStrip />
+              ReadOnly/>
+    <CommandsTabStrip/>
 </MudStack>
