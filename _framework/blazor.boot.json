@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MinecraftCommandBuilder",
   "resources": {
-    "hash": "sha256-YX1W7ezyhNEWJwVeIWS/3xmovmVly0uIZCVbTa92o10=",
+    "hash": "sha256-zry27a9umvX+fFRU0GJLsRwSSV5QBiU8n1ljSRWxfCY=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.Forms.pl7ta3gmle.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.yt70mrnuu7.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -25,9 +25,9 @@
       "Microsoft.NET.StringTools.xqpmblatxi.wasm": "Microsoft.NET.StringTools.wasm",
       "Microsoft.Win32.Primitives.ln9p2dayjh.wasm": "Microsoft.Win32.Primitives.wasm",
       "Microsoft.Win32.Registry.0j7obnj853.wasm": "Microsoft.Win32.Registry.wasm",
-      "MinecraftCommandBuilder.PostBuild.y7x5n803ht.wasm": "MinecraftCommandBuilder.PostBuild.wasm",
-      "MinecraftCommandBuilder.hqj2s8ungp.wasm": "MinecraftCommandBuilder.wasm",
-      "MinecraftDataCSharp.om2be1w8rc.wasm": "MinecraftDataCSharp.wasm",
+      "MinecraftCommandBuilder.PostBuild.ubyhuu9dqe.wasm": "MinecraftCommandBuilder.PostBuild.wasm",
+      "MinecraftCommandBuilder.2nd4gra5y1.wasm": "MinecraftCommandBuilder.wasm",
+      "MinecraftDataCSharp.zqmyel94gd.wasm": "MinecraftDataCSharp.wasm",
       "MudBlazor.bv1l5v2ba1.wasm": "MudBlazor.wasm",
       "netstandard.xktuj6m9v7.wasm": "netstandard.wasm",
       "System.Collections.Concurrent.gce8ivrexp.wasm": "System.Collections.Concurrent.wasm",
@@ -55,7 +55,7 @@
       "System.Net.Primitives.si1hvzeknr.wasm": "System.Net.Primitives.wasm",
       "System.Net.WebClient.kpnzc7f3ct.wasm": "System.Net.WebClient.wasm",
       "System.ObjectModel.x1ecxm1wev.wasm": "System.ObjectModel.wasm",
-      "System.Private.CoreLib.a4y5emfnc6.wasm": "System.Private.CoreLib.wasm",
+      "System.Private.CoreLib.dzugf41i6s.wasm": "System.Private.CoreLib.wasm",
       "System.Private.DataContractSerialization.ydiegxao1h.wasm": "System.Private.DataContractSerialization.wasm",
       "System.Private.Uri.nk79b1gyzk.wasm": "System.Private.Uri.wasm",
       "System.Private.Xml.Linq.umcnnq4ynd.wasm": "System.Private.Xml.Linq.wasm",
@@ -65,7 +65,7 @@
       "System.Runtime.Serialization.Formatters.oom0pu7198.wasm": "System.Runtime.Serialization.Formatters.wasm",
       "System.Runtime.Serialization.Primitives.hefn0lssuf.wasm": "System.Runtime.Serialization.Primitives.wasm",
       "System.Runtime.Serialization.Xml.m4lq8qrk9d.wasm": "System.Runtime.Serialization.Xml.wasm",
-      "System.Runtime.qzulyyuu9e.wasm": "System.Runtime.wasm",
+      "System.Runtime.9663b8o4y6.wasm": "System.Runtime.wasm",
       "System.Security.Cryptography.ProtectedData.5cs82lb979.wasm": "System.Security.Cryptography.ProtectedData.wasm",
       "System.Security.Cryptography.ye1vk2nsal.wasm": "System.Security.Cryptography.wasm",
       "System.Text.Encoding.CodePages.lvy930db37.wasm": "System.Text.Encoding.CodePages.wasm",
@@ -81,7 +81,7 @@
       "System.Xml.ReaderWriter.4x0o36z3bh.wasm": "System.Xml.ReaderWriter.wasm",
       "System.Xml.XmlSerializer.1q7bxbqdq6.wasm": "System.Xml.XmlSerializer.wasm",
       "dotnet.native.x2ntgizn3x.js": "dotnet.native.js",
-      "dotnet.native.n9j5dn4bpi.wasm": "dotnet.native.wasm",
+      "dotnet.native.mz9atnndjv.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.runtime.qrl1fuqt3c.js": "dotnet.runtime.js",
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
@@ -95,7 +95,7 @@
       "dotnet.runtime.qrl1fuqt3c.js": "sha256-ilTXrnUF4HKbIAFVIYlRmX3ryKNZpGUObkWMF0n2Kcg="
     },
     "wasmNative": {
-      "dotnet.native.n9j5dn4bpi.wasm": "sha256-y9kPBvCIofYCOyMYnN3K/6tMbK1Ox2K8knY+zoy5g1g="
+      "dotnet.native.mz9atnndjv.wasm": "sha256-7gUK2YxeNhrOXJuQ0dCZV+2Ykvd5WXj0yblU1zWbBqY="
     },
     "icu": {
       "icudt_CJK.tjcz0u77k5.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -103,7 +103,7 @@
       "icudt_no_CJK.lfu7j35m59.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "coreAssembly": {
-      "System.Private.CoreLib.a4y5emfnc6.wasm": "sha256-+tHyQTJlRk5/LHPKOlsKjO5Xmn3370IsW6Kqrtkr2zY=",
+      "System.Private.CoreLib.dzugf41i6s.wasm": "sha256-J3DTEJ6mmenQSPrzE15UNjvWDtItLUmffsxaqo0BXLk=",
       "System.Runtime.InteropServices.JavaScript.0tgicm7vjk.wasm": "sha256-bAbPaONHne7R1hItHoY8/SYWlDb84JZQ1cxd1Y+tJn0="
     },
     "assembly": {
@@ -129,9 +129,9 @@
       "Microsoft.NET.StringTools.xqpmblatxi.wasm": "sha256-J5Wp/4Ffed79/pcfMGWixLukJw02QpBHrO4AKRSdcyI=",
       "Microsoft.Win32.Primitives.ln9p2dayjh.wasm": "sha256-30xO+FUzOa+7erb3K4Vs4Mw4xddwMQwXmalKInZSXEQ=",
       "Microsoft.Win32.Registry.0j7obnj853.wasm": "sha256-HBNRT6XlpQsbzobYJB2P1/kJUvH7sugKvxn6yO6TDOA=",
-      "MinecraftCommandBuilder.PostBuild.y7x5n803ht.wasm": "sha256-knHZTQcBmmCV2hPfxflSUXQar8NUmQ0SSq1SiBeV3MA=",
-      "MinecraftCommandBuilder.hqj2s8ungp.wasm": "sha256-aSyUTUS49SZurHiuQcZKgYNQteUDuyV/FGvads3pgsU=",
-      "MinecraftDataCSharp.om2be1w8rc.wasm": "sha256-EFS4HsRui2cjgw/fmmQq6bhxD0kD+U6b0F6Fezfm3rA=",
+      "MinecraftCommandBuilder.PostBuild.ubyhuu9dqe.wasm": "sha256-9lGwkkTiHp+3ggT5+ET1h5F2Ko1aF+g9rF3R/nmA2Kw=",
+      "MinecraftCommandBuilder.2nd4gra5y1.wasm": "sha256-8qW/I26rA8aixN9VWQX+Wnt2W4WvNtEkHVztwOgWiAA=",
+      "MinecraftDataCSharp.zqmyel94gd.wasm": "sha256-VYY8HqyckAvj5WKZE0jIa8qkzge5r1DQwFcWRedUyiE=",
       "MudBlazor.bv1l5v2ba1.wasm": "sha256-SSKeXe8dneSncaTh5r7fA2daHJRPnxjZYJJtPKlLfCg=",
       "netstandard.xktuj6m9v7.wasm": "sha256-v6NsREq7XSup5Pjp+e00sKgUgzKK5XJr+UuhgKrFndM=",
       "System.Collections.Concurrent.gce8ivrexp.wasm": "sha256-oFgAxuvrzuMFEr/PmEP4zbInUxqBM+S/973H+krNS0c=",
@@ -167,7 +167,7 @@
       "System.Runtime.Serialization.Formatters.oom0pu7198.wasm": "sha256-2BOxpZ2WNIlDpBdXX+S1aY6n9Vv6gQjI1SeZHSULjds=",
       "System.Runtime.Serialization.Primitives.hefn0lssuf.wasm": "sha256-ueGOSaMIDyZl81noc7psZfm0HJtZ96UhI98RZr/DmSM=",
       "System.Runtime.Serialization.Xml.m4lq8qrk9d.wasm": "sha256-dk11f2OrjaIMh3dkxmd8S/MqBmnAYV3l/NzuDXOB1Nw=",
-      "System.Runtime.qzulyyuu9e.wasm": "sha256-2uUuOs313MegVRUh4/rIxCN9/KU++b1bM5RW9KlsZzE=",
+      "System.Runtime.9663b8o4y6.wasm": "sha256-/zLy5gDKF9vZSl0h6zVKZRw8sLdous1T1e5zzJdL3pk=",
       "System.Security.Cryptography.ProtectedData.5cs82lb979.wasm": "sha256-dee5o31rNI8KDBlWNmKt0UP4jsiZlsBeQQq1yoBVSOM=",
       "System.Security.Cryptography.ye1vk2nsal.wasm": "sha256-FpssZSQr1gvNIX+DGcBLQ1Rz2e9vmcey3b7LX9oCyLc=",
       "System.Text.Encoding.CodePages.lvy930db37.wasm": "sha256-0Yszrzxo2fdJBQrN3pOc1yjsQAUx7aUWT+yTSixbaj8=",
