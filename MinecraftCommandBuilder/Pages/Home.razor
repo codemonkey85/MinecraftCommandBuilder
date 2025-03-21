@@ -6,32 +6,24 @@
 
 <MudSelect Label="Edition"
            T="@string"
-           Value="@Edition"
+           Value="@SelectedEdition"
            ValueChanged="@SetEdition">
-    <MudSelectItem Value="@("pc")">
-        PC
-    </MudSelectItem>
-    <MudSelectItem Value="@("bedrock")">
-        Bedrock
-    </MudSelectItem>
+    @foreach (var edition in Editions)
+    {
+        <MudSelectItem Value="@edition">
+            @edition
+        </MudSelectItem>
+    }
 </MudSelect>
 
 <MudSelect Label="Version"
            T="@string"
-           Value="@Version"
+           Value="@SelectedVersion"
            ValueChanged="@SetVersion">
-
-    @if (Edition == "pc")
+    @foreach (var version in Versions)
     {
-        <MudSelectItem Value="@("1.21.4")">
-            1.21.4
-        </MudSelectItem>
-    }
-
-    @if (Edition == "bedrock")
-    {
-        <MudSelectItem Value="@("1.21.60")">
-            1.21.60
+        <MudSelectItem Value="@version">
+            @version
         </MudSelectItem>
     }
 </MudSelect>

@@ -2,9 +2,18 @@ namespace MinecraftCommandBuilder.Pages;
 
 public partial class Home : IDisposable
 {
-    private string Edition => MinecraftDataManager.Edition;
+    private string SelectedEdition => MinecraftDataManager.Edition;
 
-    private string Version => MinecraftDataManager.Version;
+    private string SelectedVersion => MinecraftDataManager.Version;
+
+    private static List<string> Editions => [.. MinecraftDataCSharp.Editions.GetAll()];
+
+    private List<string> Versions => SelectedEdition switch
+    {
+        MinecraftDataCSharp.Editions.Pc => [.. PcVersions.GetAll()],
+        MinecraftDataCSharp.Editions.Bedrock => [.. BedrockVersions.GetAll()],
+        _ => []
+    };
 
     public void Dispose() => CommandService.OnAppStateChanged -= StateHasChanged;
 

@@ -10,18 +10,9 @@ public partial class GiveItemsTab
 
     private bool GenerateCommandDisabled => SelectedItem is null;
 
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-        if (Items is [])
-        {
-            Items = await ItemRepository.GetAllItems();
-        }
-    }
-
     private async Task<IEnumerable<Item>> Search(string value, CancellationToken cancellationToken)
     {
-        await Task.Yield();
+        Items = await ItemRepository.GetAllItems();
 
         return string.IsNullOrEmpty(value)
             ? Items

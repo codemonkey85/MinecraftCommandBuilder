@@ -182,6 +182,7 @@ public partial class EnchantsTab
     ];
 
     private readonly List<Enchantment> BestTurtleShellEnchantments = [];
+
     private List<Enchantment> Enchantments { get; set; } = [];
 
     private List<Item> Items { get; set; } = [];
@@ -198,10 +199,6 @@ public partial class EnchantsTab
     {
         await base.OnInitializedAsync();
         await InitializeEnchantments();
-        if (Items is [])
-        {
-            Items = await ItemRepository.GetAllItems();
-        }
     }
 
     private async Task InitializeEnchantments()
@@ -356,14 +353,9 @@ public partial class EnchantsTab
         }
     }
 
-    private string GenerateBestEnchantCommand(Enchantment enchantment) =>
-        CommandService.GenerateEnchantCommand(
-            enchantment.Name,
-            enchantment.MaxLevel);
-
     private async Task<IEnumerable<Enchantment>> Search(string value, CancellationToken cancellationToken)
     {
-        await Task.Yield();
+        Items = await ItemRepository.GetAllItems();
 
         return string.IsNullOrEmpty(value)
             ? Enchantments

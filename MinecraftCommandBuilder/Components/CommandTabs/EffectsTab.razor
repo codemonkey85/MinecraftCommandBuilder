@@ -3,6 +3,15 @@
 <MudStack>
     <PlayerNameComponent/>
 
+    <MudButton ButtonType="@ButtonType.Button"
+               Variant="@Variant.Filled"
+               Color="@Color.Default"
+               OnClick="@RefreshEffectsList"
+               StartIcon="@Icons.Material.Filled.Refresh"
+               title="Refresh Effects List">
+        Refresh Effects List
+    </MudButton>
+
     <MudSelect T="@(Effect)"
                Placeholder="Select an effect"
                Class="mt-3"

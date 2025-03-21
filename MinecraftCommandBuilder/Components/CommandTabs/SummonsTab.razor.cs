@@ -8,18 +8,9 @@ public partial class SummonsTab
 
     private bool GenerateCommandDisabled => SelectedEntity is null;
 
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-        if (Entities is [])
-        {
-            Entities = await EntityRepository.GetAllEntities();
-        }
-    }
-
     private async Task<IEnumerable<Entity>> Search(string value, CancellationToken cancellationToken)
     {
-        await Task.Yield();
+        Entities = await EntityRepository.GetAllEntities();
 
         return string.IsNullOrEmpty(value)
             ? Entities

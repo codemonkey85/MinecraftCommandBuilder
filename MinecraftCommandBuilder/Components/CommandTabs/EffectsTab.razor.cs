@@ -19,9 +19,11 @@ public partial class EffectsTab
         await base.OnInitializedAsync();
         if (Effects is [])
         {
-            Effects = await EffectRepository.GetAllEffects();
+            await RefreshEffectsList();
         }
     }
+
+    private async Task RefreshEffectsList() => Effects = await EffectRepository.GetAllEffects();
 
     private void OnSelectedValuesChanged(IEnumerable<Effect?>? values) =>
         SelectedEffect = values?.FirstOrDefault();
