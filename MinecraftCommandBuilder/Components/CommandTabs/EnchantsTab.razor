@@ -66,6 +66,7 @@
     {
         if (enchantments is not { Count: > 0 })
         {
+            Console.WriteLine($"No best enchantments for {itemName}.");
             return null;
         }
 
@@ -73,11 +74,13 @@
 
         if (item is null)
         {
+            Console.WriteLine($"Item {itemName} not found.");
             itemName = $"Netherite {itemName}";
             item = GetItem(itemName);
 
             if (item is null)
             {
+                Console.WriteLine($"Item {itemName} not found either.");
                 return null;
             }
         }
