@@ -15,7 +15,7 @@ jobs:
 
       # sets up .NET SDK
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v4.2.0
+        uses: actions/setup-dotnet@v4.3.1
         with:
           global-json-file: ./global.json
 
@@ -34,7 +34,7 @@ jobs:
 
       # changes the base-tag in index.html from '/' to 'MinecraftCommandBuilder' to match GitHub Pages repository subdirectory
       - name: Change base-tag in index.html from / to MinecraftCommandBuilder
-        run: sed -i 's/<base href="\/" \/>/<base href="\/MinecraftCommandBuilder\/" \/>/g' release/wwwroot/index.html
+        run: sed -i 's|<base href="/"\s*/>|<base href="/MinecraftCommandBuilder/" />|g' release/wwwroot/index.html
 
       # copy index.html to 404.html to serve the same file when a file is not found
       - name: copy index.html to 404.html
@@ -45,7 +45,7 @@ jobs:
         run: touch release/wwwroot/.nojekyll
 
       - name: Commit wwwroot to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.7.2
+        uses: JamesIves/github-pages-deploy-action@v4.7.3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages

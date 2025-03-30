@@ -62,7 +62,7 @@ namespace MinecraftCommandBuilder.PostBuild
                 return false;
             }
         }
-        
+
         /// <summary>
         /// Custom implementation of Path.GetRelativePath for .NET Standard 2.0.
         /// </summary>
@@ -86,6 +86,7 @@ namespace MinecraftCommandBuilder.PostBuild
             {
                 return path + Path.DirectorySeparatorChar;
             }
+
             return path;
         }
     }

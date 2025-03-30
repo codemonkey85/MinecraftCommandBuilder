@@ -8,18 +8,11 @@ public partial class GiveItemsTab
 
     private int Count { get; set; } = 1;
 
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-        if (Items is [])
-        {
-            Items = await ItemRepository.GetAllItems();
-        }
-    }
+    private bool GenerateCommandDisabled => SelectedItem is null;
 
     private async Task<IEnumerable<Item>> Search(string value, CancellationToken cancellationToken)
     {
-        await Task.Yield();
+        Items = await ItemRepository.GetAllItems();
 
         return string.IsNullOrEmpty(value)
             ? Items
@@ -33,8 +26,6 @@ public partial class GiveItemsTab
 
     private static string ToString(Item? item) =>
         item?.DisplayName ?? string.Empty;
-
-    private bool GenerateCommandDisabled => SelectedItem is null;
 
     private async Task GenerateCommand()
     {

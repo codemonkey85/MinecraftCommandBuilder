@@ -12,20 +12,11 @@ public partial class FillTab
 
     private Block? SelectedBlock { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-        if (Blocks is [])
-        {
-            Blocks = await BlockRepository.GetAllBlocks();
-        }
-    }
-
     private bool GenerateCommandDisabled => SelectedBlock is null;
 
     private async Task<IEnumerable<Block>> Search(string value, CancellationToken cancellationToken)
     {
-        await Task.Yield();
+        Blocks = await BlockRepository.GetAllBlocks();
 
         return string.IsNullOrEmpty(value)
             ? Blocks

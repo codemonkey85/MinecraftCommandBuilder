@@ -4,11 +4,35 @@
     Minecraft Command Builder
 </PageTitle>
 
+<MudSelect Label="Edition"
+           T="@string"
+           Value="@SelectedEdition"
+           ValueChanged="@SetEdition">
+    @foreach (var edition in Editions)
+    {
+        <MudSelectItem Value="@edition">
+            @edition
+        </MudSelectItem>
+    }
+</MudSelect>
+
+<MudSelect Label="Version"
+           T="@string"
+           Value="@SelectedVersion"
+           ValueChanged="@SetVersion">
+    @foreach (var version in Versions)
+    {
+        <MudSelectItem Value="@version">
+            @version
+        </MudSelectItem>
+    }
+</MudSelect>
+
 <MudStack Class="mt-3">
     <MudInput T="string"
               Label="Command Text"
               @bind-Value="@CommandService.CommandText"
               Variant="@Variant.Outlined"
-              ReadOnly />
-    <CommandsTabStrip />
+              ReadOnly/>
+    <CommandsTabStrip/>
 </MudStack>

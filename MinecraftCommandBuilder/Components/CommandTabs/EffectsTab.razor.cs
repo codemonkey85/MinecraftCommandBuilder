@@ -12,19 +12,21 @@ public partial class EffectsTab
 
     private bool ClearEffect { get; set; }
 
+    private bool GenerateCommandDisabled => SelectedEffect is null;
+
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
         if (Effects is [])
         {
-            Effects = await EffectRepository.GetAllEffects();
+            await RefreshEffectsList();
         }
     }
 
+    private async Task RefreshEffectsList() => Effects = await EffectRepository.GetAllEffects();
+
     private void OnSelectedValuesChanged(IEnumerable<Effect?>? values) =>
         SelectedEffect = values?.FirstOrDefault();
-
-    private bool GenerateCommandDisabled => SelectedEffect is null;
 
     private async Task GenerateCommand()
     {
