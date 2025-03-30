@@ -203,16 +203,19 @@ public partial class EnchantsTab
 
     private async Task InitializeEnchantments()
     {
-        if (Enchantments is [])
-        {
-            Enchantments = await EnchantmentRepository.GetAllEnchantments();
-        }
+        Enchantments = await EnchantmentRepository.GetAllEnchantments();
+        Items = await ItemRepository.GetAllItems();
 
         if (BestPickaxeEnchantments is [])
         {
             foreach (var eName in BestPickaxeEnchantmentNames)
             {
-                BestPickaxeEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestPickaxeEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -220,7 +223,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestSwordEnchantmentNames)
             {
-                BestSwordEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestSwordEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -228,7 +236,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestAxeEnchantmentNames)
             {
-                BestAxeEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestAxeEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -236,7 +249,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestShovelEnchantmentNames)
             {
-                BestShovelEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestShovelEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -244,7 +262,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestHoeEnchantmentNames)
             {
-                BestHoeEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestHoeEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -252,7 +275,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestBowEnchantmentNames)
             {
-                BestBowEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestBowEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -260,7 +288,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestCrossbowEnchantmentNames)
             {
-                BestCrossbowEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestCrossbowEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -268,7 +301,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestTridentEnchantmentNames)
             {
-                BestTridentEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestTridentEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -276,7 +314,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestHelmetEnchantmentNames)
             {
-                BestHelmetEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestHelmetEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -284,7 +327,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestBodyArmorEnchantmentNames)
             {
-                BestBodyArmorEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestBodyArmorEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -292,7 +340,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestLeggingsEnchantmentNames)
             {
-                BestLeggingsEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestLeggingsEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -300,7 +353,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestBootsEnchantmentNames)
             {
-                BestBootsEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestBootsEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -308,7 +366,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestElytraEnchantmentNames)
             {
-                BestElytraEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestElytraEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -316,7 +379,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestShieldEnchantmentNames)
             {
-                BestShieldEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestShieldEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -324,7 +392,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestShearsEnchantmentNames)
             {
-                BestShearsEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestShearsEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -332,7 +405,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestFlintAndSteelEnchantmentNames)
             {
-                BestFlintAndSteelEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestFlintAndSteelEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -340,7 +418,12 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestBrushEnchantmentNames)
             {
-                BestBrushEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestBrushEnchantments.Add(enchantment);
+                }
             }
         }
 
@@ -348,31 +431,31 @@ public partial class EnchantsTab
         {
             foreach (var eName in BestTurtleShellEnchantmentNames)
             {
-                BestTurtleShellEnchantments.Add(Enchantments.First(e => e.Name == eName));
+                var enchantment = Enchantments.FirstOrDefault(e => e.Name == eName);
+
+                if (enchantment is not null)
+                {
+                    BestTurtleShellEnchantments.Add(enchantment);
+                }
             }
         }
     }
 
-    private async Task<IEnumerable<Enchantment>> Search(string value, CancellationToken cancellationToken)
-    {
-        Items = await ItemRepository.GetAllItems();
-
-        return string.IsNullOrEmpty(value)
+    private Task<IEnumerable<Enchantment>> Search(string value, CancellationToken cancellationToken) =>
+        Task.FromResult(string.IsNullOrEmpty(value)
             ? Enchantments
                 .OrderBy(i => i.DisplayName)
                 .Take(10)
             : Enchantments
                 .Where(enchantment => enchantment.DisplayName
                     .Contains(value.Trim(), StringComparison.InvariantCultureIgnoreCase))
-                .OrderBy(i => i.DisplayName);
-    }
+                .OrderBy(i => i.DisplayName));
 
-    private Item? GetItem(string itemName) =>
-        string.IsNullOrEmpty(itemName)
-            ? null
-            : Items
-                .FirstOrDefault(item => item.DisplayName
-                    .Equals(itemName.Trim(), StringComparison.InvariantCultureIgnoreCase));
+    private Item? GetItem(string itemName) => string.IsNullOrEmpty(itemName)
+        ? null
+        : Items
+            .FirstOrDefault(item => item.DisplayName
+                .Equals(itemName.Trim(), StringComparison.InvariantCultureIgnoreCase));
 
     private string GenerateGiveEnchantedItemCommand(string itemName, List<Enchantment> enchantments, int level) =>
         CommandService.GenerateGiveEnchantedItemCommand(
