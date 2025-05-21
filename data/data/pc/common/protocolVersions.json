@@ -1,5 +1,61 @@
 [
   {
+    "minecraftVersion": "25w21a",
+    "version": 1073742075,
+    "dataVersion": 4429,
+    "usesNetty": true,
+    "majorVersion": "1.21",
+    "releaseType": "snapshot"
+  },
+  {
+    "minecraftVersion": "25w20a",
+    "version": 1073742074,
+    "dataVersion": 4428,
+    "usesNetty": true,
+    "majorVersion": "1.21",
+    "releaseType": "snapshot"
+  },
+  {
+    "minecraftVersion": "25w19a",
+    "version": 1073742073,
+    "dataVersion": 4427,
+    "usesNetty": true,
+    "majorVersion": "1.21",
+    "releaseType": "snapshot"
+  },
+  {
+    "minecraftVersion": "25w18a",
+    "version": 1073742072,
+    "dataVersion": 4426,
+    "usesNetty": true,
+    "majorVersion": "1.21",
+    "releaseType": "snapshot"
+  },
+  {
+    "minecraftVersion": "25w17a",
+    "version": 1073742071,
+    "dataVersion": 4425,
+    "usesNetty": true,
+    "majorVersion": "1.21",
+    "releaseType": "snapshot"
+  },
+  {
+    "minecraftVersion": "25w16a",
+    "version": 1073742070,
+    "dataVersion": 4423,
+    "usesNetty": true,
+    "majorVersion": "1.21",
+    "releaseType": "snapshot"
+  },
+  {
+    "minecraftVersion": "25w15a",
+    "version": 1073742069,
+    "dataVersion": 4422,
+    "usesNetty": true,
+    "majorVersion": "1.21",
+    "releaseType": "snapshot"
+  },
+  {
     "minecraftVersion": "25w14craftmine",
     "version": 1073742068,
     "dataVersion": 4323,
