@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 using Microsoft.Build.Framework;
-using Task = Microsoft.Build.Utilities.Task;
+using Microsoft.Build.Utilities;
 
 namespace MinecraftCommandBuilder.PostBuild
 {
@@ -34,7 +34,9 @@ namespace MinecraftCommandBuilder.PostBuild
 
                 // Locate all `content/data/data` directories under the NuGet package root.
                 var dataDirectories = Directory.GetDirectories(SourceDirectory, "data", SearchOption.AllDirectories)
-                    .Where(dir => dir.EndsWith("content" + Path.DirectorySeparatorChar + "data" + Path.DirectorySeparatorChar + "data", StringComparison.OrdinalIgnoreCase));
+                    .Where(dir =>
+                        dir.EndsWith($"content{Path.DirectorySeparatorChar}data{Path.DirectorySeparatorChar}data",
+                            StringComparison.OrdinalIgnoreCase));
 
                 foreach (var dataDirectory in dataDirectories)
                 {
@@ -50,7 +52,7 @@ namespace MinecraftCommandBuilder.PostBuild
                             Directory.CreateDirectory(destDir);
                         }
 
-                        File.Copy(file, destFile, overwrite: true);
+                        File.Copy(file, destFile, true);
                     }
                 }
 
@@ -64,7 +66,7 @@ namespace MinecraftCommandBuilder.PostBuild
         }
 
         /// <summary>
-        /// Custom implementation of Path.GetRelativePath for .NET Standard 2.0.
+        ///     Custom implementation of Path.GetRelativePath for .NET Standard 2.0.
         /// </summary>
         private static string GetRelativePath(string basePath, string path)
         {
@@ -80,14 +82,9 @@ namespace MinecraftCommandBuilder.PostBuild
             return Uri.UnescapeDataString(relativeUri.ToString().Replace('/', Path.DirectorySeparatorChar));
         }
 
-        private static string AppendDirectorySeparator(string path)
-        {
-            if (!path.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
-            {
-                return path + Path.DirectorySeparatorChar;
-            }
-
-            return path;
-        }
+        private static string AppendDirectorySeparator(string path) =>
+            !path.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal)
+                ? $"{path}{Path.DirectorySeparatorChar}"
+                : path;
     }
 }
