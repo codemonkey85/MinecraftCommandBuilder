@@ -11,8 +11,8 @@ public partial class MainLayout
     {
         if (firstRender && mudThemeProvider is not null)
         {
-            isDarkMode = await mudThemeProvider.GetSystemPreference();
-            await mudThemeProvider.WatchSystemPreference(OnSystemPreferenceChanged);
+            isDarkMode = await mudThemeProvider.GetSystemDarkModeAsync();
+            await mudThemeProvider.WatchSystemDarkModeAsync(OnSystemPreferenceChanged);
             StateHasChanged();
         }
     }
