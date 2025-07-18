@@ -2,6 +2,8 @@ namespace MinecraftCommandBuilder.Components.CommandTabs;
 
 public partial class FillTab
 {
+    public const string TabTitle = "Fill";
+
     private int Width { get; set; }
 
     private int Height { get; set; }

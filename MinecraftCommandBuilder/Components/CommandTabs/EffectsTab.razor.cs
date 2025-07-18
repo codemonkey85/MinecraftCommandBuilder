@@ -2,6 +2,8 @@ namespace MinecraftCommandBuilder.Components.CommandTabs;
 
 public partial class EffectsTab
 {
+    public const string TabTitle = "Effects";
+
     private List<Effect> Effects { get; set; } = [];
 
     private Effect? SelectedEffect { get; set; }

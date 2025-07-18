@@ -2,6 +2,8 @@ namespace MinecraftCommandBuilder.Components.CommandTabs;
 
 public partial class SummonsTab
 {
+    public const string TabTitle = "Summons";
+
     private List<Entity> Entities { get; set; } = [];
 
     private Entity? SelectedEntity { get; set; }

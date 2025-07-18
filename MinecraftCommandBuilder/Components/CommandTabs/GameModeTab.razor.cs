@@ -2,6 +2,8 @@ namespace MinecraftCommandBuilder.Components.CommandTabs;
 
 public partial class GameModeTab
 {
+    public const string TabTitle = "Game Mode";
+
     public enum GameMode
     {
         Survival,

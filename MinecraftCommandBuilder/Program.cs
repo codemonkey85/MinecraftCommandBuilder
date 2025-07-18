@@ -20,6 +20,11 @@ services
     // Used by WebFileApi
     .AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
+// Register an IChatClient
+var innerChatClient = new OllamaSharp.OllamaApiClient(new Uri("http://localhost:11434"), "llama3.1");
+services.AddChatClient(innerChatClient)
+    .UseFunctionInvocation();
+
 var app = builder.Build();
 
 using (var serviceScope = app.Services.CreateScope())

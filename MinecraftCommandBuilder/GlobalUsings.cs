@@ -1,6 +1,7 @@
 ﻿global using System.Text;
 global using Microsoft.AspNetCore.Components.Web;
 global using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+global using Microsoft.Extensions.AI;
 global using Microsoft.JSInterop;
 global using MinecraftCommandBuilder;
 global using MinecraftCommandBuilder.Models;

@@ -2,6 +2,8 @@ namespace MinecraftCommandBuilder.Components.CommandTabs;
 
 public partial class GiveItemsTab
 {
+    public const string TabTitle = "Give Items";
+
     private List<Item> Items { get; set; } = [];
 
     private Item? SelectedItem { get; set; }

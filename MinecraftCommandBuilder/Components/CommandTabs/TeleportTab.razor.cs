@@ -2,6 +2,8 @@ namespace MinecraftCommandBuilder.Components.CommandTabs;
 
 public partial class TeleportTab
 {
+    public const string TabTitle = "Teleport";
+
     private double? X { get; set; }
 
     private double? Y { get; set; }

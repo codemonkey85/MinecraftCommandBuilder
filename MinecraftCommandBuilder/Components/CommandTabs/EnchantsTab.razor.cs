@@ -2,6 +2,8 @@ namespace MinecraftCommandBuilder.Components.CommandTabs;
 
 public partial class EnchantsTab
 {
+    public const string TabTitle = "Enchantments";
+
     private readonly List<string> BestAxeEnchantmentNames =
     [
         "unbreaking",
