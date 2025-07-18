@@ -20,10 +20,15 @@ services
     // Used by WebFileApi
     .AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-// Register an IChatClient
-var innerChatClient = new OllamaSharp.OllamaApiClient(new Uri("http://localhost:11434"), "llama3.1");
-services.AddChatClient(innerChatClient)
-    .UseFunctionInvocation();
+const string aiUrl = "";
+const string apiKey = "";
+
+var innerChatClient = new AzureOpenAIClient(
+    new Uri(aiUrl),
+    new ApiKeyCredential(apiKey))
+    .GetChatClient("gpt-4o-mini").AsIChatClient();
+
+services.AddChatClient(innerChatClient);
 
 var app = builder.Build();
 

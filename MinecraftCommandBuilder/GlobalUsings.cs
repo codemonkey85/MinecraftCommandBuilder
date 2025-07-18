@@ -1,4 +1,6 @@
-﻿global using System.Text;
+﻿global using System.ClientModel;
+global using System.Text;
+global using Azure.AI.OpenAI;
 global using Microsoft.AspNetCore.Components.Web;
 global using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 global using Microsoft.Extensions.AI;
