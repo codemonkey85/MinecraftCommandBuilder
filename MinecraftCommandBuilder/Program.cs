@@ -20,15 +20,15 @@ services
     // Used by WebFileApi
     .AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-const string aiUrl = "";
-const string apiKey = "";
+//const string aiUrl = "";
+//const string apiKey = "";
 
-var innerChatClient = new AzureOpenAIClient(
-    new Uri(aiUrl),
-    new ApiKeyCredential(apiKey))
-    .GetChatClient("gpt-4o-mini").AsIChatClient();
+//var innerChatClient = new AzureOpenAIClient(
+//    new Uri(aiUrl),
+//    new ApiKeyCredential(apiKey))
+//    .GetChatClient("gpt-4o-mini").AsIChatClient();
 
-services.AddChatClient(innerChatClient);
+//services.AddChatClient(innerChatClient);
 
 var app = builder.Build();
 

@@ -14,25 +14,27 @@ public partial class ExperimentalTab
     If the user asks for help with a specific command, you should ask them for more details about what they want to achieve.
     """)];
 
-    private async Task GetResponseFromChat()
+    private Task GetResponseFromChat()
     {
         if (string.IsNullOrWhiteSpace(UserInputText))
         {
-            return;
+            return Task.CompletedTask;
         }
 
-        messages.Add(new ChatMessage(ChatRole.User, UserInputText));
+        return Task.CompletedTask;
 
-        var response = await ChatClient.GetResponseAsync(messages);
+        //messages.Add(new ChatMessage(ChatRole.User, UserInputText));
 
-        if (response is not null)
-        {
-            messages.Add(new ChatMessage(ChatRole.Assistant, response.Text));
-            ChatOutputText = response.Text;
-        }
-        else
-        {
-            ChatOutputText = "No response received.";
-        }
+        //var response = await ChatClient.GetResponseAsync(messages);
+
+        //if (response is not null)
+        //{
+        //    messages.Add(new ChatMessage(ChatRole.Assistant, response.Text));
+        //    ChatOutputText = response.Text;
+        //}
+        //else
+        //{
+        //    ChatOutputText = "No response received.";
+        //}
     }
 }
