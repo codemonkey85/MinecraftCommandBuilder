@@ -19,7 +19,7 @@
         <PackageReference Include="Microsoft.Extensions.AI" Version="9.7.1" />
         <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.7.1-preview.1.25365.4" />
         <PackageReference Include="MinecraftDataCSharp" Version="2025.7.1" />
-        <PackageReference Include="MudBlazor" Version="8.9.0" />
+        <PackageReference Include="MudBlazor" Version="8.10.0" />
     </ItemGroup>
 
     <ItemGroup>
