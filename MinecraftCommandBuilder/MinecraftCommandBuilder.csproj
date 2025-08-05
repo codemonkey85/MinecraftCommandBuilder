@@ -19,7 +19,7 @@
         <PackageReference Include="Microsoft.Extensions.AI" Version="9.7.1" />
         <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.7.1-preview.1.25365.4" />
         <PackageReference Include="MinecraftDataCSharp" Version="2025.7.1" />
-        <PackageReference Include="MudBlazor" Version="8.10.0" />
+        <PackageReference Include="MudBlazor" Version="8.11.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -27,6 +27,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="9.0.8" />
+      <PackageReference Include="Microsoft.NET.Sdk.WebAssembly.Pack" Version="9.0.8" />
         <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
     </ItemGroup>
 
