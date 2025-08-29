@@ -452,6 +452,7 @@
   },
   {
     "name": "usesBlockStates",
+    "description": "uses block states for block identification instead of block ID + metadata",
     "versions": [
       "1.13",
       "latest"
@@ -459,6 +460,7 @@
   },
   {
     "name": "effectNamesMatchRegistryName",
+    "description": "effect names match their registry names rather than legacy names",
     "versions": [
       "1.17",
       "latest"
@@ -466,6 +468,7 @@
   },
   {
     "name": "shieldSlot",
+    "description": "shields are equipped in the off-hand slot",
     "versions": [
       "1.9",
       "latest"
@@ -473,6 +476,7 @@
   },
   {
     "name": "village&pillageInventoryWindows",
+    "description": "inventory windows introduced in Village & Pillage update",
     "versions": [
       "1.14",
       "latest"
@@ -480,6 +484,7 @@
   },
   {
     "name": "netherUpdateInventoryWindows",
+    "description": "inventory windows introduced in Nether Update",
     "versions": [
       "1.16",
       "latest"
@@ -885,5 +890,15 @@
     "name": "usesOldSoundPacket",
     "description": "uses the old sound packet format",
     "versions": ["1.8", "1.8.9"]
+  },
+  {
+    "name": "chatGlobalIndexAndChecksum",
+    "description": "chatGlobalIndexAndChecksum",
+    "versions": ["1.21.5", "latest"]
+  },
+  {
+    "name": "entityActionUsesStringMapper",
+    "description": "entity_action packet uses string mappings instead of numeric actionId",
+    "versions": ["1.21.6", "latest"]
   }
 ]
