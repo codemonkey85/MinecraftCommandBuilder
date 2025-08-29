@@ -1,6 +1,6 @@
-﻿<MudTabs Outlined="true"
-         Rounded="true"
-         Border="true">
+﻿<MudTabs Outlined="@true"
+         Rounded="@true"
+         Border="@true">
 
     <MudTabPanel Text="Give Items">
         <GiveItemsTab/>
@@ -30,8 +30,20 @@
         <GameModeTab/>
     </MudTabPanel>
 
-    @* <MudTabPanel Text="@ExperimentalTab.TabTitle">
-        <ExperimentalTab/>
-    </MudTabPanel> *@
+    @if (ShowExperimentalTab)
+    {
+        <MudTabPanel Text="@ExperimentalTab.TabTitle">
+            <ExperimentalTab />
+        </MudTabPanel>
+    }
 
 </MudTabs>
+
+@code {
+    private bool ShowExperimentalTab { get; set; } = 
+    #if DEBUG
+        true;
+#else
+        false;
+#endif
+}

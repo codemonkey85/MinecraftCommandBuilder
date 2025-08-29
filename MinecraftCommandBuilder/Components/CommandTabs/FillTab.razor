@@ -1,31 +1,35 @@
-﻿<h3>@TabTitle</h3>
+﻿@using Block = MinecraftDataCSharp.Repositories.Block
+
+<h3>
+    @TabTitle
+</h3>
 
 <MudStack>
     <PlayerNameComponent/>
 
-    <MudAutocomplete T="Block"
+    <MudAutocomplete T="@Block"
                      Label="Select a block"
-                     @bind-Value="SelectedBlock"
+                     @bind-Value="@SelectedBlock"
                      SearchFunc="@Search"
                      ToStringFunc="@ToString"
                      Clearable/>
 
-    <MudNumericField T="int"
+    <MudNumericField T="@int"
                      Label="Width"
-                     Min="-int.MaxValue"
-                     Max="int.MaxValue"
+                     Min="@(-int.MaxValue)"
+                     Max="@int.MaxValue"
                      @bind-Value="@Width"/>
 
-    <MudNumericField T="int"
+    <MudNumericField T="@int"
                      Label="Height"
-                     Min="-int.MaxValue"
-                     Max="int.MaxValue"
+                     Min="@(-int.MaxValue)"
+                     Max="@int.MaxValue"
                      @bind-Value="@Height"/>
 
-    <MudNumericField T="int"
+    <MudNumericField T="@int"
                      Label="Depth"
-                     Min="-int.MaxValue"
-                     Max="int.MaxValue"
+                     Min="@(-int.MaxValue)"
+                     Max="@int.MaxValue"
                      @bind-Value="@Depth"/>
 
     <MudButton ButtonType="@ButtonType.Submit"

@@ -1,4 +1,6 @@
-﻿<h3>@TabTitle</h3>
+﻿<h3>
+    @TabTitle
+</h3>
 
 <MudStack>
     <PlayerNameComponent/>
@@ -6,28 +8,28 @@
     <MudGrid>
         <MudItem xs="12"
                  md="4">
-            <MudNumericField T="double?"
+            <MudNumericField T="@(double?)"
                              Label="X"
-                             Min="-double.MaxValue"
-                             Max="double.MaxValue"
+                             Min="@(-double.MaxValue)"
+                             Max="@double.MaxValue"
                              @bind-Value="@X"
                              Clearable/>
         </MudItem>
         <MudItem xs="12"
                  md="4">
-            <MudNumericField T="double?"
+            <MudNumericField T="@(double?)"
                              Label="Y"
-                             Min="-double.MaxValue"
-                             Max="double.MaxValue"
+                             Min="@(-double.MaxValue)"
+                             Max="@double.MaxValue"
                              @bind-Value="@Y"
                              Clearable/>
         </MudItem>
         <MudItem xs="12"
                  md="4">
-            <MudNumericField T="double?"
+            <MudNumericField T="@(double?)"
                              Label="Z"
-                             Min="-double.MaxValue"
-                             Max="double.MaxValue"
+                             Min="@(-double.MaxValue)"
+                             Max="@double.MaxValue"
                              @bind-Value="@Z"
                              Clearable/>
         </MudItem>

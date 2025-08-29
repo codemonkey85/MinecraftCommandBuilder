@@ -1,18 +1,18 @@
 ﻿<MudSelect T="string"
            @bind-Value="@CommandService.PlayerName">
-    <MudSelectItem T="string"
+    <MudSelectItem T="@string"
                    Value="@("@s")">
         @("@s (self)")
     </MudSelectItem>
-    <MudSelectItem T="string"
+    <MudSelectItem T="@string"
                    Value="@("@p")">
         @("@p (closest player)")
     </MudSelectItem>
-    <MudSelectItem T="string"
+    <MudSelectItem T="@string"
                    Value="@("@a")">
         @("@a (all players)")
     </MudSelectItem>
-    <MudSelectItem T="string"
+    <MudSelectItem T="@string"
                    Value="@("@r")">
         @("@r (random player)")
     </MudSelectItem>

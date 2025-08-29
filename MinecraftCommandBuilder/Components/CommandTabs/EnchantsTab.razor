@@ -1,16 +1,18 @@
-﻿<h3>@TabTitle</h3>
+﻿<h3>
+    @TabTitle
+</h3>
 
 <MudStack>
     <PlayerNameComponent/>
 
-    <MudAutocomplete T="Enchantment"
+    <MudAutocomplete T="@Enchantment"
                      Label="Select an enchantment"
-                     @bind-Value="SelectedEnchantment"
+                     @bind-Value="@SelectedEnchantment"
                      SearchFunc="@Search"
                      ToStringFunc="@ToString"
                      Clearable/>
 
-    <MudNumericField T="int"
+    <MudNumericField T="@int"
                      Label="Level"
                      Min="1"
                      Max="@(SelectedEnchantment?.MaxLevel ?? 1)"
@@ -26,9 +28,11 @@
     </MudButton>
 
     <MudStack>
-        <h4>My Favorite Enchantments</h4>
+        <h4>
+            My Favorite Enchantments
+        </h4>
 
-        <MudNumericField T="int"
+        <MudNumericField T="@int"
                          Label="Level"
                          Min="1"
                          Max="255"
@@ -92,12 +96,12 @@
                 <h5>
                     @itemName
                 </h5>
-                <MudInput T="string"
+                <MudInput T="@string"
                           Label="Command Text"
                           Value="@command"
                           Variant="@Variant.Outlined"
                           ReadOnly
-                          Adornment="Adornment.Start"
+                          Adornment="@Adornment.Start"
                           AdornmentIcon="@Icons.Material.Filled.ContentCopy"
                           OnAdornmentClick="@(async _ => await CopyCommand(command))"/>
             </MudStack>;

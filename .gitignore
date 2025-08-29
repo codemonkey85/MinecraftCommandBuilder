@@ -401,3 +401,4 @@ FodyWeavers.xsd
 
 MinecraftCommandBuilder/wwwroot/data
 .idea
+MinecraftCommandBuilder/wwwroot/appsettings.Development.json

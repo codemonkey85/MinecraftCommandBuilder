@@ -1,19 +1,21 @@
-﻿<h3>@TabTitle</h3>
+﻿<h3>
+    @TabTitle
+</h3>
 
 <MudStack>
     <PlayerNameComponent/>
 
-    <MudAutocomplete T="Item"
+    <MudAutocomplete T="@Item"
                      Label="Select an item"
-                     @bind-Value="SelectedItem"
+                     @bind-Value="@SelectedItem"
                      SearchFunc="@Search"
                      ToStringFunc="@ToString"
                      Clearable/>
 
-    <MudNumericField T="int"
+    <MudNumericField T="@int"
                      Label="Count"
                      Min="1"
-                     Max="int.MaxValue"
+                     Max="@int.MaxValue"
                      @bind-Value="@Count"/>
 
     <MudButton ButtonType="@ButtonType.Submit"

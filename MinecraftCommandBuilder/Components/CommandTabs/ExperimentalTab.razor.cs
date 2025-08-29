@@ -2,6 +2,13 @@ namespace MinecraftCommandBuilder.Components.CommandTabs;
 
 public partial class ExperimentalTab
 {
+#if DEBUG
+
+    [Inject]
+    private IChatClient ChatClient { get; set; } = null!;
+
+#endif
+
     public const string TabTitle = "Experimental";
 
     private string UserInputText = string.Empty;
@@ -14,27 +21,31 @@ public partial class ExperimentalTab
     If the user asks for help with a specific command, you should ask them for more details about what they want to achieve.
     """)];
 
-    private Task GetResponseFromChat()
+    private async Task GetResponseFromChat()
     {
         if (string.IsNullOrWhiteSpace(UserInputText))
         {
-            return Task.CompletedTask;
+            return;
         }
 
-        return Task.CompletedTask;
+        messages.Add(new ChatMessage(ChatRole.User, UserInputText));
 
-        //messages.Add(new ChatMessage(ChatRole.User, UserInputText));
+#if DEBUG
 
-        //var response = await ChatClient.GetResponseAsync(messages);
+        var response = await ChatClient.GetResponseAsync(messages);
 
-        //if (response is not null)
-        //{
-        //    messages.Add(new ChatMessage(ChatRole.Assistant, response.Text));
-        //    ChatOutputText = response.Text;
-        //}
-        //else
-        //{
-        //    ChatOutputText = "No response received.";
-        //}
+        if (response is not null)
+        {
+            messages.Add(new ChatMessage(ChatRole.Assistant, response.Text));
+            ChatOutputText = response.Text;
+        }
+        else
+        {
+            ChatOutputText = "No response received.";
+        }
+
+#else
+        await Task.Delay(1);
+#endif
     }
 }

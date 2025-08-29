@@ -1,20 +1,22 @@
-﻿<h3>@TabTitle</h3>
+﻿<h3>
+    @TabTitle
+</h3>
 
 <MudStack>
     <PlayerNameComponent/>
 
     <MudSelect T="@GameMode">
         <MudSelectItem T="@GameMode"
-                       Value="GameMode.Survival">Survival
+                       Value="@GameMode.Survival">Survival
         </MudSelectItem>
         <MudSelectItem T="@GameMode"
-                       Value="GameMode.Creative">Creative
+                       Value="@GameMode.Creative">Creative
         </MudSelectItem>
         <MudSelectItem T="@GameMode"
-                       Value="GameMode.Adventure">Adventure
+                       Value="@GameMode.Adventure">Adventure
         </MudSelectItem>
         <MudSelectItem T="@GameMode"
-                       Value="GameMode.Spectator">Spectator
+                       Value="@GameMode.Spectator">Spectator
         </MudSelectItem>
     </MudSelect>
 

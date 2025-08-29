@@ -1,4 +1,6 @@
-﻿<h3>@TabTitle</h3>
+﻿<h3>
+    @TabTitle
+</h3>
 
 <MudStack>
     <PlayerNameComponent/>
@@ -12,31 +14,31 @@
         Refresh Effects List
     </MudButton>
 
-    <MudSelect T="@(Effect)"
+    <MudSelect T="@Effect"
                Placeholder="Select an effect"
                Class="mt-3"
                MultiSelection="@false"
                SelectedValuesChanged="@OnSelectedValuesChanged"
                Clearable>
-        <MudSelectItem T="@(Effect)"
+        <MudSelectItem T="@Effect"
                        Value="@null">
             None
         </MudSelectItem>
         @foreach (var effect in Effects.OrderBy(e => e.DisplayName))
         {
-            <MudSelectItem T="@(Effect)"
+            <MudSelectItem T="@Effect"
                            Value="@effect">
                 @effect.DisplayName
             </MudSelectItem>
         }
     </MudSelect>
 
-    <MudNumericField T="int"
+    <MudNumericField T="@int"
                      Label="Duration (seconds)"
                      Min="1"
                      @bind-Value="@Duration"/>
 
-    <MudNumericField T="int"
+    <MudNumericField T="@int"
                      Label="Amplifier"
                      Min="1"
                      Max="255"
