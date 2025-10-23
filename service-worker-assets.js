@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "jKj2NS33",
+  "version": "2oZzrqVG",
   "assets": [
     {
       "hash": "sha256-TSgzDIY4qdWvjvfBaUSrnerVt2+FjH4cXGlPrxEz1C0=",
@@ -38,8 +38,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.Build.Utilities.Core.ks30vo400j.wasm"
     },
     {
-      "hash": "sha256-sBSYGMwFAJTOV6YkQb3Q0TQqbuG3kk2ylBXrVA7DePc=",
-      "url": "_framework/Microsoft.Extensions.AI.Abstractions.k3tkjyqz6m.wasm"
+      "hash": "sha256-6v47RRgCmJr1KS5bwWuYGZHTxdtsXkwKiomeQDX45FM=",
+      "url": "_framework/Microsoft.Extensions.AI.Abstractions.ey44zndusg.wasm"
     },
     {
       "hash": "sha256-kMkTNci+rypvlVo91GsthRNT22k4Mk2BHQPk/Up3p7M=",
@@ -106,16 +106,16 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.Win32.Registry.2ms7vv9i8k.wasm"
     },
     {
-      "hash": "sha256-lumNbM8dYaI2vbLL7KD2qdpOif6YxqOVvc4W0/0SEZU=",
-      "url": "_framework/MinecraftCommandBuilder.PostBuild.21fitcyjza.wasm"
+      "hash": "sha256-xtZfiHJq99TIb8C2ZsSDL9FiRDa58+AUII7jAm93Axc=",
+      "url": "_framework/MinecraftCommandBuilder.6p369ubd7k.wasm"
     },
     {
-      "hash": "sha256-u3ISZyIfXRAY5PCYZv4Q05P3+76CjIQv2kTdrhmXIPg=",
-      "url": "_framework/MinecraftCommandBuilder.bgrvmwsfwu.wasm"
+      "hash": "sha256-kD31MnskAgg8RlU30PXtjDRlbbIz0yTFAeoogYNTgeY=",
+      "url": "_framework/MinecraftCommandBuilder.PostBuild.cxukojetp7.wasm"
     },
     {
-      "hash": "sha256-Zaj5UEb2JepMTt5bS8KddN31qhIr4Mp/OGca+/LIQB4=",
-      "url": "_framework/MinecraftDataCSharp.1h4bt8um8c.wasm"
+      "hash": "sha256-oym6DIIndg1jZMI+XRCiIMYcJN0iJg+HLO3ERD53f68=",
+      "url": "_framework/MinecraftDataCSharp.3cr58m3fwv.wasm"
     },
     {
       "hash": "sha256-uVfRgsEK9QRBmG0wJVTu/QJsuQP0g6qEKEohwGrR/2Y=",
@@ -342,7 +342,7 @@ self.assetsManifest = {
       "url": "_framework/System.Xml.XmlSerializer.bbyto8zwk8.wasm"
     },
     {
-      "hash": "sha256-tHFMEA2DihXHM3qAZOWFazLB6/XIZOaMGxFR93M3xPQ=",
+      "hash": "sha256-YOJNQZLrqBKVy1L2+pdgshk2VYJdieW7NZSP/TK7+Ns=",
       "url": "_framework/blazor.boot.json"
     },
     {
