@@ -2,8 +2,6 @@ namespace MinecraftCommandBuilder.Components.CommandTabs;
 
 public partial class GameModeTab
 {
-    public const string TabTitle = "Game Mode";
-
     public enum GameMode
     {
         Survival,
@@ -12,7 +10,9 @@ public partial class GameModeTab
         Spectator
     }
 
-    private GameMode SelectedGameMode { get; set; } = GameMode.Survival;
+    public const string TabTitle = "Game Mode";
+
+    private GameMode SelectedGameMode { get; } = GameMode.Survival;
 
     private async Task CopyCommand(string command) =>
         await CommandService.CopyTextToClipboard(command);

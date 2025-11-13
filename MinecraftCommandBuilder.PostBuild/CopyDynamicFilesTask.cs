@@ -66,7 +66,7 @@ namespace MinecraftCommandBuilder.PostBuild
         }
 
         /// <summary>
-        ///     Custom implementation of Path.GetRelativePath for .NET Standard 2.0.
+        /// Custom implementation of Path.GetRelativePath for .NET Standard 2.0.
         /// </summary>
         private static string GetRelativePath(string basePath, string path)
         {

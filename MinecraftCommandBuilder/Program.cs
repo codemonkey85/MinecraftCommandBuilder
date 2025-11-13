@@ -25,8 +25,8 @@ services
 var aiConfig = builder.Configuration.GetSection(nameof(AiConfig)).Get<AiConfig>() ?? new AiConfig();
 
 var innerChatClient = new AzureOpenAIClient(
-    new Uri(aiConfig.Endpoint),
-    new ApiKeyCredential(aiConfig.Key))
+        new Uri(aiConfig.Endpoint),
+        new ApiKeyCredential(aiConfig.Key))
     .GetChatClient("gpt-5").AsIChatClient();
 
 services.AddChatClient(innerChatClient);

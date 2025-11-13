@@ -33,17 +33,17 @@
     @if (ShowExperimentalTab)
     {
         <MudTabPanel Text="@ExperimentalTab.TabTitle">
-            <ExperimentalTab />
+            <ExperimentalTab/>
         </MudTabPanel>
     }
 
 </MudTabs>
 
 @code {
-    private bool ShowExperimentalTab { get; set; } = 
-    #if DEBUG
+    private bool ShowExperimentalTab { get; } =
+#if DEBUG
         true;
 #else
-        false;
+    false;
 #endif
 }
