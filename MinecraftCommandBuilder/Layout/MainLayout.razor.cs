@@ -4,15 +4,15 @@ public partial class MainLayout
 {
     private const string AppTitle = "Minecraft Command Builder";
 
-    private bool isDarkMode;
-    private MudThemeProvider? mudThemeProvider;
+    private bool IsDarkMode;
+    private MudThemeProvider? MudThemeProvider;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender && mudThemeProvider is not null)
+        if (firstRender && MudThemeProvider is not null)
         {
-            isDarkMode = await mudThemeProvider.GetSystemDarkModeAsync();
-            await mudThemeProvider.WatchSystemDarkModeAsync(OnSystemPreferenceChanged);
+            IsDarkMode = await MudThemeProvider.GetSystemDarkModeAsync();
+            await MudThemeProvider.WatchSystemDarkModeAsync(OnSystemPreferenceChanged);
             StateHasChanged();
         }
     }
@@ -21,7 +21,7 @@ public partial class MainLayout
     private async Task OnSystemPreferenceChanged(bool newValue)
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
     {
-        isDarkMode = newValue;
+        IsDarkMode = newValue;
         StateHasChanged();
     }
 }

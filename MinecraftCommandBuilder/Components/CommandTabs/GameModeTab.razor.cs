@@ -12,7 +12,7 @@ public partial class GameModeTab
 
     public const string TabTitle = "Game Mode";
 
-    private GameMode SelectedGameMode { get; } = GameMode.Survival;
+    private GameMode SelectedGameMode { get; set; } = GameMode.Survival;
 
     private async Task CopyCommand(string command) =>
         await CommandService.CopyTextToClipboard(command);

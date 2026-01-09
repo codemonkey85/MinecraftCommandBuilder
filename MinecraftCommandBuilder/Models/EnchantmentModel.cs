@@ -2,7 +2,7 @@ namespace MinecraftCommandBuilder.Models;
 
 public class EnchantmentModel
 {
-    public required string Name { get; set; } = string.Empty;
+    public required string Name { get; init; } = string.Empty;
 
-    public int Level { get; set; } = 1;
+    public int Level { get; init; } = 1;
 }

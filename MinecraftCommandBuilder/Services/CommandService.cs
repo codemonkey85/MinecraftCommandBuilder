@@ -31,7 +31,7 @@ public class CommandService(IJSRuntime jsRuntime) : ICommandService
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
-            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
+            throw new Exception("Player name cannot be empty.");
         }
 
         if (string.IsNullOrWhiteSpace(itemName))
@@ -72,7 +72,7 @@ public class CommandService(IJSRuntime jsRuntime) : ICommandService
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
-            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
+            throw new Exception("Player name cannot be empty.");
         }
 
         if (string.IsNullOrWhiteSpace(enchantmentName))
@@ -80,6 +80,7 @@ public class CommandService(IJSRuntime jsRuntime) : ICommandService
             throw new ArgumentException("Enchantment name cannot be empty.", nameof(enchantmentName));
         }
 
+        // ReSharper disable once ConvertIfStatementToReturnStatement
         if (level < 1)
         {
             throw new ArgumentOutOfRangeException(nameof(level), "Level must be greater than 0.");
@@ -98,7 +99,7 @@ public class CommandService(IJSRuntime jsRuntime) : ICommandService
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
-            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
+            throw new Exception("Player name cannot be empty.");
         }
 
         if (string.IsNullOrWhiteSpace(effectName))
@@ -106,25 +107,24 @@ public class CommandService(IJSRuntime jsRuntime) : ICommandService
             throw new ArgumentException("Effect name cannot be empty.", nameof(effectName));
         }
 
-        if (!clear && duration < 1)
+        switch (clear)
         {
-            throw new ArgumentOutOfRangeException(nameof(duration), "Duration must be greater than 0.");
+            case false when duration < 1:
+                throw new ArgumentOutOfRangeException(nameof(duration), "Duration must be greater than 0.");
+            case false when amplifier < 1:
+                throw new ArgumentOutOfRangeException(nameof(amplifier), "Amplifier must be greater than 0.");
+            default:
+                CommandText = $"/effect {PlayerName} {effectName}{(clear ? " 0" : $" {duration}")}{(clear ? string.Empty : $" {amplifier}")}";
+                Refresh();
+                break;
         }
-
-        if (!clear && amplifier < 1)
-        {
-            throw new ArgumentOutOfRangeException(nameof(amplifier), "Amplifier must be greater than 0.");
-        }
-
-        CommandText = $"/effect {PlayerName} {effectName}{(clear ? " 0" : $" {duration}")}{(clear ? string.Empty : $" {amplifier}")}";
-        Refresh();
     }
 
     public void SetClearAllEffectsCommand()
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
-            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
+            throw new Exception("Player name cannot be empty.");
         }
 
         CommandText = $"/effect clear {PlayerName}";
@@ -135,7 +135,7 @@ public class CommandService(IJSRuntime jsRuntime) : ICommandService
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
-            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
+            throw new Exception("Player name cannot be empty.");
         }
 
         CommandText = $"/tp {PlayerName} {(x is not null ? x : "~")} {(y is not null ? y : "~")} {(z is not null ? z : "~")}";
@@ -193,7 +193,7 @@ public class CommandService(IJSRuntime jsRuntime) : ICommandService
     {
         if (string.IsNullOrWhiteSpace(PlayerName))
         {
-            throw new ArgumentException("Player name cannot be empty.", nameof(PlayerName));
+            throw new Exception("Player name cannot be empty.");
         }
 
         CommandText = $"/gamemode {gameMode} {PlayerName}";

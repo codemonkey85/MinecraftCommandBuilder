@@ -2,7 +2,7 @@
 
 public class AiConfig
 {
-    public string Endpoint { get; set; } = string.Empty;
+    public string Endpoint { get; init; } = string.Empty;
 
-    public string Key { get; set; } = string.Empty;
+    public string Key { get; init; } = string.Empty;
 }

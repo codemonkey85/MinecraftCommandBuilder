@@ -13,26 +13,26 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Azure.AI.OpenAI" Version="2.3.0-beta.2" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.1" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.1" PrivateAssets="all" />
-        <PackageReference Include="Microsoft.Extensions.AI" Version="10.1.1" />
-        <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.8.0-preview.1.25412.6" />
-        <PackageReference Include="MinecraftDataCSharp" Version="2025.12.9" />
-        <PackageReference Include="MudBlazor" Version="8.15.0" />
+        <PackageReference Include="Azure.AI.OpenAI" Version="2.3.0-beta.2"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.1" PrivateAssets="all"/>
+        <PackageReference Include="Microsoft.Extensions.AI" Version="10.1.1"/>
+        <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.8.0-preview.1.25412.6"/>
+        <PackageReference Include="MinecraftDataCSharp" Version="2026.1.9"/>
+        <PackageReference Include="MudBlazor" Version="8.15.0"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\MinecraftCommandBuilder.PostBuild\MinecraftCommandBuilder.PostBuild.csproj" />
+        <ProjectReference Include="..\MinecraftCommandBuilder.PostBuild\MinecraftCommandBuilder.PostBuild.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+        <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js"/>
     </ItemGroup>
 
-    <UsingTask TaskName="CopyDynamicFilesTask" AssemblyFile="$(OutputPath)MinecraftCommandBuilder.PostBuild.dll" />
+    <UsingTask TaskName="CopyDynamicFilesTask" AssemblyFile="$(OutputPath)MinecraftCommandBuilder.PostBuild.dll"/>
     <Target Name="PostBuild" AfterTargets="Build">
-        <CopyDynamicFilesTask SourceDirectory="$(NuGetPackageRoot)" TargetDirectory="$(ProjectDir)wwwroot/data/data" />
+        <CopyDynamicFilesTask SourceDirectory="$(NuGetPackageRoot)" TargetDirectory="$(ProjectDir)wwwroot/data/data"/>
     </Target>
 
 </Project>

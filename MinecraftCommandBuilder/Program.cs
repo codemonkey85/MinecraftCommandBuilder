@@ -18,7 +18,7 @@ services
     .AddScoped<EnchantmentRepository>()
     .AddScoped<ICommandService, CommandService>()
     // Used by WebFileApi
-    .AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+    .AddScoped(_ => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 #if DEBUG
 
