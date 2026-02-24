@@ -29,10 +29,10 @@
 </MudSelect>
 
 <MudStack Class="mt-3">
-    <MudInput T="@string"
-              Label="Command Text"
-              @bind-Value="@CommandService.CommandText"
-              Variant="@Variant.Outlined"
-              ReadOnly/>
+    <MudTextField T="@string"
+                  Label="Command Text"
+                  @bind-Value="@CommandService.CommandText"
+                  Variant="@Variant.Outlined"
+                  ReadOnly/>
     <CommandsTabStrip/>
 </MudStack>

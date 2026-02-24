@@ -96,14 +96,14 @@
                 <h5>
                     @itemName
                 </h5>
-                <MudInput T="@string"
-                          Label="Command Text"
-                          Value="@command"
-                          Variant="@Variant.Outlined"
-                          ReadOnly
-                          Adornment="@Adornment.Start"
-                          AdornmentIcon="@Icons.Material.Filled.ContentCopy"
-                          OnAdornmentClick="@(async _ => await CopyCommand(command))"/>
+                <MudTextField T="@string"
+                              Label="Command Text"
+                              Value="@command"
+                              Variant="@Variant.Outlined"
+                              ReadOnly
+                              Adornment="@Adornment.Start"
+                              AdornmentIcon="@Icons.Material.Filled.ContentCopy"
+                              OnAdornmentClick="@(async _ => await CopyCommand(command))"/>
             </MudStack>;
     }
 

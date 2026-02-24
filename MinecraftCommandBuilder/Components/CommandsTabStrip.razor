@@ -30,20 +30,4 @@
         <GameModeTab/>
     </MudTabPanel>
 
-    @if (ShowExperimentalTab)
-    {
-        <MudTabPanel Text="@ExperimentalTab.TabTitle">
-            <ExperimentalTab/>
-        </MudTabPanel>
-    }
-
 </MudTabs>
-
-@code {
-    private bool ShowExperimentalTab { get; } =
-#if DEBUG
-        true;
-#else
-    false;
-#endif
-}

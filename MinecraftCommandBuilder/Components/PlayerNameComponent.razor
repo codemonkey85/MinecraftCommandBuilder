@@ -1,4 +1,5 @@
-﻿<MudSelect T="string"
+﻿<MudSelect T="@string"
+           Label="Target player"
            @bind-Value="@CommandService.PlayerName">
     <MudSelectItem T="@string"
                    Value="@("@s")">
