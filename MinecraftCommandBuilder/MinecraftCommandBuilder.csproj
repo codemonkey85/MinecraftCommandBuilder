@@ -18,7 +18,7 @@
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.3" PrivateAssets="all"/>
         <PackageReference Include="Microsoft.Extensions.AI" Version="10.3.0"/>
         <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="10.3.0"/>
-        <PackageReference Include="MinecraftDataCSharp" Version="2026.1.9"/>
+        <PackageReference Include="MinecraftDataCSharp" Version="2026.2.24"/>
         <PackageReference Include="MudBlazor" Version="9.0.0"/>
     </ItemGroup>
 
